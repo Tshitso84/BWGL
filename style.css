@@ -1,72 +1,65 @@
-
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
+:root {
+    /* Primary Colors */
+    --primary-100: #112C49;
+    --primary-200: #1A4170;
+    --primary-300: #245797;
+    --primary-400: #2E6DBE;
+    --primary-500: #5387CC;
+    --primary-600: #78A2DA;
+    --primary-700: #9DBBE8;
+    --primary-800: #C1D4F5;
+    --primary-900: #E5ECFB;
+
+    /* Secondary Colors */
+    --secondary-100: #DEA9A1;
+    --secondary-200: #D69389;
+    --secondary-300: #CE7D72;
+    --secondary-400: #C6675B;
+    --secondary-500: #BE5144;
+    --secondary-600: #A3453A;
+    --secondary-700: #883931;
+    --secondary-800: #6D2E27;
+    --secondary-900: #52221D;
+
+    /* Neutral Colors */
+    --neutral-100: #F8F9FA;
+    --neutral-200: #E9ECEF;
+    --neutral-300: #DEE2E6;
+    --neutral-400: #CED4DA;
+    --neutral-500: #ADB5BD;
+    --neutral-600: #6C757D;
+    --neutral-700: #495057;
+    --neutral-800: #343A40;
+    --neutral-900: #212529;
+
+    /* Accent Colors */
+    --accent-success: #28A745;
+    --accent-info: #17A2B8;
+    --accent-warning: #FFC107;
+    --accent-danger: #DC3545;
+
+    /* Background and Text Colors */
+    --bg-light: #FFFFFF;
+    --bg-dark: #121A24;
+    --text-dark: #1F2937;
+    --text-light: #F9FAFB;
+
+    /* E-commerce Specific */
+    --sale-badge: #FF5252;
+    --new-badge: #4CAF50;
+    --discount-highlight: #FDECEC;
+    --rating-star: #FFC107;
+    --add-to-cart: #246EB9;
+    --checkout-button: #A4453C;
 }
 
-main {
-    padding: 20px;
+body{
+    min-width: 480px;
+    border: 1px solid red;
 }
-
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.product {
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: white;
-    width: 200px;
-    text-align: center;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-}
-
-.cart-items {
-    margin-bottom: 20px;
-}
-
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-#checkout-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-#checkout-form input, #checkout-form textarea {
-    padding: 10px;
-    font-size: 16px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
