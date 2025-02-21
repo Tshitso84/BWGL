@@ -1,56 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BWGL</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section>
 
-    <header class="header">
-        <nav class="navbar">
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="assets/images/logo.png" loading="lazy">
+                </div>
 
-            <button class="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
 
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">Products</a>
-                <a href="services.html">Reviews</a>
-                <a href="contact.html">Blogs</a>
+                <div class="nav-btns">
+                    <div class="nav-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">Products</a>
+                        <a href="services.html">Reviews</a>
+                        <a href="services.html">Services</a>
+                        <a href="services.html">About Us</a>
+                        <!-- <a href="contact.html">Blogs</a> -->
+                    </div>
+
+                    <div class="ux-btns">
+                        <button><a href=""><i class="fa-solid fa-cart-shopping"></i></a></button>
+                        <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
+                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
+                    </div>
+                    <button class="hamburger" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+
+                </div>
+
+            </nav>
+        </header>
+        <div class="hero">
+            <!-- <div class="hero-content">
+                <h1>Discover</h1>
+                <P>a new eco way of cleaning</P>
+                <small>with Boni’s <span>Eco Detergents</span> no space is left dirty</small>
+
+            </div> -->
+        </div>
+
+        <section class="friendly-products">
+            <div class="friendly-products-title-content">
+                <div class="friendlyIcon">
+                    <img src="assets/images/SVG.png" alt="">
+                </div>
+                <div class="title">
+                    <h2>Eco Friendly Products</h2>
+                </div>
+                <div class="sub-title">
+                    <p>Our various products </p>
+                </div>
             </div>
-            <div class="nav-btns">
-            <div class="ux-btns">
-            <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
-            <button><a href=""><i class="fa-solid fa-cart-shopping"></i></a></button>
-            <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
-        </div>
-        <div class="logo">
-            <img src="assets/images/logo.png"  loading="lazy">
-        </div>
-    </div>
 
-        </nav>
-    </header>
-    <div class="hero">
-        <div class="hero-content">
-            <h1>B.W.G.L</h1>
-            <P>products and consultancy</P>
-        </div>
-    </div>
+            <div class="friendly-images">
+                <div class="friendly-img-cont">
+                    <img src="assets/images/Dishwasher.png" alt="">
+                </div>
+                <div class="friendly-img-cont">
+                    <img src="assets/images/Glass Cleaner.png" alt="">
+                </div>
+                <div class="friendly-img-cont">
+                    <img src="assets/images/Surfaca cleaner.png" alt="">
+                </div>
+            </div>
+        </section>
 
     </section>
 
 
-    
+
 
     <script src="main.js"></script>
 </body>
-</html>
 
+</html>
