@@ -306,8 +306,8 @@ section {
 .hero {
     width: 100%;
     height: 100dvh;
-    /* background-color: #04152769; */
-    background-color: #041527da;
+    background-color: #04152769;
+    /* background-color: #041527da; */
     /* overflow: hidden; */
     position: relative;
     align-content: center;
