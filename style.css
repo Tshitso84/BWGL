@@ -115,7 +115,7 @@ body {
 section {
     min-width: 480px;
     min-height: 1020px;
-    background-color: #041527e7;
+    /* background-color: #041527e7; */
     margin: 0 auto;
     color: var(--text-dark);
 }
@@ -128,7 +128,8 @@ section {
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: #041527dc;
+    /* background-color: #04152752; */
+    background-color: #2f4b6021;
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 5px #0415271c;
     /* box-shadow: 0px 11px 15px -10px rgba(0, 0, 0, 0.51);
@@ -330,7 +331,7 @@ section {
     content: '';
     position: absolute;
     background-image: url(assets/images/colorful-composition-with-sponges-rags-gloves-detergent-general-cleaning-cleaning-service-concept.jpg);
-    background-position: center;
+    background-position:bottom ;
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
@@ -366,6 +367,8 @@ section {
     padding: 0 1rem;
     text-align: center;
     padding-top: 2rem;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.21);
+
 
 }
 
@@ -376,7 +379,6 @@ section {
     letter-spacing: 0%;
     color: #D69389;
     text-transform: uppercase;
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.21);
 }
 
 .hero-cont-detail p {
@@ -470,6 +472,26 @@ section {
     -moz-box-shadow: -1px -17px 83px -12px rgba(4, 21, 39, 0.78);
     position: relative;
     z-index: 1;
+    background-color: #041527;
+    /* border-top-right-radius: 1000px;
+    border-top-left-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+    border-bottom-left-radius: 1000px; */
+}
+
+.friendly-products::before{
+    content: '';
+    position: absolute;
+    background-image: url(assets/images/miguel-lindo-CHPPChtZJAc-unsplash.jpg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center middle;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: .2;
 }
 
 
@@ -522,8 +544,7 @@ section {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    /* aspect-ratio: 6/4; */
-
+    aspect-ratio: 1;
 }
 
 .text-overlay {
@@ -535,9 +556,7 @@ section {
     display: grid;
     place-content: center;
     background-color: #041527b4;
-    /* backdrop-filter: blur(1px); */
     text-align: center;
-    /* color: var(--text-light); */
     border-radius: 20px;
     overflow: hidden;
     transition: .3s ease-in;
@@ -555,7 +574,6 @@ section {
 }
 
 .text-overlay p {
-    /* font-family: overlock; */
     line-height: 1.5;
     letter-spacing: 1px;
 }
@@ -569,17 +587,16 @@ section {
     grid-template-columns: repeat(auto-fit, 380px);
     gap: 2rem;
     max-width: 1280px;
-    /* border: 1px solid; */
     margin-bottom: 1rem;
     padding: 2rem;
     border-radius: 20px;
-
 
     img {
         width: 100%;
         height: auto;
         object-fit: cover;
         box-shadow: 0px 20px 50px #0415279d;
+        aspect-ratio: 1;
         /* box-shadow: 0px 23px 37px -5px rgba(0, 0, 0, 0.35);
         -webkit-box-shadow: 0px 23px 37px -5px rgba(0, 0, 0, 0.35);
         -moz-box-shadow: 0px 23px 37px -5px rgba(0, 0, 0, 0.35); */
@@ -660,6 +677,23 @@ section {
     color: #D69389;
     box-shadow: 0px 20px 50px #0415279d;
     gap: 2rem;
+    position: relative;
+
+}
+
+.overview::before{
+    content: '';
+    position: absolute;
+    background-image: url(assets/images/miguel-lindo-CHPPChtZJAc-unsplash.jpg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: .2;
 
 }
 
