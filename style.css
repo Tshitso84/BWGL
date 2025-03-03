@@ -128,13 +128,13 @@ section {
     left: 0;
     width: 100%;
     z-index: 100;
-    background-color: transparent;
+    background-color: #041527dc;
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 5px #0415271c;
     /* box-shadow: 0px 11px 15px -10px rgba(0, 0, 0, 0.51);
     -webkit-box-shadow: 0px 11px 15px -10px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: 0px 11px 15px -10px rgba(0, 0, 0, 0.51); */
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in;
 }
 
 .navbar {
