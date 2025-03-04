@@ -104,8 +104,7 @@ body {
 }
 
 .overlay-color {
-    background-image: linear-gradient( #041527a4, #041527);
-    z-index: 2;
+    background-image: linear-gradient(transparent, #051b33);
 }
 
 .overlay-color2 {
@@ -129,7 +128,7 @@ section {
     width: 100%;
     z-index: 100;
     /* background-color: #04152752; */
-    background-color: #041527;
+    background-color: #2f4b6021;
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 5px #0415271c;
     /* box-shadow: 0px 11px 15px -10px rgba(0, 0, 0, 0.51);
@@ -178,7 +177,7 @@ section {
 
 
 .ux-btns button i {
-    color: var(--text-light);
+    color: var(--primary-100);
     font-size: 24px;
     padding-inline: 5px;
     transition: all .3s ease;
@@ -250,7 +249,7 @@ section {
 .hamburger span {
     width: 27px;
     height: 2px;
-    background-color: var(--text-light);
+    background-color: var(--primary-100);
     transition: all 0.3s ease;
 }
 
@@ -307,7 +306,7 @@ section {
 .hero {
     width: 100%;
     height: 100dvh;
-    /* background-color: #04152738; */
+    background-color: #04152769;
     /* background-color: #041527da; */
     /* overflow: hidden; */
     position: relative;
@@ -330,8 +329,8 @@ section {
 .hero::before {
     content: '';
     position: absolute;
-    background-image: url(assets/images/frame-mock-up-with-cleaning-products.jpg);
-    background-position: center ;
+    background-image: url(assets/images/colorful-composition-with-sponges-rags-gloves-detergent-general-cleaning-cleaning-service-concept.jpg);
+    background-position:bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
@@ -342,18 +341,18 @@ section {
     height: 100%;
     overflow: hidden;
     z-index: -1;
-    opacity: .9;
+    opacity: .7;
     mix-blend-mode: multiply;
     background-attachment: fixed;
 
 }
 
-/* @media(max-width:480px){
+@media(max-width:480px){
     .hero::before{
         background-position:left -320px   bottom 90px;
     }
 }
- */
+
 
 
 .hero-content {
@@ -501,7 +500,6 @@ section {
     background-repeat: no-repeat;
     z-index: -1;
     opacity: .2;
-    /* mix-blend-mode: multiply; */
 }
 
 
