@@ -74,7 +74,7 @@ li {
 button {
     padding: 10px 15px;
     border: none;
-    font-size: 16px;
+    font-size:clamp(0.75rem, 1vw, 1rem);
     color: #041527;
     background-color: #fff;
     border-radius: 8.3rem;
@@ -84,7 +84,6 @@ button {
     transition: all .3s ease;
 }
 
-button:hover {}
 
 button:active {
     transform: translateY(-3PX);
@@ -399,6 +398,7 @@ section {
     span {
         font-family: overlock;
         font-style: italic;
+        color: #D69389;
     }
 }
 
@@ -428,7 +428,7 @@ section {
     box-shadow: 1px 20px 50px #041527;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    background-color: #CE7D72;
+    background-color: #D69389;
     padding-top: 60px;
     /* background-image: url(assets/images\/Board\ 1.png);
     background-size: cover;
@@ -515,8 +515,8 @@ section {
 }
 
 .friendlyIcon {
-    max-width: 70px;
-    max-height: 70px;
+    max-width: clamp(2rem, 3vw, 4rem);
+    max-height: clamp(2rem, 3vw, 4rem);
     /* border: 1px solid; */
     display: flex;
     align-content: center;
@@ -537,7 +537,7 @@ section {
     span {
         font-family: overlock;
         font-style: italic;
-        color: #ECBBB7;
+        color: #D69389;
 
     }
 }
@@ -591,8 +591,11 @@ section {
 }
 
 .friendly-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 380px);
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, 380px); */
+    display: flex;
+    overflow-x: auto;
+    padding: 1rem;
     gap: 2rem;
     max-width: 1280px;
     margin-bottom: 1rem;
@@ -613,11 +616,11 @@ section {
     }
 }
 
-@media(max-width:1275px){
+/* @media(max-width:1275px){
     .friendly-images{
         display: flex;
     }
-}
+} */
 
 
 @media(max-width:768px){
@@ -702,6 +705,11 @@ section {
     background-repeat: no-repeat;
     z-index: -1;
     opacity: .2;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
 
 }
 
@@ -724,7 +732,7 @@ section {
     span {
         font-family: overlock;
         font-style: italic;
-        color: #DEA9A1;
+        color: #D69389;
 
     }
 }
@@ -781,7 +789,7 @@ footer {
 
     h3 {
         font-family: overlock;
-        color: #ECBBB7;
+        color: #D69389;
         /* font-style: italic; */
 
     }
