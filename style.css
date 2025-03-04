@@ -178,14 +178,14 @@ section {
 
 
 .ux-btns button i {
-    color: var(--primary-500);
+    color: var(--primary-100);
     font-size: 24px;
     padding-inline: 5px;
     transition: all .3s ease;
 }
 
 .ux-btns button i:hover {
-    color: #fff;
+    color:var(--primary-500);
 }
 
 
@@ -250,7 +250,7 @@ section {
 .hamburger span {
     width: 27px;
     height: 2px;
-    background-color: var(--secondary-100);
+    background-color: var(--primary-100);
     transition: all 0.3s ease;
 }
 
@@ -331,7 +331,7 @@ section {
     content: '';
     position: absolute;
     background-image: url(assets/images/colorful-composition-with-sponges-rags-gloves-detergent-general-cleaning-cleaning-service-concept.jpg);
-    background-position:bottom ;
+    background-position:bottom center;
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
@@ -347,6 +347,14 @@ section {
     background-attachment: fixed;
 
 }
+
+@media(max-width:480px){
+    .hero::before{
+        background-position:left -320px   bottom 90px;
+    }
+}
+
+
 
 .hero-content {
     max-width: 1280px;
