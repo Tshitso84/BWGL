@@ -183,7 +183,7 @@ section {
 
 .ux-btns button i {
     color: var(--primary-700);
-    font-size:  clamp(1.6rem, 3vw, 1.9rem);
+    font-size: clamp(1.6rem, 3vw, 1.9rem);
     padding-inline: 5px;
     transition: all .3s ease;
 }
@@ -699,8 +699,8 @@ section {
     padding-inline: 2rem;
     max-width: 1280px;
     margin-inline: auto;
-    border-top-left-radius:  clamp(3rem, 5vw, 6.25rem);
-    border-bottom-right-radius:  clamp(3rem, 5vw, 6.25rem);
+    border-top-left-radius: clamp(3rem, 5vw, 6.25rem);
+    border-bottom-right-radius: clamp(3rem, 5vw, 6.25rem);
     border-top-right-radius: clamp(0.75rem, 1.5vw, 1.25rem);
     border-bottom-left-radius: clamp(0.75rem, 1.5vw, 1.25rem);
     color: #D69389;
@@ -769,9 +769,8 @@ section {
 footer {
     background-color: #041527;
     color: #fff;
-    padding-block: clamp(3rem, 5vw, 7rem);
+    padding-top: clamp(3rem, 5vw, 7rem);
     padding-inline: 2rem;
-    /* border: 1px solid; */
 }
 
 .footer-grid {
@@ -780,18 +779,30 @@ footer {
     margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* padding-bottom: 4rem; */
 }
 
 @media(max-width:768px) {
     .footer-grid {
         grid-template-columns: 1fr;
     }
+
 }
 
+
 .footer-col {
-    /* border: 1px solid; */
+    border-bottom: 1px solid #77777767;
     justify-content: center;
+    padding-block: 2rem;
 }
+
+/* @media screens and(max-width:768px) {
+    .footer-col {
+        border-bottom: none;
+    }
+
+}
+ */
 
 .footer-col-content {
     color: #777;
@@ -843,4 +854,21 @@ footer {
 .footer-btn:hover {
     color: #246EB9;
     background-color: #fff;
+}
+
+.main-footer {
+    max-width: 1280px;
+    font-size: .8rem;
+    color: #777;
+    /* border: 1px solid; */
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+
+    span a {
+        color: #777;
+        font-style: italic;
+    }
 }
