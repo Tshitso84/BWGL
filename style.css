@@ -714,7 +714,7 @@ section {
     background-color: #041527;
     backdrop-filter: blur(5px);
     padding-block: clamp(3rem, 5vw, 7rem);
-    padding-inline: 2rem;
+    padding-inline: clamp(1rem, 2vw, 2rem);
     max-width: 1280px;
     margin-inline: auto;
     border-top-left-radius: clamp(3rem, 5vw, 6.25rem);
@@ -779,7 +779,17 @@ section {
     font-size: clamp(1rem, 2vw, 1.5rem);
     color: #ccc;
     /* border: 1px solid #fff; */
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vw, 1rem);
 
+}
+
+.overview-subtitle p{
+    /* background-color: #112c4979; */
+    padding: .5rem;
+    border-radius: 20px;
+    /* text-align: center; */
 }
 
 /* FOOTER */
