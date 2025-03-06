@@ -350,16 +350,17 @@ section {
 
 }
  .heroImage{
-    width: 120px;
-    height: 120px;
+    width:  clamp(5.5rem, 5.5vw, 7.5rem);
+    height: clamp(5.5rem, 5.5vw, 7.5rem);
     border-radius: 50%;
     padding: .5rem;
-    background-color:#DEA9A1;
-    box-shadow: 10px 20px 50px #04152759;
+    background-color:#ECBBB7;
+    box-shadow: 10px 20px 50px #0415276b;
     margin-inline: auto;
     display: flex;
     align-content: center;
     justify-content: center;
+    border: 2px #041527 solid;
     img{
         width: 100%;
         height: 100%;
@@ -399,7 +400,7 @@ section {
     /* height: 100%; */
     padding: 0 1rem;
     text-align: center;
-    padding-top: 2rem;
+    padding-top: clamp(1rem, 2vw, 2rem);
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.21);
 
 
@@ -410,7 +411,7 @@ section {
     font-weight: 900;
     font-size: clamp(40px, 8vw, 115px);
     letter-spacing: 0%;
-    color: #D69389;
+    color: #ECBBB7;
     text-transform: uppercase;
 }
 
@@ -423,7 +424,7 @@ section {
     span {
         font-family: overlock;
         font-style: italic;
-        color: #D69389;
+        color: #ECBBB7;
     }
 }
 
@@ -437,7 +438,7 @@ section {
 }
 
 .hero-cont-detail span {
-    color: #D69389;
+    color: #ECBBB7;
     font-weight: 500;
 
 }
@@ -452,7 +453,7 @@ section {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     background-color: #D69389;
-    padding-top: 60px;
+    padding-top:  clamp(2rem, 4vw, 3.75rem);
 }
 
 .hero-cont-img img {
@@ -496,7 +497,7 @@ section {
     position: relative;
     z-index: 1;
     background-color: #041527;
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
 }
 
 .friendly-products::before {
@@ -520,8 +521,8 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    padding-bottom: 2rem;
+    padding: clamp(0.5rem, 1vw, 1rem);
+    padding-bottom: clamp(1rem, 2vw, 2rem);
     gap: 10px;
     text-align: center;
 }
@@ -557,10 +558,10 @@ section {
 .product-scroll {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
     width: 100%;
     max-width: 1300px;
-    padding: 20px;
+    padding: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
 .cardContainer {
@@ -597,7 +598,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
 .product-imageContainer img {
@@ -610,8 +611,8 @@ section {
 
 .product-detail {
     margin: 0;
-    padding-inline: 1.5rem;
-    padding-block: 1rem;
+    padding-inline:clamp(1rem, 2vw, 1.5rem);
+    padding-block: clamp(0.5rem, 1vw, 1rem);
     text-align: left;
     color: #ccc;
     line-height: 1.6;
@@ -687,7 +688,7 @@ section {
 .overview-container {
     max-width: 100%;
     padding-block: clamp(3rem, 5vw, 7rem);
-    padding-inline: 2rem;
+    padding-inline: clamp(1rem, 2vw, 2rem);
     /* background-color: #1c6880; */
     position: relative;
     z-index: 0;
@@ -768,7 +769,7 @@ section {
     span {
         font-family: overlock;
         font-style: italic;
-        color: #D69389;
+        color: #ECBBB7;
 
     }
 }
@@ -787,7 +788,11 @@ footer {
     background-color: #041527;
     color: #fff;
     padding-top: clamp(3rem, 5vw, 7rem);
-    padding-inline: 2rem;
+}
+
+.wrapper{
+    max-inline-size: 100%;
+    background-color: #061b31b6;
 }
 
 .footer-grid {
@@ -796,7 +801,9 @@ footer {
     margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* padding-bottom: 4rem; */
+    padding-bottom:clamp(1rem, 2vw, 2rem);
+    padding-inline: clamp(1rem, 2vw, 2rem);
+
 }
 
 @media(max-width:768px) {
@@ -808,9 +815,9 @@ footer {
 
 
 .footer-col {
-    border-bottom: 1px solid #77777767;
+    /* border-bottom: 1px solid #77777767; */
     justify-content: center;
-    padding-block: 2rem;
+    padding-block: clamp(1rem, 2vw, 2rem);
 }
 
 /* @media screens and(max-width:768px) {
@@ -836,7 +843,7 @@ footer {
 
     h3 {
         font-family: overlock;
-        color: #D69389;
+        color: #ECBBB7;
         /* font-style: italic; */
 
     }
@@ -874,7 +881,7 @@ footer {
 }
 
 .main-footer {
-    max-width: 1280px;
+    max-inline-size: 1280px;
     font-size: .8rem;
     color: #777;
     /* border: 1px solid; */
@@ -882,7 +889,9 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 2rem;
+    padding-block: clamp(1rem, 2vw, 2rem);
+    padding-inline: clamp(1rem, 2vw, 2rem);
+
 
     span a {
         color: #777;
