@@ -577,6 +577,8 @@ section {
     font-style: italic;
     margin-bottom: 1rem;
     font-family: overlock;
+    padding-inline:clamp(1rem, 2vw, 1.5rem);
+
 }
 
 .product-card {
