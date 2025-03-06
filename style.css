@@ -350,20 +350,21 @@ section {
 
 }
  .heroImage{
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    padding: 1rem;
-    background-color: #041527f8;
+    padding: .5rem;
+    background-color:#DEA9A1;
+    box-shadow: 10px 20px 50px #04152759;
     margin-inline: auto;
     display: flex;
     align-content: center;
     justify-content: center;
-    box-shadow: -1px 15px 53px 0px #041527 inset, 0px 13px 26px 14px #0415273b;
     img{
         width: 100%;
         height: 100%;
         object-fit:contain ;
+        mix-blend-mode: multiply;
     }
  }
 
