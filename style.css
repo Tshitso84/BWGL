@@ -624,9 +624,9 @@ section {
 }
 
 .friendly-btn button {
-    background-color: #ECBBB7;
-    color: #041527;
-    border: none;
+    background-color: #041527 ;
+    color:  #ECBBB7;
+    border: 1px solid #ecbbb77c;
     padding: 10px 20px;
     border-radius: 25px;
     font-size: clamp(0.8rem, 1vw, 1rem);
@@ -635,8 +635,9 @@ section {
 }
 
 .friendly-btn button:hover {
-    background-color: #f4d1cc;
+    background-color: #ECBBB7;
     transform: scale(1.05);
+    color: #041527;
 }
 
 /* Responsive adjustments */
