@@ -552,7 +552,7 @@ section {
 
 .sub-title p {
     font-size: clamp(1rem, 2vw, 1.5rem);
-    color: #fff;
+    color: #777;
 }
 
 .product-scroll {
@@ -686,186 +686,6 @@ section {
     }
 }
 
-/* STACKED CARDS */
-:root {
-	--card-height: 40vw;
-	--card-margin: 4vw;
-	--card-top-offset: 1em;
-	--numcards: 3;
-	--outline-width: 0px;
-}
-
-#cards {
-	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
-	margin-block: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
-
-}
-
-#card_1 {
-	--index: 1;
-}
-
-#card_2 {
-	--index: 2;
-}
-
-#card_3 {
-	--index: 3;
-}
-
-
-.card {
-	position: sticky;
-	top: 0;
-	padding-top: calc(var(--index) * var(--card-top-offset));
-    
-
-}
-
-@supports (animation-timeline: works) {
-
-	@scroll-timeline cards-element-scrolls-in-body {
-		source: selector(body);
-		scroll-offsets:
-			/* Start when the start edge touches the top of the scrollport */
-			selector(#cards) start 1,
-			/* End when the start edge touches the start of the scrollport */
-			selector(#cards) start 0
-		;
-		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
-		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
-		time-range: 4s;
-	}
-
-	.card {
-		--index0: calc(var(--index) - 1); /* 0-based index */
-		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-
-	}
-	
-	.card__content {
-		transform-origin: 50% 0%;
-		will-change: transform;
-
-		--duration: calc(var(--reverse-index0) * 1s);
-		--delay: calc(var(--index0) * 1s);
-
-		animation: var(--duration) linear scale var(--delay) forwards;
-		animation-timeline: cards-element-scrolls-in-body;
-	}
-
-	@keyframes scale {
-		to {
-			transform:
-				scale(calc(
-					1.1
-					-
-					calc(0.1 * var(--reverse-index))
-				));
-		}
-	}
-}
-
-
-
-main {
-	max-width: 800px;
-	margin-inline: auto;
-    padding-inline: 1rem;
-}
-
-
-#cards {
-	list-style: none;
-	outline: calc(var(--outline-width) * 10) solid blue;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(var(--numcards), var(--card-height));
-	gap: var(--card-margin);
-}
-
-.card {
-	outline: var(--outline-width) solid hotpink;
-}
-
-.card__content {
-	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-	background: var(--primary-100);
-	color: #fff;
-	border-radius: 1em;
-	overflow: hidden;
-
-	display: grid;
-	grid-template-areas: "text img";
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
-
-	align-items: stretch;
-	outline: var(--outline-width) solid lime;
-}
-
-.card__content > div {
-	grid-area: text;
-	width: 80%;
-	place-self: center;
-	text-align: left;
-
-	display: grid;
-	gap: 1em;
-	place-items: start;
-}
-
-.card__content > figure {
-	grid-area: img;
-	overflow: hidden;
-}
-
-.card__content > figure > img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-    aspect-ratio: 1;
-}
-
-h1 {
-	font-weight: 300;
-	font-size: 3.5em;
-}
-
-h2 {
-	font-weight: 700;
-	font-size: 2rem;
-    font-family: overlock;
-    color: #ECBBB7;
-}
-
-p {
-	font-family: sans-serif;
-	font-weight: 300;
-	line-height: 1.42;
-}
-
-.btn {
-	background:transparent;
-	color: rgb(255 255 255);
-	text-decoration: none;
-	display: inline-block;
-	padding: 10px 20px;
-	border-radius: 200px;
-    border: 1px solid #ccc;
-    font-size: clamp(0.8rem, 1vw, 1rem);;
-}
-
-aside {
-	width: 50vw;
-	margin: 0 auto;
-	text-align: left;
-}
-
-aside p {
-	margin-bottom: 1em;
-}
 /* END OF STACKED CARDS */
 
 /* OVERVIEW BANNER */
@@ -874,7 +694,6 @@ aside p {
     max-width: 100%;
     padding-block: clamp(3rem, 5vw, 7rem);
     padding-inline: clamp(1rem, 2vw, 2rem);
-    /* background-color: #1c6880; */
     position: relative;
     z-index: 0;
 }
@@ -1073,6 +892,21 @@ footer {
 .footer-btn:hover {
     color: #246EB9;
     background-color: #fff;
+}
+
+.footer-logo{
+    margin-block: 1rem;
+    border: 1px solid #fff;
+    width: clamp(40px, 5vw, 80px);
+    height: clamp(40px, 5vw, 80px);
+    display: flex;
+    border-radius: 50%;
+    padding: 6px;
+
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
 }
 
 .main-footer {
