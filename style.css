@@ -691,13 +691,14 @@ section {
 	--card-height: 40vw;
 	--card-margin: 4vw;
 	--card-top-offset: 1em;
-	--numcards: 4;
+	--numcards: 3;
 	--outline-width: 0px;
 }
 
 #cards {
 	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
-	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+	margin-block: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+
 }
 
 #card_1 {
@@ -712,14 +713,13 @@ section {
 	--index: 3;
 }
 
-#card_4 {
-	--index: 4;
-}
 
 .card {
 	position: sticky;
 	top: 0;
 	padding-top: calc(var(--index) * var(--card-top-offset));
+    
+
 }
 
 @supports (animation-timeline: works) {
@@ -741,6 +741,7 @@ section {
 		--index0: calc(var(--index) - 1); /* 0-based index */
 		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
 		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+
 	}
 	
 	.card__content {
@@ -778,7 +779,6 @@ main {
 #cards {
 	list-style: none;
 	outline: calc(var(--outline-width) * 10) solid blue;
-	
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(var(--numcards), var(--card-height));
@@ -791,8 +791,8 @@ main {
 
 .card__content {
 	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-	background: rgb(255, 255, 255);
-	color: rgb(10, 5, 7);
+	background: var(--primary-100);
+	color: #fff;
 	border-radius: 1em;
 	overflow: hidden;
 
@@ -837,6 +837,7 @@ h2 {
 	font-weight: 700;
 	font-size: 2rem;
     font-family: overlock;
+    color: #ECBBB7;
 }
 
 p {
@@ -846,12 +847,14 @@ p {
 }
 
 .btn {
-	background: rgb(188 87 36);
+	background:transparent;
 	color: rgb(255 255 255);
 	text-decoration: none;
 	display: inline-block;
-	padding: 0.5em;
-	border-radius: 0.25em;
+	padding: 10px 20px;
+	border-radius: 200px;
+    border: 1px solid #ccc;
+    font-size: clamp(0.8rem, 1vw, 1rem);;
 }
 
 aside {
