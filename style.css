@@ -648,6 +648,13 @@ section {
     color: #777;
 }
 
+.sub-title span{
+    font-style: italic;
+    font-family: overlock;
+    font-weight: 600;
+    color: #ECBBB7;
+}
+
 .product-scroll {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
