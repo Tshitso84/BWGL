@@ -149,7 +149,7 @@ section {
     border-top: 6px solid #fff;
     display: inline-block;
     vertical-align: middle;
-    /* margin-left: 1rem; */
+        margin-left: .8rem;
     transition: transform ease-in-out 0.3s;
   }
   .product-link {
