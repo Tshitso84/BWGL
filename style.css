@@ -1033,6 +1033,8 @@ footer {
     /* border-bottom: 1px solid #77777767; */
     justify-content: center;
     padding-block: clamp(1rem, 2vw, 2rem);
+    /* padding-inline:clamp(1rem, 2vw, 1.5rem); */
+
 }
 
 /* @media screens and(max-width:768px) {
