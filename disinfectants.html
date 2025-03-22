@@ -34,7 +34,6 @@
                     <img src="assets/images/logo.png" loading="lazy">
                 </div>
 
-
                 <div class="nav-btns">
                     <div class="nav-links">
                         <a href="index.html">Home</a>
@@ -59,58 +58,64 @@
                         <a href="services.html">Reviews</a>
                         <a href="services.html">Services</a>
                         <a href="services.html">About Us</a>
-                        <!-- <a href="contact.html">Blogs</a> -->
                     </div>
 
                     <div class="ux-btns">
-                        <button><a href=""><i class="fa-solid fa-cart-shopping"></i></a></button>
-                        <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
-                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
-                    </div>
-                    <button class="hamburger" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-
+                    <button><a href=""><i class="fa-solid fa-cart-shopping"></i></a></button>
+                    <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
+                    <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
                 </div>
-
+                </div>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </nav>
         </header>
+
+        <aside class="cart">
+            <div class="cart-title">
+                <h1>Your Cart</h1>
+                <!-- Close button will be added via JavaScript -->
+            </div>
+
+            <div class="cart-content">
+                <div class="cart-product-info">
+                    <div class="cart-product">
+                        <div class="cart-product-title">
+                            <h3>Detergent</h3>
+                        </div>
+
+                        <div class="cart-product-price">
+                            <p>R50.00</p>
+                        </div>
+
+                        <button class="cart-product-btn">Remove</button>
+                    </div>
+
+                    <div class="cart-product-arrows">
+                        <span><i class="fa-solid fa-arrow-up"></i>
+                            0
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="cart-checkout">
+                    <div class="subtotal">
+                        <h3 class="subtotal-title">Subtotal</h3>
+                        <p class="total">R50.00</p>
+                    </div>
+
+                    <div>
+                        <button class="cart-checkout-btn">Continue to checkout</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
         <section class="friendly-products">
 
-            <!-- <nav class="friendly-products-navbar">
-                <div class="logo">
-                    <img src="assets/images/logo.png" loading="lazy">
-                </div>
-
-
-                <div class="nav-btns">
-                    <div class="nav-links">
-                        <a href="index.html">Home</a>
-                        <a href="about.html">Products</a>
-                        <a href="services.html">Reviews</a>
-                        <a href="services.html">Services</a>
-                        <a href="services.html">About Us</a>
-                    </div>
-
-                    <div class="ux-btns">
-                        <button><a href=""><i class="fa-solid fa-cart-shopping"></i></a></button>
-                        <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
-                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
-                    </div>
-                    <button class="hamburger" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-
-
-                </div>
-
-            </nav>
- -->
 
             <div class="friendly-products-title-content">
                 <div class="friendlyIcon">
@@ -141,28 +146,19 @@
                             <p>Commonly used for general cleaning tasks and contain surfactants that help lift dirt and
                                 grime from surfaces</p>
                         </div>
-                        <div class="product-price">
-                            R50.00 </div>
                         <div class="product-actions">
+                            <div class="product-info">
+                            <div class="product-price">
+                                R50.00 </div>
+    
                             <div class="quantity-controls">
                                 <button class="quantity-btn minus">-</button>
                                 <div class="quantity-display">1</div>
                                 <button class="quantity-btn plus">+</button>
                             </div>
+                        </div>
                             <div class="button-container">
-                                <button class="add-to-cart-btn">
-                                    <svg class="cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-                                    </svg>
-                                    Add to Cart
-                                </button>
-                                <button class="remove-btn">
-                                    <svg class="trash-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
-                                    </svg>
-                                </button>
+                                <input class="add-to-cart-btn" value="ADD TO CART" data-loading-text="ADDING TO CART..."  aria-busy="false" aria-haspopup="dialog" type="submit" data-node-type="add-to-cart-button">              
                             </div>
                         </div>
 
@@ -184,28 +180,19 @@
                                 settings
                             </p>
                         </div>
-                        <div class="product-price">
-                            R50.00 </div>
                         <div class="product-actions">
+                            <div class="product-info">
+                            <div class="product-price">
+                                R50.00 </div>
+    
                             <div class="quantity-controls">
                                 <button class="quantity-btn minus">-</button>
                                 <div class="quantity-display">1</div>
                                 <button class="quantity-btn plus">+</button>
                             </div>
+                        </div>
                             <div class="button-container">
-                                <button class="add-to-cart-btn">
-                                    <svg class="cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-                                    </svg>
-                                    Add to Cart
-                                </button>
-                                <button class="remove-btn">
-                                    <svg class="trash-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
-                                    </svg>
-                                </button>
+                                <input class="add-to-cart-btn" value="ADD TO CART" data-loading-text="ADDING TO CART..."  aria-busy="false" aria-haspopup="dialog" type="submit" data-node-type="add-to-cart-button">              
                             </div>
                         </div>
 
@@ -227,28 +214,19 @@
                                 properties
                             </p>
                         </div>
-                        <div class="product-price">
-                            R50.00 </div>
                         <div class="product-actions">
+                            <div class="product-info">
+                            <div class="product-price">
+                                R50.00 </div>
+    
                             <div class="quantity-controls">
                                 <button class="quantity-btn minus">-</button>
                                 <div class="quantity-display">1</div>
                                 <button class="quantity-btn plus">+</button>
                             </div>
+                        </div>
                             <div class="button-container">
-                                <button class="add-to-cart-btn">
-                                    <svg class="cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-                                    </svg>
-                                    Add to Cart
-                                </button>
-                                <button class="remove-btn">
-                                    <svg class="trash-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
-                                    </svg>
-                                </button>
+                                <input class="add-to-cart-btn" value="ADD TO CART" data-loading-text="ADDING TO CART..."  aria-busy="false" aria-haspopup="dialog" type="submit" data-node-type="add-to-cart-button">              
                             </div>
                         </div>
 
@@ -270,28 +248,19 @@
                                 properties
                             </p>
                         </div>
-                        <div class="product-price">
-                            R50.00 </div>
                         <div class="product-actions">
+                            <div class="product-info">
+                            <div class="product-price">
+                                R50.00 </div>
+    
                             <div class="quantity-controls">
                                 <button class="quantity-btn minus">-</button>
                                 <div class="quantity-display">1</div>
                                 <button class="quantity-btn plus">+</button>
                             </div>
+                        </div>
                             <div class="button-container">
-                                <button class="add-to-cart-btn">
-                                    <svg class="cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-                                    </svg>
-                                    Add to Cart
-                                </button>
-                                <button class="remove-btn">
-                                    <svg class="trash-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
-                                    </svg>
-                                </button>
+                                <input class="add-to-cart-btn" value="ADD TO CART" data-loading-text="ADDING TO CART..."  aria-busy="false" aria-haspopup="dialog" type="submit" data-node-type="add-to-cart-button">              
                             </div>
                         </div>
 
@@ -313,28 +282,19 @@
                                 properties
                             </p>
                         </div>
-                        <div class="product-price">
-                            R50.00 </div>
                         <div class="product-actions">
+                            <div class="product-info">
+                            <div class="product-price">
+                                R50.00 </div>
+    
                             <div class="quantity-controls">
                                 <button class="quantity-btn minus">-</button>
                                 <div class="quantity-display">1</div>
                                 <button class="quantity-btn plus">+</button>
                             </div>
+                        </div>
                             <div class="button-container">
-                                <button class="add-to-cart-btn">
-                                    <svg class="cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-                                    </svg>
-                                    Add to Cart
-                                </button>
-                                <button class="remove-btn">
-                                    <svg class="trash-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
-                                    </svg>
-                                </button>
+                                <input class="add-to-cart-btn" value="ADD TO CART" data-loading-text="ADDING TO CART..."  aria-busy="false" aria-haspopup="dialog" type="submit" data-node-type="add-to-cart-button">              
                             </div>
                         </div>
 
@@ -356,39 +316,24 @@
                                 properties
                             </p>
                         </div>
-                        <div class="product-price">
-                            R50.00 </div>
                         <div class="product-actions">
+                            <div class="product-info">
+                            <div class="product-price">
+                                R50.00 </div>
+    
                             <div class="quantity-controls">
                                 <button class="quantity-btn minus">-</button>
                                 <div class="quantity-display">1</div>
                                 <button class="quantity-btn plus">+</button>
                             </div>
+                        </div>
                             <div class="button-container">
-                                <button class="add-to-cart-btn">
-                                    <svg class="cart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
-                                    </svg>
-                                    Add to Cart
-                                </button>
-                                <button class="remove-btn">
-                                    <svg class="trash-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
-                                    </svg>
-                                </button>
+                                <input class="add-to-cart-btn" value="ADD TO CART" data-loading-text="ADDING TO CART..."  aria-busy="false" aria-haspopup="dialog" type="submit" data-node-type="add-to-cart-button">              
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- <div>
-                    <h1>Stacking Cards</h1>
-                    <p>👇 Scroll down to see the effect.</p>
-                </div> -->
-
 
         </section>
 
