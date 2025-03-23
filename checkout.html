@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWGL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/images/logo.png" loading="lazy">
+            </div>
+        <div class="nav-btns">
+                <button>
+                    <i class="fa-solid fa-shopping-cart"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current">Checkout</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="checkout-section">
+        <div class="container">
+            <h2 class="checkout-title">Checkout</h2>
+            
+            <div class="checkout-container">
+                <div class="checkout-form">
+                    <div class="form-section">
+                        <h3>Shipping Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="postalCode">Postal Code</label>
+                                <input type="text" id="postalCode" name="postalCode" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="AU">Australia</option>
+                                <option value="ZA">South Africa</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Payment Method</h3>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="nameOnCard">Name on Card</label>
+                            <input type="text" id="nameOnCard" name="nameOnCard" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div class="cart-items" id="checkout-cart-items">
+                        <!-- Cart items will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="order-totals">
+                        <div class="order-row">
+                            <span>Subtotal</span>
+                            <span id="checkout-subtotal">R0.00</span>
+                        </div>
+                        <div class="order-row">
+                            <span>Shipping</span>
+                            <span id="checkout-shipping">R50.00</span>
+                        </div>
+                        <div class="order-row">
+                            <span>Tax (15.5%)</span>
+                            <span id="checkout-tax">R0.00</span>
+                        </div>
+                        <div class="order-row order-total">
+                            <span>Total</span>
+                            <span id="checkout-total">R0.00</span>
+                        </div>
+                    </div>
+                    
+                    <button class="checkout-btn" id="place-order-btn" data-loading-text="Processing...">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart sidebar -->
+    <div class="cart">
+        <div class="cart-title">
+            <h2>Your Cart</h2>
+            <!-- Close button will be added by JS -->
+        </div>
+        <div class="cart-content">
+            <!-- Cart items will be added by JS -->
+            <div class="cart-checkout">
+                <div class="subtotal">
+                    <span>Subtotal:</span>
+                    <span class="total">R0.00</span>
+                </div>
+                <button class="cart-checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cart overlay -->
+    <div class="cart-overlay"></div>
+    
+    <script src="main.js"></script>
+</body>
+
+</html>
