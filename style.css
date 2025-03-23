@@ -1767,7 +1767,8 @@ header {
 .breadcrumb {
     margin-bottom: 20px;
     padding: 10px 0;
-    background-color: var(--primary-700);
+    background-color: #ecbbb70a;
+    backdrop-filter: blur(15px);
     border-radius: 0 0 25px 25px ;
 }
 
@@ -1791,9 +1792,9 @@ header {
 
 .breadcrumb a {
     text-decoration: none;
-    color: var(--primary-color);
 }
 
 .breadcrumb .current {
     font-weight: bold;
+    color: var(--primary-700);
 }
