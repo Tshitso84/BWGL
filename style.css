@@ -1492,7 +1492,7 @@ footer {
     font-family: 'Arial', sans-serif;
 }
 
-body {
+#checkoutBody {
     color: var(--text-color);
     background-color: #041527;
     line-height: 1.6;
