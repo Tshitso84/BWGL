@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (cartItems.length === 0) {
             const emptyMessage = document.createElement('p');
-            emptyMessage.textContent = 'Your cart is empty. Please add items before checkout.';
+            emptyMessage.textContent = 'Your cart is empty😢 Please add items before checkout.';
             checkoutCartItems.appendChild(emptyMessage);
             
             // Disable checkout button
@@ -624,7 +624,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.removeItem('cartItems');
             
             // Show success message and redirect
-            alert('Order placed successfully! Thank you for your purchase.');
+            alert('Order placed successfully🎉🎊😍! Thank you for your purchase🙌');
             
             // Reset button state
             orderBtn.setAttribute('aria-busy', 'false');
