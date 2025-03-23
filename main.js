@@ -522,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (cartItems.length === 0) {
             const emptyMessage = document.createElement('p');
-            emptyMessage.textContent = 'Your cart is empty😢 Please add items before checkout.';
+            emptyMessage.textContent = 'Your cart is empty😢 Please add items before checkout 👇';
             checkoutCartItems.appendChild(emptyMessage);
             
             // Disable checkout button
