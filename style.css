@@ -1107,8 +1107,8 @@ footer {
 .footer-btn {
     /* width: 100%; */
     cursor: pointer;
-    background-color: #2E6DBE;
-    color: #fff;
+    background-color: var(--primary-700);
+    color: var(--primary-100);
 }
 
 .footer-btn:hover {
