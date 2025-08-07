@@ -659,3 +659,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize checkout page
     populateCheckoutItems();
 });
+
+// CHECK OUT NAV
+
+function nextStep(currentStep, nextStep) {
+    // Hide current form
+    document.getElementById(`${currentStep}-form`).classList.remove('active');
+    
+    // Show next form
+    document.getElementById(`${nextStep}-form`).classList.add('active');
+    
+    // Update breadcrumb
+    document.getElementById(`${currentStep}-step`).classList.remove('active');
+    document.getElementById(`${nextStep}-step`).classList.add('active');
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+}
