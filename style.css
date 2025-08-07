@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: inter;
-    text-wrap: balance;
+    /* text-wrap: balance; */
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 :root {
@@ -128,6 +130,7 @@ section {
     width: 100%;
     z-index: 100;
     background-color: #2f4b6021;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 5px #0415271c;
     transition: transform 0.3s ease-in;
@@ -163,6 +166,7 @@ section {
     padding: 0px 10px;
     text-align: left;
     height: 0px;
+    min-width: -webkit-fill-available;
     min-width: fit-content;
     overflow: hidden;
     cursor: pointer;
@@ -171,7 +175,7 @@ section {
     background-color: #041527;
     transition-duration: 0.2s, 0.4s;
     transition-property: all, background-color;
-    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .dropdown11 li a {
