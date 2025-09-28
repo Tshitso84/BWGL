@@ -31,7 +31,9 @@
         <header class="header">
             <nav class="navbar">
                 <div class="logo">
-                    <img src="assets/images/logo.png" loading="lazy">
+                    <a href="index.html">
+                    <img src="assets/images/logo.png" alt="BWGL Group Company Logo" loading="lazy">
+                    </a>
                 </div>
 
                 <div class="nav-btns">
@@ -56,13 +58,16 @@
                         </div>
 
                         <!-- <a href="services.html">Reviews</a>
-                       <!-- <a href="services.html">Reviews</a>
+                        <a href="services.html">Reviews</a>
                         <a href="services.html">Services</a> -->
                         <!-- <a href="checkout.html">Checkout</a>-->
                     </div>
 
                     <div class="ux-btns">
-                        <button><a href=""><i class="fa-solid fa-cart-shopping"></i></a></button>
+                        <button title="View Cart" aria-label="View Cart">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                            <span class="sr-only">View Cart</span>
+                        </button>
                        <!-- <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
                         <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>-->
                     </div>
@@ -352,7 +357,9 @@
                             <li> info@bwglgroup.co.za </li>
                         </ul>
                         <div class="footer-logo">
-                            <img src="assets/images/logo.png" alt="">
+                            <a href="index.html">
+                            <img src="assets/images/logo.png" alt="BWGL Group company logo" loading="lazy">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -377,9 +384,9 @@
                     </div>
                     <div class="footer-inputs">
                         <label for="">Name</label>
-                        <input type="text" name="name" required>
+                        <input type="text" name="name" required placeholder="Enter your name" title="Name">
                         <label for="">Email</label>
-                        <input type="email" name="email" required>
+                        <input type="email" name="email" required placeholder="Enter your email" title="Email">
                         <a href=""><button class="footer-btn">Subscribe</button></a>
                     </div>
                 </div>
