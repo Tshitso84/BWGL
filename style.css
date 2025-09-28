@@ -167,7 +167,7 @@ section {
     text-align: left;
     height: 0px;
     min-width: -webkit-fill-available;
-    min-width: fit-content;
+    /*min-width: fit-content;*/
     overflow: hidden;
     cursor: pointer;
     opacity: 0;
@@ -941,6 +941,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background-color: #041527;
+    -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     padding-block: clamp(3rem, 5vw, 7rem);
     padding-inline: clamp(1rem, 2vw, 2rem);
@@ -1276,6 +1277,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding-block: 1rem;
+    -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     box-shadow: 0px 4px 5px #0415271c;
 
@@ -1515,6 +1517,7 @@ footer {
 header {
     background-color: #04152710;
     color: white;
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(0.9375rem); /* 15px */
     padding: 0.5rem;
     position: sticky;
@@ -1557,6 +1560,7 @@ header {
     padding: 10px;
     background-color: rgba(236, 187, 183, 0.05);
     border-radius: 0 0 25px 25px;
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
 }
 
@@ -1803,6 +1807,7 @@ header {
     margin-bottom: 0.9375rem; /* 15px */
     padding: 0.5rem 0.625rem; /* 8px 10px */
     background-color: #ecbbb70a;
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(0.9375rem); /* 15px */
     border-radius: 0 0 1.5625rem 1.5625rem; /* 25px */
     overflow-x: auto;
