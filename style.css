@@ -697,6 +697,7 @@ section {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    border-bottom: 1px solid #555;
 }
 
 .product-card:hover {

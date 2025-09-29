@@ -27,13 +27,176 @@
 </head>
 
 <body>
+
+    <style>
+        .about-banner {
+            background: #041527;
+            color: white;
+            height: 300px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+        }
+
+        .about-banner h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: 'Overlock', cursive;
+            letter-spacing: 2px;
+            /* border: 2px solid #ECBBB7; */
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            /*             
+            background-color: #112C49; */
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+            animation: fadeIn 2s ease-in-out;
+            color: #ECBBB7;
+
+        }
+
+        .about-section {
+            background-color: #041527;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-block: clamp(3rem, 5vw, 7rem);
+            gap: 20px;
+            min-width: 100%;
+            min-height: 100vh;
+            margin: auto;
+            color: white;
+
+
+        }
+
+        .about-img {
+            flex: 1 1 300px;
+            max-width: 1200px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 20px;
+            border: 5px solid #ECBBB7;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content {
+            flex: 1 2 400px;
+        }
+
+        .about-content-container {
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid #555; */
+            gap: 2rem;
+        }
+
+        .content-split {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            /* border: 1px solid #555; */
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ECBBB7;
+            border-bottom: 2px solid #555;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-family: 'Overlock', cursive;
+
+
+        }
+
+        strong {
+            color: #ECBBB7;
+            font-weight: 600;
+            font-family: 'Overlock', cursive;
+
+        }
+
+        .about-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+
+        }
+
+        .about-content ul {
+            list-style-type: disc;
+            /* padding-left: 20px;*/
+
+        }
+
+        .contact-tag {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 600px;
+            text-align: center;
+            border: 1px solid #555;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background-color: #112C49;
+            padding: 10px 20px;
+            border-radius: 10px;
+
+            p {
+                margin-top: 10px;
+                /* color: #ECBBB7; */
+            }
+
+            h2 {
+                color: #ECBBB7;
+                font-family: 'Overlock', cursive;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .about-content ul li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-img,
+            .about-content {
+                max-width: 100%;
+                flex: none;
+            }
+        }
+    </style>
     <section>
 
         <header class="header">
             <nav class="navbar">
                 <div class="logo">
                     <a href="index.html">
-                    <img src="assets/images/logo.png" alt="BWGL Group company Logo" loading="lazy">
+                        <img src="assets/images/logo.png" alt="BWGL Group company Logo" loading="lazy">
                     </a>
                 </div>
 
@@ -60,14 +223,14 @@
 
                         <a href="about.html">About Us</a>
                         <!-- <a href="services.html">Services</a> -->
-                       <!-- <a href="checkout.html">Checkout</a>-->
+                        <!-- <a href="checkout.html">Checkout</a>-->
                     </div>
 
                     <div class="ux-btns">
                         <button type="button" title="View Cart" aria-label="View Cart">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </button>
-                       <!-- <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
+                        <!-- <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
                         <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>-->
                     </div>
                 </div>
@@ -78,7 +241,7 @@
                 </button>
             </nav>
         </header>
-        
+
 
         <aside class="cart">
             <div class="cart-title">
@@ -120,120 +283,111 @@
                 </div>
             </div>
         </aside>
-        <div class="hero overlay-color2">
-            <div class="hero-content">
-                <div class="hero-cont-detail">
-                    <h1>Clean Smarter</h1>
-                    <P>switch to <span>Boni's</span> eco friendly</P>
-                    <small>with Boni’s <span>Eco Detergents</span> no space is left dirty</small>
-                </div>
-
-                <div class="heroImage">
-                    <img src="assets/images/coe-badge-2021.png" alt="">
-                </div>
-
-                <div class="friendly-btn">
-                    <a href=""><button>Shop Now</button></a>
-                </div>
-            </div>
-        </div>
-
-        <section class="friendly-products">
-
-            <div id="products" class="friendly-products-title-content">
-                <div class="friendlyIcon">
-                    <img src="assets/images/SVG.png" alt="">
-                </div>
-                <div class="title">
-                    <h2>Eco <span>Friendly</span> Products</h2>
-                </div>
-                <div class="sub-title">
-                    <p>Our Various Products </p>
-                </div>
-            </div>
 
 
-            <div class="product-scroll">
-                <div class="cardContainer">
-                    <div class="product-title">
-                        <h3>Detergents</h3>
+        <main>
+            <section class=" about-section">
+                <div id="products" class="friendly-products-title-content">
+                    <div class="friendlyIcon">
+                        <img src="assets/images/SVG.png" alt="flower icon" loading="lazy">
                     </div>
-
-                    <div class="product-card">
-
-                        <div class="product-imageContainer">
-                            <img src="assets/images/Dishwasher.png" alt="" loading="lazy" width="200">
-                        </div>
-                        <div class="product-detail">
-                            <p>Commonly used for general cleaning tasks and contain surfactants that help lift dirt and
-                                grime from surfaces</p>
-                        </div>
-                        <div class="friendly-btn">
-                            <a href="detergents.html"><button>Shop Now</button></a>
-                        </div>
-
+                    <div class="title">
+                        <h2>About <span>Our</span> Company</h2>
+                    </div>
+                    <div class="sub-title">
+                        <p></p>
                     </div>
                 </div>
-                <div class="cardContainer">
-                    <div class="product-title">
-                        <h3>Degreaser</h3>
+                <div class="about-content-container">
+                    <div class="content-split">
+                        <div class="about-img">
+                            <img src="assets/images/about.jpg" alt="About BWGL Group" loading="lazy">
+                        </div>
+
+                        <div class="about-content">
+                            <h2>Who We Are</h2>
+                            <p>BWGL Group is a leading manufacturer and supplier of high-quality cleaning products,
+                                including
+                                detergents, degreasers, and disinfectants. With a commitment to excellence and customer
+                                satisfaction, we strive to provide effective and reliable cleaning solutions for various
+                                industries and households.</p>
+                        </div>
                     </div>
 
-                    <div class="product-card">
+                    <div class="friendlyIcon">
+                        <img src="assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
 
-                        <div class="product-imageContainer">
-                            <img src="assets/images/Glass Cleaner.png" alt="" loading="lazy" width="200">
+                    <div class="content-split">
+
+                        <div class="about-content">
+
+                            <h2>Our Mission</h2>
+                            <p>At BWGL Group, our mission is to deliver superior cleaning products that meet the highest
+                                standards of quality and performance. We are dedicated to innovation, sustainability,
+                                and
+                                customer-centricity, ensuring that our products not only clean effectively but also
+                                contribute
+                                to a healthier environment.</p>
+
                         </div>
-                        <div class="product-detail">
-                            <p>Formulated to tackle tough grease and oil stains, ideal for kitchen and industrial
-                                settings
+                        <div class="about-img">
+                            <img src="assets/images/cleaning.jpg" alt="About BWGL Group" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="friendlyIcon">
+                        <img src="assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
+
+                    <div class="content-split">
+                        <div class="about-img">
+                            <img src="assets/images/featured_bg.jpg" alt="About BWGL Group" loading="lazy">
+                        </div>
+
+                        <div class="about-content">
+                            <h2>Our Values</h2>
+                            <ul>
+                                <li><strong>Quality:</strong> We prioritize quality in every aspect of our products,
+                                    from
+                                    raw
+                                    materials to manufacturing processes.</li>
+                                <li><strong>Innovation:</strong> We continuously invest in research and development to
+                                    create
+                                    cutting-edge cleaning solutions.</li>
+                                <li><strong>Sustainability:</strong> We are committed to environmentally friendly
+                                    practices
+                                    and
+                                    products that minimize our ecological footprint.</li>
+                                <li><strong>Customer Satisfaction:</strong> Our customers are at the heart of everything
+                                    we
+                                    do,
+                                    and we strive to exceed their expectations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="friendlyIcon">
+                        <img src="assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
+
+
+                    <div class="content-split">
+                        <div class="contact-tag">
+                            <h2>Contact Us</h2>
+                            <p>If you have any questions or inquiries about our products or services, please feel free
+                                to
+                                reach
+                                out to us. We value your feedback and look forward to assisting you with your cleaning
+                                needs.
                             </p>
                         </div>
-                        <div class="friendly-btn">
-                            <a href="degreasers.html"><button>Shop Now</button></a>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="cardContainer">
-                    <div class="product-title">
-                        <h3>Disinfectants</h3>
-                    </div>
-
-                    <div class="product-card">
-
-                        <div class="product-imageContainer">
-                            <img src="assets/images/Surfaca cleaner.png" alt="" loading="lazy" width="200">
-                        </div>
-                        <div class="product-detail">
-                            <p> Designed to reduce environmental impact while maintaining effective antimicrobial
-                                properties
-                            </p>
-                        </div>
-                        <div class="friendly-btn">
-                            <a href="disinfectants.html"><button>Shop Now</button></a>
-                        </div>
-
                     </div>
                 </div>
-            </div>
 
-        </section>
-        <div class="overview-container overlay-color2">
-            <div class="overview">
-                <div class="overview-title">
-                    <h2>Eco Friendly <span>Sustainability</span> for Your Business</h2>
-                </div>
 
-                <div class="overview-subtitle">
-                    <p>We are a one-stop group with a focus on providing custom made solutions to your needs.</p>
-                    <p>We
-                        specialise in cleaning services, distribution of hygiene products (toilet paper distribution)
-                        and cleaning products.</p>
-                </div>
-            </div>
-        </div>
+            </section>
+        </main>
+
 
         <footer>
             <div class="footer-grid">
