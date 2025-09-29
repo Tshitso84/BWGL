@@ -676,3 +676,14 @@ function nextStep(currentStep, nextStep) {
     // Scroll to top
     window.scrollTo(0, 0);
 }
+
+
+ // Wishlist toggle
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.classList.toggle('active');
+            });
+        });
+
+
+        
