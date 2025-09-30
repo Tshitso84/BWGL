@@ -191,10 +191,17 @@
 }
 
 
-        @keyframes borderGlow {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
+@keyframes borderGlow {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
 
 a {
     text-decoration: none;
@@ -215,7 +222,7 @@ button {
     border-radius: 8.3rem;
     font-weight: 600;
     text-transform: uppercase;
-    font-family: overlock;
+    font-family: overlock ,julius sans one;
     transition: all .3s ease;
 }
 
@@ -274,6 +281,7 @@ section {
 .dropdown11 {
     font-family: "Inter", sans-serif;
     position: relative;
+    
 
 }
 
@@ -296,6 +304,9 @@ section {
     position: absolute;
     display: block;
     list-style: none;
+    /* box-shadow: 0px 9px 22px -8px rgba(0,0,0,0.72);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
 }
 
 .dropdown11 li {
@@ -317,7 +328,7 @@ section {
     /* box-shadow: 0px 40px 40px var(--primary-100); */
     -webkit-box-shadow: 0px 20px 34px -12px rgba(0, 0, 0, 0.47);
     -moz-box-shadow: 0px 20px 34px -12px rgba(116, 116, 116, 0.47);
-    box-shadow: 0px 20px 34px -12px rgba(36, 36, 36, 0.47);
+    box-shadow: 0px 9px 22px -8px rgba(0,0,0,0.72);
 }
 
 .dropdown11 li a {
@@ -342,6 +353,7 @@ section {
 
 .dropdown11-links li:nth-child(1) {
     transition-delay: 0s, 0s;
+    border-radius: 10px 10px 0px 0px ;
 }
 
 .dropdown11-links li:nth-child(2) {
@@ -459,9 +471,8 @@ section {
     align-items: center;
     gap: 2rem;
     padding: clamp(0.5rem, 1vw, 1rem);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-
+    border-radius: 10px 10px 20px 20px ;
+    box-shadow: 0px 9px 22px -8px rgba(0, 0, 0, 0.589);
     /* background-color: #04152738; */
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
@@ -657,7 +668,7 @@ section {
 }
 
 .hero-cont-detail h1 {
-    font-family: overlock;
+    font-family: overlock, julius sans one;
     font-weight: 900;
     font-size: clamp(40px, 8vw, 115px);
     letter-spacing: 0%;
@@ -676,7 +687,7 @@ section {
 
 
     span {
-        font-family: overlock;
+        font-family: overlock, julius sans one;
         font-style: italic;
         color: #ECBBB7;
         animation: shimmer 2s infinite;
@@ -688,9 +699,9 @@ section {
     letter-spacing: 0%;
     display: block;
     color: #fff;
-    font-family: poppins;
+    font-family: poppins, inter;
     font-weight: 200;
-    
+
     animation: fadeInDown 1s ease-out;
 }
 
@@ -698,7 +709,7 @@ section {
     color: #ECBBB7;
     font-weight: 500;
     animation: shimmer 2s infinite;
-    
+
 
 }
 
@@ -782,7 +793,7 @@ section {
     z-index: 1;
     background-color: #041527;
     gap: clamp(1rem, 2vw, 2rem);
-    
+
 }
 
 /* .friendly-products::before {
@@ -834,7 +845,7 @@ section {
 .title h2 span {
     color: #ECBBB7;
     position: relative;
-    font-family: overlock;
+    font-family: overlock,julius sans one;
 }
 
 
@@ -856,7 +867,7 @@ section {
 
 .sub-title span {
     font-style: italic;
-    font-family: overlock;
+    font-family: overlock, julius sans one;
     font-weight: 600;
     color: #ECBBB7;
     animation: shimmer 2s infinite;
@@ -965,7 +976,7 @@ section {
 
 .product-card:hover .product-imageContainer img {
     transform: scale(1.1) rotate(2deg);
-    
+
 }
 
 .product-content {
@@ -981,14 +992,14 @@ section {
     color: #f9f9f9;
     font-style: italic;
     margin-bottom: 0.75rem;
-    font-family: 'Overlock', cursive;
+    font-family: 'Overlock', julius sans one;
 }
 
 .product-detail {
     color: #bbb;
     line-height: 1.6;
     font-size: clamp(0.875rem, 1.5vw, 0.95rem);
-    margin-bottom: 1.25rem;
+    margin-block: 1rem;
     flex: 1;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -996,7 +1007,7 @@ section {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-  
+
 }
 
 .product-meta {
@@ -1115,7 +1126,7 @@ section {
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-   
+
     overflow: hidden;
 }
 
@@ -1141,8 +1152,8 @@ section {
     background: linear-gradient(135deg, #1557b0 0%, var(--add-to-cart) 100%);
     /* box-shadow: 0 6px 20px rgba(30, 124, 232, 0.4); */
     transform: translateY(-2px);
-     box-shadow: 0px 9px 22px -8px rgba(0,0,0,0.72);
-     transform: scale(1.02);
+    box-shadow: 0px 9px 22px -8px rgba(0, 0, 0, 0.72);
+    transform: scale(1.02);
     position: relative;
 }
 
@@ -1159,10 +1170,11 @@ section {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
@@ -1303,7 +1315,7 @@ section {
     background-color: #ECBBB7;
     transform: scale(1.05);
     color: #041527;
-    box-shadow: 0px 9px 22px -8px rgba(0,0,0,0.72);
+    box-shadow: 0px 9px 22px -8px rgba(0, 0, 0, 0.72);
 }
 
 /* Responsive adjustments */
@@ -1437,7 +1449,7 @@ section {
     }
 
     span {
-        font-family: overlock;
+        font-family: overlock, julius sans one;
         font-style: italic;
         color: #ECBBB7;
         animation: shimmer 2s infinite;
@@ -1527,7 +1539,7 @@ footer {
     margin-bottom: 1rem;
 
     h3 {
-        font-family: overlock;
+        font-family: overlock, julius sans one;
         color: #ECBBB7;
         /* font-style: italic; */
 
@@ -1750,7 +1762,7 @@ footer {
     margin: 0;
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-family: 'overlock', sans-serif;
+    font-family: 'overlock', julius sans one;
     color: #ECBBB7;
 }
 
@@ -2069,7 +2081,7 @@ header {
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
     text-transform: uppercase;
-    font-family: 'overlock', sans-serif;
+    font-family: 'overlock', julius sans one;
     font-size: 1.5rem;
 }
 
