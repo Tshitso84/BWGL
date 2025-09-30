@@ -29,168 +29,253 @@
 <body>
 
     <style>
-        .about-banner {
-            background: #041527;
-            color: white;
-            height: 300px;
-            /* border: 1px solid red; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-
-        }
-
-        .about-banner h1 {
-            font-size: 3rem;
-            font-weight: bold;
+      
+       .about-banner h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
             text-transform: uppercase;
-            font-family: 'Overlock', cursive;
-            letter-spacing: 2px;
-            /* border: 2px solid #ECBBB7; */
-            padding: 10px 20px;
+            letter-spacing: 3px;
+            padding: 20px 40px;
             text-align: center;
-            border-radius: 10px;
-            /*             
-            background-color: #112C49; */
-            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
-            animation: fadeIn 2s ease-in-out;
+            border-radius: 15px;
             color: #ECBBB7;
-
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 1s ease-out;
+            text-shadow: 0 0 20px rgba(236, 187, 183, 0.3);
         }
 
+
+        /* Main About Section */
         .about-section {
-            background-color: #041527;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding-block: clamp(3rem, 5vw, 7rem);
-            gap: 20px;
-            min-width: 100%;
+            background: linear-gradient(180deg, #041527 0%, #0a2540 50%, #041527 100%);
+            padding-inline:20px;
+            padding-top: 160px;
+            padding-bottom: 40px;
             min-height: 100vh;
-            margin: auto;
-            color: white;
-
-
+            min-height: 100dvh;
         }
 
+        /* Title Content */
+        .friendly-products-title-content {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+
+
+        /* Image Container */
         .about-img {
-            flex: 1 1 300px;
-            max-width: 1200px;
+            flex: 1 1 450px;
+            max-width: 500px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
+
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ECBBB7, #f5d6d3, #ECBBB7);
+            border-radius: 20px;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
 
         .about-img img {
             width: 100%;
-            border-radius: 20px;
-            border: 5px solid #ECBBB7;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 18px;
+            transition: transform 0.5s ease;
         }
 
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Content Text */
         .about-content {
-            flex: 1 2 400px;
-            /* padding-inline: 16px; */
+            flex: 1 1 450px;
+            max-width: 550px;
+            color: white;
         }
 
+        /* Content Container */
         .about-content-container {
             max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            /* border: 1px solid #555; */
-            gap: 2rem;
+            margin: 0 auto;
         }
 
+        /* Content Split */
         .content-split {
             display: flex;
-            flex-direction: row;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 60px;
+            margin-bottom: 80px;
             flex-wrap: wrap;
-            border-bottom: 1px solid #555;
-            padding-inline: 16px;
-            padding-block: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s ease-out forwards;
         }
 
+
+        .content-split:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .content-split:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .content-split:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .content-split:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+
         .about-content h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 20px;
             color: #ECBBB7;
-            border-bottom: 2px solid #555;
-            padding-bottom: 5px;
-            margin-top: 20px;
+            position: relative;
+            padding-bottom: 15px;
             text-transform: uppercase;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 1px;
-            font-family: 'Overlock', cursive;
+            font-family: overlock;
+        }
 
-
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ECBBB7, transparent);
+            animation: expandWidth 2s ease-in-out infinite;
         }
 
         strong {
             color: #ECBBB7;
             font-weight: 600;
-            font-family: 'Overlock', cursive;
-
+            font-family: Overlock, cursive;
         }
 
         .about-content p {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            animation: fadeInText 1s ease-out 0.5s both;
         }
 
         .about-content ul {
-            list-style-type: disc;
-            /* padding-left: 20px;*/
-
+            list-style: none;
+            padding: 0;
         }
 
-        .contact-tag {
-            font-size: 1rem;
-            line-height: 1.6;
+          .about-content ul li {
             margin-bottom: 20px;
-            max-width: 600px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            animation: fadeInText 1s ease-out both;
+        }
+
+        
+        .about-content ul li:nth-child(1) { animation-delay: 0.6s; }
+        .about-content ul li:nth-child(2) { animation-delay: 0.7s; }
+        .about-content ul li:nth-child(3) { animation-delay: 0.8s; }
+        .about-content ul li:nth-child(4) { animation-delay: 0.9s; }
+
+          .about-content ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #ECBBB7;
+            font-size: 1.2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+          /* Divider Icons */
+        .about-content-container > .friendlyIcon {
             text-align: center;
-            border: 1px solid #555;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            background-color: #112C49;
-            padding: 10px 20px;
-            border-radius: 10px;
+            margin: 40px 0;
+        }
 
-            p {
-                margin-top: 10px;
-                /* color: #ECBBB7; */
-            }
 
-            h2 {
-                color: #ECBBB7;
-                font-family: 'Overlock', cursive;
-                text-transform: uppercase;
-            }
+       /* Contact Tag */
+        .contact-tag {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(17, 44, 73, 0.8), rgba(10, 37, 64, 0.8));
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(236, 187, 183, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            animation: scaleIn 0.8s ease-out 1s both;
+        }
 
+          .contact-tag h2 {
+            color: #ECBBB7;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: Overlock, cursive;
+        }
+
+        .contact-tag p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
         }
 
         .about-content ul li {
             margin-bottom: 10px;
         }
-
+   /* Responsive Design */
         @media (max-width: 768px) {
-            .about-section {
-                flex-direction: column;
-                align-items: center;
+            .about-banner {
+                height: 250px;
+            }
+
+            .content-split {
+                gap: 40px;
             }
 
             .about-img,
             .about-content {
+                flex: 1 1 100%;
                 max-width: 100%;
-                flex: none;
             }
+
+            .contact-tag {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Scroll Animation Trigger */
+        .content-split.in-view {
+            animation: slideUp 0.8s ease-out forwards;
         }
     </style>
     <section>
@@ -289,8 +374,8 @@
 
 
         <main>
-            <section class=" about-section">
-                <div id="products" class="friendly-products-title-content">
+            <section class=" about-section about-banner">
+                <div id="products" class="friendly-products-title-content ">
                     <div class="friendlyIcon">
                         <img src="assets/images/SVG.png" alt="flower icon" loading="lazy">
                     </div>

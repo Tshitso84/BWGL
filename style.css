@@ -63,6 +63,139 @@
     --checkout-button: #A4453C;
 }
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate360 {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.1);
+    }
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes borderGlow {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes expandWidth {
+
+    0%,
+    100% {
+        width: 80px;
+    }
+
+    50% {
+        width: 120px;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
 a {
     text-decoration: none;
     color: #fff;
@@ -134,6 +267,7 @@ section {
     backdrop-filter: blur(10px);
     box-shadow: 0px 4px 5px #0415271c;
     transition: transform 0.3s ease-in;
+
 }
 
 
@@ -174,7 +308,9 @@ section {
     cursor: pointer;
     opacity: 0;
     color: #fff;
-    background-color: #041527;
+    background-color: #04152738;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     transition-duration: 0.2s, 0.4s;
     transition-property: all, background-color;
     white-space: nowrap;
@@ -235,16 +371,16 @@ section {
     opacity: 1;
 }
 
-.dropdown11 li:hover {
+/* .dropdown11 li:hover {
     background-color: var(--primary-100);
 }
-
+ */
 .dropdown11-links li:hover:before {
     background-color: #fff;
 }
 
 .dropdown11:hover .arrow-down {
-    transform: rotate(180deg);
+    transform: rotate(90deg);
 }
 
 
@@ -323,6 +459,12 @@ section {
     align-items: center;
     gap: 2rem;
     padding: clamp(0.5rem, 1vw, 1rem);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    /* background-color: #04152738; */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 }
 
 .nav-links a {
@@ -452,6 +594,7 @@ section {
     position: relative;
     height: 100%;
 
+
 }
 
 .heroImage {
@@ -510,6 +653,7 @@ section {
     text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.21);
 
 
+
 }
 
 .hero-cont-detail h1 {
@@ -519,6 +663,8 @@ section {
     letter-spacing: 0%;
     color: #ECBBB7;
     text-transform: uppercase;
+    animation: fadeInDown 1s ease-out;
+
 }
 
 .hero-cont-detail p {
@@ -526,11 +672,14 @@ section {
     font-size: clamp(20px, 5vw, 50px);
     letter-spacing: 0%;
     color: #fff;
+    animation: fadeIn 1s ease-out 0.8s both;
+
 
     span {
         font-family: overlock;
         font-style: italic;
         color: #ECBBB7;
+        animation: shimmer 2s infinite;
     }
 }
 
@@ -541,11 +690,15 @@ section {
     color: #fff;
     font-family: poppins;
     font-weight: 200;
+    
+    animation: fadeInDown 1s ease-out;
 }
 
 .hero-cont-detail span {
     color: #ECBBB7;
     font-weight: 500;
+    animation: shimmer 2s infinite;
+    
 
 }
 
@@ -587,6 +740,30 @@ section {
 
 /* FRIENDLY PRODUCTS */
 
+/* Banner Section */
+.about-banner {
+    background: linear-gradient(135deg, #041527 0%, #0a2540 100%);
+    color: white;
+    /* height: 350px; */
+    display: flex;
+    flex-direction: column;
+    /* border-radius: 20px; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-banner::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(236, 187, 183, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveBackground 3s linear infinite;
+}
+
 
 .friendly-products {
     min-width: 100%;
@@ -595,7 +772,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-block: clamp(3rem, 5vw, 7rem);
+    padding-top: 160px;
+    padding-bottom: 40px;
     justify-content: center;
     -webkit-box-shadow: -1px -17px 83px -12px rgba(4, 21, 39, 0.78);
     -moz-box-shadow: -1px -17px 83px -12px rgba(4, 21, 39, 0.78);
@@ -604,9 +782,10 @@ section {
     z-index: 1;
     background-color: #041527;
     gap: clamp(1rem, 2vw, 2rem);
+    
 }
 
-.friendly-products::before {
+/* .friendly-products::before {
     content: '';
     position: absolute;
     background-image: url(assets/images/miguel-lindo-CHPPChtZJAc-unsplash.jpg);
@@ -620,41 +799,54 @@ section {
     z-index: -1;
     opacity: .2;
     mix-blend-mode: multiply;
+} */
+
+/* Title Content */
+.friendly-products-title-content {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeIn 1s ease-out 0.3s both;
 }
 
-.friendly-products-title-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: clamp(0.5rem, 1vw, 1rem);
-    padding-bottom: clamp(1rem, 2vw, 2rem);
-    gap: 10px;
-    text-align: center;
-    padding-top: 4rem;
-}
+
 
 .friendlyIcon {
-    max-width: clamp(2rem, 3vw, 4rem);
-    max-height: clamp(2rem, 3vw, 4rem);
-    display: flex;
-    align-content: center;
+    margin-bottom: 20px;
+    animation: rotate360 3s ease-in-out infinite;
 }
+
+
 
 .friendlyIcon img {
-    width: 100%;
-    height: 100%;
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px rgba(236, 187, 183, 0.5));
 }
 
+
 .title h2 {
-    font-size: clamp(2rem, 4vw, 5rem);
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: white;
+    margin-bottom: 10px;
     font-weight: 700;
-    color: #fff;
 }
 
 .title h2 span {
+    color: #ECBBB7;
+    position: relative;
     font-family: overlock;
-    font-style: italic;
+}
+
+
+.title h2 span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ECBBB7, transparent);
+    animation: shimmer 2s infinite;
 }
 
 .sub-title p {
@@ -667,6 +859,7 @@ section {
     font-family: overlock;
     font-weight: 600;
     color: #ECBBB7;
+    animation: shimmer 2s infinite;
 }
 
 
@@ -771,7 +964,8 @@ section {
 }
 
 .product-card:hover .product-imageContainer img {
-    transform: scale(1.08) rotate(2deg);
+    transform: scale(1.1) rotate(2deg);
+    
 }
 
 .product-content {
@@ -912,7 +1106,7 @@ section {
     background: linear-gradient(135deg, var(--add-to-cart) 0%, #1557b0 100%);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 0.875rem 1.5rem;
     font-size: clamp(0.875rem, 1.5vw, 0.95rem);
     font-weight: 600;
@@ -920,8 +1114,7 @@ section {
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    box-shadow: 0 4px 12px rgba(30, 124, 232, 0.3);
-    position: relative;
+   
     overflow: hidden;
 }
 
@@ -945,8 +1138,11 @@ section {
 
 .add-to-cart-btn:hover {
     background: linear-gradient(135deg, #1557b0 0%, var(--add-to-cart) 100%);
-    box-shadow: 0 6px 20px rgba(30, 124, 232, 0.4);
+    /* box-shadow: 0 6px 20px rgba(30, 124, 232, 0.4); */
     transform: translateY(-2px);
+     box-shadow: 0px 9px 22px -8px rgba(0,0,0,0.72);
+     transform: scale(1.02);
+    position: relative;
 }
 
 .add-to-cart-btn:active {
@@ -1106,6 +1302,7 @@ section {
     background-color: #ECBBB7;
     transform: scale(1.05);
     color: #041527;
+    box-shadow: 0px 9px 22px -8px rgba(0,0,0,0.72);
 }
 
 /* Responsive adjustments */
@@ -1196,10 +1393,11 @@ section {
     box-shadow: 0px 20px 50px #041527;
     gap: 2rem;
     position: relative;
+    animation: scaleIn 0.8s ease-out .3s both;
 
 }
 
-.overview::before {
+/* .overview::before {
     content: '';
     position: absolute;
     background-image: url(assets/images/miguel-lindo-CHPPChtZJAc-unsplash.jpg);
@@ -1219,7 +1417,7 @@ section {
     mix-blend-mode: multiply;
 
 
-}
+} */
 
 @media(max-width:768px) {
     .overview {
@@ -1241,6 +1439,7 @@ section {
         font-family: overlock;
         font-style: italic;
         color: #ECBBB7;
+        animation: shimmer 2s infinite;
 
     }
 }
@@ -1253,6 +1452,8 @@ section {
     display: flex;
     flex-direction: column;
     gap: clamp(0.5rem, 1vw, 1rem);
+    padding: 20px;
+    border-radius: 20px;
 
 }
 
@@ -1394,6 +1595,7 @@ footer {
     span a {
         color: #777;
         font-style: italic;
+        animation: shimmer 2s infinite;
     }
 }
 
