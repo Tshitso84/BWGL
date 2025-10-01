@@ -1465,14 +1465,14 @@ section {
     display: flex;
     flex-direction: column;
     gap: clamp(0.5rem, 1vw, 1rem);
-    padding: 20px;
+   /* padding: 20px;*/
     border-radius: 20px;
 
 }
 
 .overview-subtitle p {
     /* background-color: #112c4979; */
-    padding: .5rem;
+    
     border-radius: 20px;
     /* text-align: center; */
 }
