@@ -304,6 +304,7 @@ section {
     position: absolute;
     display: block;
     list-style: none;
+ 
     /* box-shadow: 0px 9px 22px -8px rgba(0,0,0,0.72);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; */
@@ -329,6 +330,7 @@ section {
     -webkit-box-shadow: 0px 20px 34px -12px rgba(0, 0, 0, 0.47);
     -moz-box-shadow: 0px 20px 34px -12px rgba(116, 116, 116, 0.47);
     box-shadow: 0px 9px 22px -8px rgba(0,0,0,0.72);
+      
 }
 
 .dropdown11 li a {
@@ -336,6 +338,7 @@ section {
     font-weight: 400;
     color: #fff;
     text-decoration: none;
+     text-wrap: nowrap;
 
 }
 
