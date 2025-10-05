@@ -314,10 +314,42 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cartItems.length === 0) {
             const emptyCartMessage = document.createElement('div');
             emptyCartMessage.className = 'empty-cart-message';
-            emptyCartMessage.textContent = 'Your cart is empty 😒';
             emptyCartMessage.style.padding = '1.5rem';
             emptyCartMessage.style.textAlign = 'center';
+            emptyCartMessage.style.height ='100%';
+            // emptyCartMessage.style.border ='1px solid red';
+            
+           
+            emptyCartMessage.style.display='flex';
+            emptyCartMessage.style.flexDirection='column';
+            emptyCartMessage.style.gap='1.5rem'
+            
             cartProductsContainer.appendChild(emptyCartMessage);
+
+            const emptyMessage = document.createElement('p');
+            emptyMessage.innerHTML = 'Your cart is empty😢 <br> Please add items before checkout 👇';
+            emptyCartMessage.appendChild(emptyMessage);
+
+            // Add continue shopping button
+
+            const continueShoppingBtn = document.createElement('button');
+            continueShoppingBtn.className = 'continue-shopping-btn';
+            continueShoppingBtn.textContent = 'Continue Shopping';
+            continueShoppingBtn.style.marginTop = '1rem';
+            continueShoppingBtn.style.padding = '0.5rem 1rem';
+            continueShoppingBtn.style.border = 'none';
+            continueShoppingBtn.style.borderRadius = '4px';
+            continueShoppingBtn.style.backgroundColor = '#3d8b40';
+            continueShoppingBtn.style.color = '#fff';
+            continueShoppingBtn.style.padding = '13px 32px';
+            continueShoppingBtn.style.fontSize = '1.2rem';
+            continueShoppingBtn.style.cursor = 'pointer';
+            continueShoppingBtn.addEventListener('click', () => {
+                closeCart();
+                window.location.href= '/index.html#products'
+            });
+            
+            emptyCartMessage.appendChild(continueShoppingBtn);
         } else {
             // Add each product to the cart
             cartItems.forEach((item, index) => {
@@ -353,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
         productInfo.className = 'cart-product';
         productInfo.style.display = 'flex';
         productInfo.style.justifyContent = 'space-between';
-        productInfo.style.alignItems = 'center';
+        productInfo.style.alignItems = 'start';
         
         // Create product title
         const productTitle = document.createElement('div');
@@ -371,9 +403,13 @@ document.addEventListener('DOMContentLoaded', function() {
         productPrice.appendChild(priceP);
         
         // Create remove button
-        const removeButton = document.createElement('button');
-        removeButton.className = 'cart-product-btn';
-        removeButton.textContent = 'Remove';
+        const removeButton = document.createElement('i');
+        removeButton.className = 'cart-product-btn fa-solid fa-trash';
+        
+        removeButton.style.fontSize = '1.8rem';
+        removeButton.style.cursor = 'pointer';
+        removeButton.setAttribute('title', `Remove ${product.title} from cart`);
+        removeButton.style.color =('#777')
         
         // Add elements to product info
         productInfo.appendChild(productTitle);
