@@ -29,8 +29,7 @@
 <body>
 
     <style>
-      
-       .about-banner h1 {
+        .about-banner h1 {
             font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
             text-transform: uppercase;
@@ -49,7 +48,7 @@
         /* Main About Section */
         .about-section {
             background: linear-gradient(180deg, #041527 0%, #0a2540 50%, #041527 100%);
-            padding-inline:20px;
+            padding-inline: 20px;
             padding-top: 160px;
             padding-bottom: 40px;
             min-height: 100vh;
@@ -71,7 +70,11 @@
             max-width: 500px;
             position: relative;
             overflow: hidden;
-            border-radius: 20px;
+             border: 1px solid rgba(236, 187, 183, 0.3);
+            border-top-left-radius: clamp(3rem, 5vw, 6.25rem);
+            border-bottom-right-radius: clamp(3rem, 5vw, 6.25rem);
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 6px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
@@ -94,7 +97,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            border-radius: 18px;
+            border-radius: 6px;
             transition: transform 0.5s ease;
         }
 
@@ -128,23 +131,24 @@
             animation: slideUp 0.8s ease-out forwards;
         }
 
-        .founder-content{
+        .founder-content {
             /* flex-direction: column; */
             /* border-bottom: 1px solid rgba(236, 187, 183, 0.3); */
             padding-block: 4rem;
         }
-        .content-split-content{
+
+        .content-split-content {
             max-width: 500px;
             /* border: 1px solid red; */
         }
 
-        .content-split-content p{
+        .content-split-content p {
             padding-top: 2rem;
             /* text-align: center; */
             /* border: 1px solid red; */
 
-            small{
-                
+            small {
+
                 color: rgba(255, 255, 255, 0.8);
                 font-style: italic;
             }
@@ -178,7 +182,7 @@
             text-transform: uppercase;
             font-weight: 700;
             letter-spacing: 1px;
-            font-family: overlock;
+            font-family: overlock, julius sans one;
         }
 
         .about-content h2::after {
@@ -195,7 +199,7 @@
         strong {
             color: #ECBBB7;
             font-weight: 600;
-            font-family: Overlock, cursive;
+            font-family: Overlock, julius sans one;
         }
 
         .about-content p {
@@ -210,7 +214,7 @@
             padding: 0;
         }
 
-          .about-content ul li {
+        .about-content ul li {
             margin-bottom: 20px;
             padding-left: 30px;
             position: relative;
@@ -220,13 +224,24 @@
             animation: fadeInText 1s ease-out both;
         }
 
-        
-        .about-content ul li:nth-child(1) { animation-delay: 0.6s; }
-        .about-content ul li:nth-child(2) { animation-delay: 0.7s; }
-        .about-content ul li:nth-child(3) { animation-delay: 0.8s; }
-        .about-content ul li:nth-child(4) { animation-delay: 0.9s; }
 
-          .about-content ul li::before {
+        .about-content ul li:nth-child(1) {
+            animation-delay: 0.6s;
+        }
+
+        .about-content ul li:nth-child(2) {
+            animation-delay: 0.7s;
+        }
+
+        .about-content ul li:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        .about-content ul li:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .about-content ul li::before {
             content: '✦';
             position: absolute;
             left: 0;
@@ -235,14 +250,14 @@
             animation: pulse 2s ease-in-out infinite;
         }
 
-          /* Divider Icons */
-        .about-content-container > .friendlyIcon {
+        /* Divider Icons */
+        .about-content-container>.friendlyIcon {
             text-align: center;
             margin: 40px 0;
         }
 
 
-       /* Contact Tag */
+        /* Contact Tag */
         .contact-tag {
             max-width: 700px;
             margin: 0 auto;
@@ -251,19 +266,22 @@
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(236, 187, 183, 0.3);
-            border-radius: 20px;
+            border-top-left-radius: clamp(3rem, 5vw, 6.25rem);
+            border-bottom-right-radius: clamp(3rem, 5vw, 6.25rem);
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 6px;
             padding: 40px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             animation: scaleIn 0.8s ease-out 1s both;
         }
 
-          .contact-tag h2 {
+        .contact-tag h2 {
             color: #ECBBB7;
             font-size: 2rem;
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-family: Overlock, cursive;
+            font-family: Overlock, julius sans one;
         }
 
         .contact-tag p {
@@ -275,9 +293,10 @@
         .about-content ul li {
             margin-bottom: 10px;
         }
-   /* Responsive Design */
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-          
+
 
             .content-split {
                 gap: 40px;
@@ -289,9 +308,9 @@
                 max-width: 100%;
             }
 
-             .contact-tag {
+            .contact-tag {
                 padding: 30px 20px;
-            } 
+            }
         }
 
         /* Scroll Animation Trigger */
@@ -314,10 +333,11 @@
                         <a href="index.html">Home</a>
 
                         <div class="dropdown11">
-                            <a href="#products" class="product-link">
-                                Products <span class="arrow-down"></span>
+                            <a href="catalog.html" class="product-link">
+                                Products 
+                                <!-- <span class="arrow-down"></span> -->
                             </a>
-                            <ul class="dropdown11-links">
+                            <!-- <ul class="dropdown11-links">
                                 <li>
                                     <a href="detergents.html">Detergents</a>
                                 </li>
@@ -327,7 +347,7 @@
                                 <li>
                                     <a href="disinfectants.html">Disinfectants</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
 
                         <a href="about.html">About Us</a>
@@ -335,13 +355,13 @@
                         <!-- <a href="checkout.html">Checkout</a>-->
                     </div>
 
-                    <div class="ux-btns">
-                        <button type="button" title="View Cart" aria-label="View Cart">
+                    <!-- <div class="ux-btns">
+                        <button type="button" title="View your cart" aria-label="View Cart">
                             <i class="fa-solid fa-cart-shopping"></i>
                         </button>
-                        <!-- <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
-                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>-->
-                    </div>
+                        <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
+                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
+                    </div> -->
                 </div>
                 <button class="hamburger" aria-label="Menu">
                     <span></span>
@@ -410,20 +430,29 @@
                 <div class="about-content-container">
                     <div class="content-split founder-content ">
                         <div class="content-split-content">
-                        <div class="about-img">
-                            <img src="assets/images/founder.jpg" alt="About BWGL Group" loading="lazy">
-                        </div>
-                        
-                        <p><span>Sibongile V. Mthimunye</span><br>
-                            <strong>Founder & CEO</strong><br> <br>
-                        <small>A former Executive with  over 23 years professional experience in both Corporate and NPO Sector</small> <br>
-                        <strong><br>Formal Qualifications:</strong><small> BA Social Sciences (University of the Witwatersrand), HRM (RAU) and MBA (Regent Business School).</small>
-                        </p>
+                            <div class="about-img">
+                                <img src="assets/images/founder.jpg" alt="About BWGL Group" loading="lazy">
+                            </div>
+
+                            <p><span>Sibongile V. Mthimunye</span><br>
+                                <strong>Founder & CEO</strong><br> <br>
+                                <small>A former Executive with over 23 years professional experience in both Corporate
+                                    and NPO Sector</small> <br>
+                                <strong><br>Formal Qualifications:</strong><small> BA Social Sciences (University of the
+                                    Witwatersrand), HRM (RAU) and MBA (Regent Business School).</small>
+                            </p>
                         </div>
 
                         <div class="about-content">
                             <h2>Who We Are</h2>
-                            <p>BWGL Group places the client at the centre of our services. We aim to provide an excellent two-pronged solution to clients: 1. Cleaning/hygiene services and 2. Consulting services to the market. <br> <br> <q> <em> We work closely with our clients such as Corporate, Business, Public Sector and other entities to partner with in providing solutions for their needs. Through our foundation, we run community outreach programmes to empower our communities and the country at large.</em></q> <br> <br> The company is based in the picturesque mountainous area of Heidelberg in Gauteng few kilometres outside of the city of Johannesburg. </p>
+                            <p>BWGL Group places the client at the centre of our services. We aim to provide an
+                                excellent two-pronged solution to clients: 1. Cleaning/hygiene services and 2.
+                                Consulting services to the market. <br> <br> <q> <em> We work closely with our clients
+                                        such as Corporate, Business, Public Sector and other entities to partner with in
+                                        providing solutions for their needs. Through our foundation, we run community
+                                        outreach programmes to empower our communities and the country at
+                                        large.</em></q> <br> <br> The company is based in the picturesque mountainous
+                                area of Heidelberg in Gauteng few kilometres outside of the city of Johannesburg. </p>
                         </div>
                     </div>
 
@@ -479,12 +508,12 @@
                         </div>
                     </div>
 
-                    <div class="friendlyIcon">
+                    <!-- <div class="friendlyIcon">
                         <img src="assets/images/SVG.png" alt="flower icon" loading="lazy">
-                    </div>
+                    </div> -->
 
 
-                    <div class="content-split">
+                    <!-- <div class="content-split">
                         <div class="contact-tag">
                             <h2>Contact Us</h2>
                             <p>If you have any questions or inquiries about our products or services, please feel free
@@ -494,7 +523,24 @@
                                 needs.
                             </p>
                         </div>
+                    </div> -->
+
+                     <div class="catalog-info">
+                      <div class="friendlyIcon">
+                        <img src="assets/images/SVG.png" alt="flower icon" loading="lazy">
                     </div>
+                    <h3>Contact Us</h3>
+                    <p>We're here to help with all your cleaning product needs</p>
+                    
+                    <div class="contact-info">
+                        <p><strong>Phone:</strong> 0823076510 / 0764088968</p>
+                        <p><strong>Email:</strong> admin@bwglgroup.co.za / info@bwglgroup.co.za</p>
+                        <p><strong>Address:</strong> 70 Merz Str, Heidelberg, GP</p>
+                        <p ><strong>Delivery:</strong> Courier costs apply - we deliver via PAXI available at all PEP Stores nationwide</p>
+                    </div>
+                    
+                    <button class="shop-btn mt-20">Call Us Now</button>
+                </div>
                 </div>
 
 
@@ -502,7 +548,7 @@
         </main>
 
 
-        <footer>
+          <footer>
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-title">
@@ -515,7 +561,9 @@
                             <li> info@bwglgroup.co.za </li>
                         </ul>
                         <div class="footer-logo">
-                            <img src="assets/images/logo.png" alt="">
+                            <a href="index.html" title="Go to Home">
+                            <img src="assets/images/logo.png" alt="BWGL Group company logo" loading="lazy" aria-label="BWGL Group company logo">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -542,8 +590,10 @@
                         <label for="">Name</label>
                         <input type="text" name="name" required placeholder="Enter your name" title="Name">
                         <label for="">Email</label>
-                        <input type="email" name="email" required title="Email" placeholder="Enter your email">
-                        <a href=""><button class="footer-btn">Subscribe</button></a>
+                        <input type="email" name="email" required placeholder="Enter your email" title="Email">
+                        <div class="footer-btn">
+                        <a href="" title="Subscribe to Newsletter"><button >Subscribe</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -554,8 +604,10 @@
                         2025 &copy BWGL Group. All rights reserved.
                     </div>
 
+                   
                     <div class="credits">
-                        <span>Designed by <a href="">digitalconsistency.africa</a></span>
+                        <span>Designed by <a href="">digitalconsistency.africa</a> & <span><a href="">NoWanDesigns</a></span></span>
+                        <span>Developed by <a href="">NoWanDesigns</a></span>
                     </div>
                 </div>
             </div>
