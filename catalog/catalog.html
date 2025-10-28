@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWGL - Become a distributor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+    <style>
+      
+  /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .modal-content {
+            background-color: #041527dc;
+            backdrop-filter: blur(30px);
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+            text-align: center;
+        }
+
+        .modal-header {
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            color: #ECBBB7;
+            font-weight: 600;
+            font-family: overlock, julius sans-serif;
+        }
+
+        .phone-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .phone-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #041527;
+            border-radius: 8px;
+            border: 1px solid #e0e0e02c;
+            transition: all 0.2s ease;
+        }
+
+        .phone-option:hover {
+            background-color: #f0f0f02f;
+            transform: translateY(-2px);
+        }
+
+        .phone-number {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .call-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .call-btn:hover {
+            background-color: #45a049;
+        }
+
+        .close-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .close-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+            .phone-option {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+        
+    </style>
+    <section>
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="/index.html" title="Go to Home">
+                        <img src="/assets/images/logo.png" alt="BWGL Group company Logo" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="nav-btns">
+                    <div class="nav-links">
+                        <a href="/index.html" title="Go to Home">Home</a>
+
+                        <div class="dropdown11">
+                            <a href="/catalog/catalog.html" title="View catalog" class="product-link">
+                                Products
+                                <!-- <span class="arrow-down"></span> -->
+                            </a>
+                            <!-- <ul class="dropdown11-links">
+                                <li>
+                                    <a href="detergents.html">Detergents</a>
+                                </li>
+                                <li>
+                                    <a href="degreasers.html">Degreasers</a>
+                                </li>
+                                <li>
+                                    <a href="disinfectants.html">Disinfectants</a>
+                                </li>
+                            </ul> -->
+                        </div>
+
+                        <a href="/about/about.html">About Us</a>
+                        <!-- <a href="services.html">Services</a> -->
+                        <!-- <a href="checkout.html">Checkout</a>-->
+                    </div>
+
+                    <!-- <div class="ux-btns">
+                        <button type="button" title="View your cart" aria-label="View Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
+                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
+                    </div> -->
+                </div>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+        <aside class="cart">
+            <div class="cart-title">
+                <h1>Your Cart</h1>
+            </div>
+
+            <div class="cart-content">
+                <div class="cart-product-info">
+                    <div class="cart-product">
+                        <div class="cart-product-title">
+                            <h3>Detergent</h3>
+                        </div>
+
+                        <div class="cart-product-price">
+                            <p>R50.00</p>
+                        </div>
+
+                        <button class="cart-product-btn">Remove</button>
+                    </div>
+
+                    <div class="cart-product-arrows">
+                        <span><i class="fa-solid fa-arrow-up"></i>
+                            0
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="cart-checkout">
+                    <div class="subtotal">
+                        <h3 class="subtotal-title">Subtotal</h3>
+                        <p class="total">R50.00</p>
+                    </div>
+
+                    <div>
+                        <button class="cart-checkout-btn">Continue to checkout</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Product Catalog Section -->
+        <section class="product-catalog about-banner">
+            <div class="catalog-container">
+
+
+
+                <div class="catalog-title">
+                    <div class="friendlyIcon">
+                        <img src="/assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
+                    <h2>Boni <span>Clean</span> Products</h2>
+                    <p class="catalog-subtitle">Our <span>Complete</span> Product Range</p>
+                </div>
+
+                <!-- 5L Products Section -->
+                <div class="catalog-section">
+
+                    <h3 class="section-title">5L Products</h3>
+                    <div class="catalog-grid">
+                        <div class="product-item">
+                            <h4 class="product-name">5L Dishwashing Liquid</h4>
+                            <div class="product-price">R175.00</div>
+                            <p class="product-description">Powerful dishwashing liquid that cuts through grease and
+                                leaves dishes sparkling clean.</p>
+
+                        </div>
+
+                        <div class="product-item">
+                            <h4 class="product-name">5L Pine Gel</h4>
+                            <div class="product-price">R225.00</div>
+                            <p class="product-description">Fresh pine-scented cleaner perfect for floors and surfaces.
+                                Leaves a clean, fresh fragrance.</p>
+
+                        </div>
+
+                        <div class="product-item">
+                            <h4 class="product-name">5L Multi-Purpose Cleaner</h4>
+                            <div class="product-price">R175.00</div>
+                            <p class="product-description">Versatile cleaner suitable for various surfaces. Effectively
+                                removes dirt and grime.</p>
+
+                        </div>
+
+                        <div class="product-item">
+                            <h4 class="product-name">5L Thick Bleach</h4>
+                            <div class="product-price">R200.00</div>
+                            <p class="product-description">Concentrated thick bleach for powerful stain removal and
+                                disinfection.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Distributor Package -->
+                <div class="distributor-package">
+                    <div class="friendlyIcon">
+                        <img src="/assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
+                    <h3>Become a Distributor Today!</h3>
+                    <div class="package-price">R750</div>
+                    <p>Get started with our comprehensive distributor package</p>
+
+                    <div class="package-items">
+                        <div class="package-item">5 units of Pine Gel (1L)</div>
+                        <div class="package-item">5 units of Thick Bleach (750ml)</div>
+                        <div class="package-item">5 units of Multi-Purpose Cleaner (750ml)</div>
+                        <div class="package-item">5 units of Dishwashing Liquid (750ml)</div>
+                    </div>
+
+                     <button class="shop-btn mt-20">Become a distributor</button>
+                      <!-- Modal for phone numbers -->
+                    <div class="modal" id="phoneModal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Choose a Number to Call</h2>
+                            </div>
+                            <div class="phone-options">
+                                <div class="phone-option">
+                                    <span class="phone-number">0823076510</span>
+                                    <a href="tel:0823076510" class="call-btn">Call</a>
+                                </div>
+                                <div class="phone-option">
+                                    <span class="phone-number">0764088968</span>
+                                    <a href="tel:0764088968" class="call-btn">Call</a>
+                                </div>
+                            </div>
+                            <button class="close-btn" id="closeModal">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Smaller Size Products Section -->
+                <div class="catalog-section">
+
+                    <h3 class="section-title">Smaller Sizes</h3>
+                    <div class="catalog-grid">
+                        <div class="product-item">
+                            <h4 class="product-name">Dishwashing Liquid</h4>
+                            <h5 class="size">750ml</h5>
+                            <div class="item-image">
+                                <img src="/assets/images/IMG_3682.jpg" alt="">
+                            </div>
+                            <div class="product-price">R35.00</div>
+                            <p class="product-description">Convenient size for everyday dishwashing needs.</p>
+
+                        </div>
+
+                        <div class="product-item">
+                            <h4 class="product-name">Pine Gel</h4>
+                            <h5 class="size">1 Litre</h5>
+                            <div class="item-image">
+                                <img src="/assets/images/IMG_3685.jpg" alt="">
+                            </div>
+                            <div class="product-price">R60.00</div>
+                            <p class="product-description">Perfect for smaller cleaning tasks with fresh pine scent.</p>
+
+                        </div>
+
+                        <div class="product-item">
+                            <h4 class="product-name">Multi-Purpose Cleaner</h4>
+                            <h5 class="size">750ml</h5>
+                            <div class="item-image">
+                                <img src="/assets/images/IMG_3678.jpg" alt="">
+                            </div>
+                            <div class="product-price">R40.00</div>
+                            <p class="product-description">All-purpose cleaner in a convenient size for various cleaning
+                                tasks.</p>
+
+                        </div>
+
+                        <div class="product-item">
+                            <h4 class="product-name">Thick Bleach</h4>
+                            <h5 class="size">750ml</h5>
+                            <div class="item-image">
+                                <img src="/assets/images/IMG_3676.jpg" alt="">
+                            </div>
+                            <div class="product-price">R40.00</div>
+                            <p class="product-description">Powerful bleach for stain removal and disinfection in a
+                                smaller size.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Contact and Additional Info -->
+                <div class="catalog-info">
+                    <div class="friendlyIcon">
+                        <img src="/assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
+                    <h3>Contact Us</h3>
+                    <p>We're here to help with all your cleaning product needs</p>
+
+                    <div class="contact-info">
+                        <p><strong>Phone:</strong> 0823076510 / 0764088968</p>
+                        <p><strong>Email:</strong> admin@bwglgroup.co.za / info@bwglgroup.co.za</p>
+                        <p><strong>Address:</strong> 70 Merz Str, Heidelberg, GP</p>
+                        <p><strong>Delivery:</strong> Courier costs apply - we deliver via PAXI available at all PEP
+                            Stores nationwide</p>
+                    </div>
+
+                     <button class="shop-btn mt-20">Call Us Now</button>
+                
+                    <!-- Modal for phone numbers -->
+                    <div class="modal" id="phoneModal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Choose a Number to Call</h2>
+                            </div>
+                            <div class="phone-options">
+                                <div class="phone-option">
+                                    <span class="phone-number">0823076510</span>
+                                    <a href="tel:0823076510" class="call-btn">Call</a>
+                                </div>
+                                <div class="phone-option">
+                                    <span class="phone-number">0764088968</span>
+                                    <a href="tel:0764088968" class="call-btn">Call</a>
+                                </div>
+                            </div>
+                            <button class="close-btn" id="closeModal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-title">
+                <h3>Contact Us</h3>
+            </div>
+            <div class="footer-col-content">
+                <ul>
+                    <li>Merz Street, Heidelberg Gauteng 1441</li>
+                    <li>+27 087 012 5682</li>
+                    <li>info@bwglgroup.co.za</li>
+                </ul>
+                <div class="footer-logo">
+                    <a href="/index.html" title="Go to Home">
+                        <img src="/assets/images/logo.png" alt="BWGL Group company logo" loading="lazy"
+                            aria-label="BWGL Group company logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-col">
+            <div class="footer-title">
+                <h3>Quick Links</h3>
+            </div>
+            <div class="footer-col-content">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/catalog/catalog.html">Products</a></li>
+                    <li><a href="/about/about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-col footer-delivery">
+    <div class="footer-title">
+        <h3>Delivery Info</h3>
+    </div>
+    <div class="footer-col-content">
+        <ul>
+            <li>✓ Nationwide via PAXI</li>
+            <li>✓ Available at PEP Stores</li>
+            <li>✓ Courier costs apply</li>
+            <li>✓ Fast & Reliable</li>
+        </ul>
+    </div>
+</div>
+
+        <div class="footer-col footer-hours">
+            <div class="footer-title">
+                <h3>Business Hours</h3>
+            </div>
+            <div class="footer-col-content">
+                <ul>
+                    <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
+                    <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
+                    <li><strong>Sunday:</strong> Closed</li>
+                    <li><strong>Public Holidays:</strong> Closed</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="footer-col footer-features">
+            <div class="footer-title">
+                <h3>Why Choose Us</h3>
+            </div>
+            <div class="footer-col-content">
+                <ul>
+                    <li>✓ Premium Quality Products</li>
+                    <li>✓ Competitive Pricing</li>
+                    <li>✓ Reliable Service</li>
+                    <li>✓ Nationwide Delivery</li>
+                    <li>✓ Expert Support</li>
+                    <li>✓ Environmentally Conscious</li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="wrapper">
+        <div class="main-footer">
+            <div class="copyright">
+                2025 &copy BWGL Group. All rights reserved.
+            </div>
+            <div class="credits">
+                <span>Designed by <a href="">digitalconsistency.africa</a></span>
+                <span>Developed by <a href="">NoWanDesigns</a></span>
+            </div>
+        </div>
+    </div>
+</footer>
+    </section>
+   <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    const callButtons = document.querySelectorAll('.shop-btn');
+    const modal = document.getElementById('phoneModal');
+    const closeButton = document.getElementById('closeModal');
+
+    // Add click event to ALL buttons with shop-btn class
+    callButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Close modal when close button is clicked
+    closeButton.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+    </script>
+    <script src="main.js">
+    </script>
+</body>
+
+</html>

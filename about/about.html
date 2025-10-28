@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWGL - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+            border-radius: 20px;
+        }
+
+        .modal-content {
+            background-color: #041527dc;
+            backdrop-filter: blur(30px);
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.3s ease;
+            text-align: center;
+        }
+
+        .modal-header {
+            margin-bottom: 20px;
+        }
+
+        .modal-header h2 {
+            color: #ECBBB7;
+            font-weight: 600;
+            font-family: overlock, julius sans-serif;
+        }
+
+        .phone-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .phone-option {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #041527;
+            border-radius: 8px;
+            border: 1px solid #e0e0e02c;
+            transition: all 0.2s ease;
+        }
+
+        .phone-option:hover {
+            background-color: #f0f0f02f;
+            transform: translateY(-2px);
+        }
+
+        .phone-number {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .call-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .call-btn:hover {
+            background-color: #45a049;
+        }
+
+        .close-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .close-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 20px;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+            .phone-option {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+
+        /* About Banner */
+
+        .about-banner h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: 20px 40px;
+            text-align: center;
+            border-radius: 15px;
+            color: #ECBBB7;
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 1s ease-out;
+            text-shadow: 0 0 20px rgba(236, 187, 183, 0.3);
+        }
+
+
+        /* Main About Section */
+        .about-section {
+            background: linear-gradient(180deg, #041527 0%, #0a2540 50%, #041527 100%);
+            padding-inline: 20px;
+            padding-top: 160px;
+            padding-bottom: 40px;
+            min-height: 100vh;
+            min-height: 100vh;
+        }
+
+        /* Title Content */
+        .friendly-products-title-content {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeIn 1s ease-out 0.3s both;
+        }
+
+
+
+        /* Image Container */
+        .about-img {
+            flex: 1 1 450px;
+            max-width: 500px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(236, 187, 183, 0.3);
+            border-top-left-radius: clamp(3rem, 5vw, 6.25rem);
+            border-bottom-right-radius: clamp(3rem, 5vw, 6.25rem);
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ECBBB7, #f5d6d3, #ECBBB7);
+            border-radius: 20px;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 6px;
+            transition: transform 0.5s ease;
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Content Text */
+        .about-content {
+            flex: 1 1 450px;
+            max-width: 550px;
+            color: white;
+        }
+
+        /* Content Container */
+        .about-content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Content Split */
+        .content-split {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideUp 0.8s ease-out forwards;
+        }
+
+        .founder-content {
+
+            padding-block: 4rem;
+        }
+
+        .content-split-content {
+            max-width: 500px;
+            /* border: 1px solid red; */
+        }
+
+        .content-split-content p {
+            padding-top: 2rem;
+            /* text-align: center; */
+            /* border: 1px solid red; */
+
+            small {
+
+                color: rgba(255, 255, 255, 0.8);
+                font-style: italic;
+            }
+        }
+
+
+
+        .content-split:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .content-split:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .content-split:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .content-split:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+
+        .about-content h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-bottom: 20px;
+            color: #ECBBB7;
+            position: relative;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: overlock, julius sans one;
+        }
+
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ECBBB7, transparent);
+            animation: expandWidth 2s ease-in-out infinite;
+        }
+
+        strong {
+            color: #ECBBB7;
+            font-weight: 600;
+            font-family: Overlock, julius sans one;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+            animation: fadeInText 1s ease-out 0.5s both;
+        }
+
+        .about-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-content ul li {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            animation: fadeInText 1s ease-out both;
+        }
+
+
+        .about-content ul li:nth-child(1) {
+            animation-delay: 0.6s;
+        }
+
+        .about-content ul li:nth-child(2) {
+            animation-delay: 0.7s;
+        }
+
+        .about-content ul li:nth-child(3) {
+            animation-delay: 0.8s;
+        }
+
+        .about-content ul li:nth-child(4) {
+            animation-delay: 0.9s;
+        }
+
+        .about-content ul li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: #ECBBB7;
+            font-size: 1.2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Divider Icons */
+        .about-content-container>.friendlyIcon {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+
+        /* Contact Tag */
+        .contact-tag {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(17, 44, 73, 0.8), rgba(10, 37, 64, 0.8));
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(236, 187, 183, 0.3);
+            border-top-left-radius: clamp(3rem, 5vw, 6.25rem);
+            border-bottom-right-radius: clamp(3rem, 5vw, 6.25rem);
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+            padding: 40px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            animation: scaleIn 0.8s ease-out 1s both;
+        }
+
+        .contact-tag h2 {
+            color: #ECBBB7;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: Overlock, julius sans one;
+        }
+
+        .contact-tag p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .about-content ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+
+            .content-split {
+                gap: 40px;
+            }
+
+            .about-img,
+            .about-content {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .contact-tag {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Scroll Animation Trigger */
+        .content-split.in-view {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+    </style>
+    <section>
+
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="/index.html" title="Go to Home">
+                        <img src="/assets/images/logo.png" alt="BWGL Group company Logo" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="nav-btns">
+                    <div class="nav-links">
+                        <a href="/index.html" title="Go to Home">Home</a>
+
+                        <div class="dropdown11">
+                            <a href="/catalog/catalog.html" title="View catalog" class="product-link">
+                                Products
+                                <!-- <span class="arrow-down"></span> -->
+                            </a>
+                            <!-- <ul class="dropdown11-links">
+                                <li>
+                                    <a href="detergents.html">Detergents</a>
+                                </li>
+                                <li>
+                                    <a href="degreasers.html">Degreasers</a>
+                                </li>
+                                <li>
+                                    <a href="disinfectants.html">Disinfectants</a>
+                                </li>
+                            </ul> -->
+                        </div>
+
+                        <a href="/about/about.html">About Us</a>
+                        <!-- <a href="services.html">Services</a> -->
+                        <!-- <a href="checkout.html">Checkout</a>-->
+                    </div>
+
+                    <!-- <div class="ux-btns">
+                        <button type="button" title="View your cart" aria-label="View Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
+                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
+                    </div> -->
+                </div>
+                <button class="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </header>
+
+
+        <aside class="cart">
+            <div class="cart-title">
+                <h1>Your Cart</h1>
+                <!-- Close button will be added via JavaScript -->
+            </div>
+
+            <div class="cart-content">
+                <div class="cart-product-info">
+                    <div class="cart-product">
+                        <div class="cart-product-title">
+                            <h3>Detergent</h3>
+                        </div>
+
+                        <div class="cart-product-price">
+                            <p>R50.00</p>
+                        </div>
+
+                        <button class="cart-product-btn">Remove</button>
+                    </div>
+
+                    <div class="cart-product-arrows">
+                        <span><i class="fa-solid fa-arrow-up"></i>
+                            0
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="cart-checkout">
+                    <div class="subtotal">
+                        <h3 class="subtotal-title">Subtotal</h3>
+                        <p class="total">R50.00</p>
+                    </div>
+
+                    <div>
+                        <button class="cart-checkout-btn">Continue to checkout</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <main>
+            <section class=" about-section about-banner">
+                <div id="products" class="friendly-products-title-content ">
+                    <div class="friendlyIcon">
+                        <img src="/assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
+                    <div class="title">
+                        <h2>About <span>Our</span> Company</h2>
+                    </div>
+                    <div class="sub-title">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="about-content-container">
+                    <div class="content-split founder-content ">
+                        <div class="content-split-content">
+                            <div class="about-img">
+                                <img src="/assets/images/founder.jpg" alt="About BWGL Group" loading="lazy">
+                            </div>
+
+                            <p><span>Sibongile V. Mthimunye</span><br>
+                                <strong>Founder & CEO</strong><br> <br>
+                                <small>A former Executive with over 23 years professional experience in both Corporate
+                                    and NPO Sector</small> <br>
+                                <strong><br>Formal Qualifications:</strong><small> BA Social Sciences (University of the
+                                    Witwatersrand), HRM (RAU) and MBA (Regent Business School).</small>
+                            </p>
+                        </div>
+
+                        <div class="about-content">
+                            <h2>Who We Are</h2>
+                            <p>BWGL Group places the client at the centre of our services. We aim to provide an
+                                excellent two-pronged solution to clients: 1. Cleaning/hygiene services and 2.
+                                Consulting services to the market. <br> <br> <q> <em> We work closely with our clients
+                                        such as Corporate, Business, Public Sector and other entities to partner with in
+                                        providing solutions for their needs. Through our foundation, we run community
+                                        outreach programmes to empower our communities and the country at
+                                        large.</em></q> <br> <br> The company is based in the picturesque mountainous
+                                area of Heidelberg in Gauteng few kilometres outside of the city of Johannesburg. </p>
+                        </div>
+                    </div>
+
+                    <div class="friendlyIcon">
+                        <img src="/assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
+
+                    <div class="content-split">
+
+                        <div class="about-content">
+
+                            <h2>Our Mission</h2>
+                            <p>At BWGL Group, our mission is to deliver superior cleaning products that meet the highest
+                                standards of quality and performance. We are dedicated to innovation, sustainability,
+                                and
+                                customer-centricity, ensuring that our products not only clean effectively but also
+                                contribute
+                                to a healthier environment.</p>
+
+                        </div>
+                        <div class="about-img">
+                            <img src="/assets/images/cleaning.jpg" alt="About BWGL Group" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="friendlyIcon">
+                        <img src="/assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div>
+
+                    <div class="content-split">
+                        <div class="about-img">
+                            <img src="/assets/images/about.jpg" alt="About BWGL Group" loading="lazy">
+                        </div>
+
+                        <div class="about-content">
+                            <h2>Our Values</h2>
+                            <ul>
+                                <li><strong>Quality:</strong> We prioritize quality in every aspect of our products,
+                                    from
+                                    raw
+                                    materials to manufacturing processes.</li>
+                                <li><strong>Innovation:</strong> We continuously invest in research and development to
+                                    create
+                                    cutting-edge cleaning solutions.</li>
+                                <li><strong>Sustainability:</strong> We are committed to environmentally friendly
+                                    practices
+                                    and
+                                    products that minimize our ecological footprint.</li>
+                                <li><strong>Customer Satisfaction:</strong> Our customers are at the heart of everything
+                                    we
+                                    do,
+                                    and we strive to exceed their expectations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- <div class="friendlyIcon">
+                        <img src="/assets/images/SVG.png" alt="flower icon" loading="lazy">
+                    </div> -->
+
+
+                    <!-- <div class="content-split">
+                        <div class="contact-tag">
+                            <h2>Contact Us</h2>
+                            <p>If you have any questions or inquiries about our products or services, please feel free
+                                to
+                                reach
+                                out to us. We value your feedback and look forward to assisting you with your cleaning
+                                needs.
+                            </p>
+                        </div>
+                    </div> -->
+
+                    <div class="catalog-info">
+                        <div class="friendlyIcon">
+                            <img src="/assets/images/SVG.png" alt="flower icon" loading="lazy">
+                        </div>
+                        <h3>Contact Us</h3>
+                        <p>We're here to help with all your cleaning product needs</p>
+
+                        <div class="contact-info">
+                            <p><strong>Phone:</strong> 0823076510 / 0764088968</p>
+                            <p><strong>Email:</strong> admin@bwglgroup.co.za / info@bwglgroup.co.za</p>
+                            <p><strong>Address:</strong> 70 Merz Str, Heidelberg, GP</p>
+                            <p><strong>Delivery:</strong> Courier costs apply - we deliver via PAXI available at all PEP
+                                Stores nationwide</p>
+                        </div>
+
+                        <button class="shop-btn mt-20">Call Us Now</button>
+                        <!-- Modal for phone numbers -->
+                        <div class="modal" id="phoneModal">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>Choose a Number to Call</h2>
+                                </div>
+                                <div class="phone-options">
+                                    <div class="phone-option">
+                                        <span class="phone-number">0823076510</span>
+                                        <a href="tel:0823076510" class="call-btn">Call</a>
+                                    </div>
+                                    <div class="phone-option">
+                                        <span class="phone-number">0764088968</span>
+                                        <a href="tel:0764088968" class="call-btn">Call</a>
+                                    </div>
+                                </div>
+                                <button class="close-btn" id="closeModal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </section>
+        </main>
+
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-title">
+                        <h3>Contact Us</h3>
+                    </div>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li>Merz Street, Heidelberg Gauteng 1441</li>
+                            <li>+27 087 012 5682</li>
+                            <li>info@bwglgroup.co.za</li>
+                        </ul>
+                        <div class="footer-logo">
+                            <a href="/index.html" title="Go to Home">
+                                <img src="/assets/images/logo.png" alt="BWGL Group company logo" loading="lazy"
+                                    aria-label="BWGL Group company logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <div class="footer-title">
+                        <h3>Quick Links</h3>
+                    </div>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/catalog/catalog.html">Products</a></li>
+                            <li><a href="/about/about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-delivery">
+                    <div class="footer-title">
+                        <h3>Delivery Info</h3>
+                    </div>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li>✓ Nationwide via PAXI</li>
+                            <li>✓ Available at PEP Stores</li>
+                            <li>✓ Courier costs apply</li>
+                            <li>✓ Fast & Reliable</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-hours">
+                    <div class="footer-title">
+                        <h3>Business Hours</h3>
+                    </div>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
+                            <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
+                            <li><strong>Sunday:</strong> Closed</li>
+                            <li><strong>Public Holidays:</strong> Closed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- <div class="footer-col footer-features">
+            <div class="footer-title">
+                <h3>Why Choose Us</h3>
+            </div>
+            <div class="footer-col-content">
+                <ul>
+                    <li>✓ Premium Quality Products</li>
+                    <li>✓ Competitive Pricing</li>
+                    <li>✓ Reliable Service</li>
+                    <li>✓ Nationwide Delivery</li>
+                    <li>✓ Expert Support</li>
+                    <li>✓ Environmentally Conscious</li>
+                </ul>
+            </div>
+        </div> -->
+            </div>
+
+            <div class="wrapper">
+                <div class="main-footer">
+                    <div class="copyright">
+                        2025 &copy BWGL Group. All rights reserved.
+                    </div>
+                    <div class="credits">
+                        <span>Designed by <a href="">digitalconsistency.africa</a></span>
+                        <span>Developed by <a href="">NoWanDesigns</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    const callButtons = document.querySelectorAll('.shop-btn');
+    const modal = document.getElementById('phoneModal');
+    const closeButton = document.getElementById('closeModal');
+
+    // Add click event to ALL buttons with shop-btn class
+    callButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Close modal when close button is clicked
+    closeButton.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the modal content
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

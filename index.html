@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BWGL</title>
+    <title>BWGL - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -84,6 +84,7 @@ body {
     animation: slideUp 0.6s ease-out;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(236, 187, 183, 0.2);
 }
 
 .category-card:hover {
@@ -248,19 +249,21 @@ body {
 <body>
     <section>
 
-        <header class="header">
+         <header class="header">
             <nav class="navbar">
-                <a href="index.html" class="logo" title="Go to Home">
-                    <img src="assets/images/logo.png" alt="BWGL Group company logo" loading="lazy">
-                </a>
+                <div class="logo">
+                    <a href="/index.html" title="Go to Home">
+                        <img src="/assets/images/logo.png" alt="BWGL Group company Logo" loading="lazy">
+                    </a>
+                </div>
 
                 <div class="nav-btns">
                     <div class="nav-links">
-                        <a href="index.html">Home</a>
+                        <a href="/index.html" title="Go to Home">Home</a>
 
                         <div class="dropdown11">
-                            <a href="catalog.html" class="product-link">
-                                Products 
+                            <a href="/catalog/catalog.html" title="View catalog" class="product-link">
+                                Products
                                 <!-- <span class="arrow-down"></span> -->
                             </a>
                             <!-- <ul class="dropdown11-links">
@@ -276,15 +279,17 @@ body {
                             </ul> -->
                         </div>
 
-                        <a href="about.html">About Us</a>
+                        <a href="/about/about.html">About Us</a>
                         <!-- <a href="services.html">Services</a> -->
-                        <!--<a href="checkout.html">Checkout</a>-->
+                        <!-- <a href="checkout.html">Checkout</a>-->
                     </div>
 
                     <!-- <div class="ux-btns">
-                        <button type="button" aria-label="View cart" title="View your cart"><i class="fa-solid fa-cart-shopping"></i></button>
-                        <button type="button" aria-label="User account"><i class="fa-solid fa-circle-user"></i></button>
-                        <button type="button" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button type="button" title="View your cart" aria-label="View Cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
+                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
                     </div> -->
                 </div>
                 <button class="hamburger" aria-label="Menu">
@@ -294,6 +299,7 @@ body {
                 </button>
             </nav>
         </header>
+
 
 
         <aside class="cart">
@@ -349,7 +355,7 @@ body {
                 </div>
 
                 <div >
-                    <a href="catalog.html" title="See Product Categories"><button class="shop-btn">Become a distributor</button></a>
+                    <a href="/catalog/catalog.html" title="See Product Categories"><button class="shop-btn">Become a distributor</button></a>
                 </div>
             </div>
         </div>
@@ -472,7 +478,7 @@ body {
                 <div class="card-content">
                     <h2 class="card-title">Detergents</h2>
                     <p class="card-description">Powerful cleaning formulas that remove tough stains and dirt from various surfaces while being gentle on materials.</p>
-                    <a href="catalog.html"><button class="shop-btn" title="Shop for Detergents">View Products</button></a>
+                    <a href="/catalog/catalog.html"><button class="shop-btn" title="Shop for Detergents">View Products</button></a>
                 </div>
             </div>
 
@@ -484,7 +490,7 @@ body {
                 <div class="card-content">
                     <h2 class="card-title">De-greasers</h2>
                     <p class="card-description">Specialized solutions that break down and remove stubborn grease, oil, and grime from kitchen and industrial surfaces.</p>
-                    <a href="catalog.html"><button class="shop-btn" title="Shop for De-greasers">View Products</button></a>
+                    <a href="/catalog/catalog.html"><button class="shop-btn" title="Shop for De-greasers">View Products</button></a>
                 </div>
             </div>
 
@@ -496,7 +502,7 @@ body {
                 <div class="card-content">
                     <h2 class="card-title">Disinfectants</h2>
                     <p class="card-description">Effective sanitizing agents that eliminate germs, bacteria, and viruses to maintain a hygienic and safe environment.</p>
-                    <a href="catalog.html"><button class="shop-btn" title="Shop for Disinfectants">View Products</button></a>
+                    <a href="/catalog/catalog.html"><button class="shop-btn" title="Shop for Disinfectants">View Products</button></a>
                 </div>
             </div>
         </div>
@@ -518,69 +524,97 @@ body {
             </div>
         </div>
 
-        <footer>
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-title">
-                        <h3>Contact Us</h3>
-                    </div>
-                    <div class="footer-col-content">
-                        <ul>
-                            <li>Merz Street, Heidelberg Gauteng 1441 </li>
-                            <li>+27 087 012 5682</li>
-                            <li> info@bwglgroup.co.za </li>
-                        </ul>
-                        <div class="footer-logo">
-                            <a href="index.html" title="Go to Home">
-                            <img src="assets/images/logo.png" alt="BWGL Group company logo" loading="lazy" aria-label="BWGL Group company logo">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <div class="footer-title">
-                        <h3>Quick Links</h3>
-                    </div>
-                    <div class="footer-col-content">
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">Products</a></li>
-                            <li><a href="">About Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="footer-col footer-newsletter">
-                    <div class="footer-title">
-                        <h3>Subscribe To Our Newsletter</h3>
-                    </div>
-                    <div class="footer-inputs">
-                        <label for="">Name</label>
-                        <input type="text" name="name" required placeholder="Enter your name" title="Name">
-                        <label for="">Email</label>
-                        <input type="email" name="email" required placeholder="Enter your email" title="Email">
-                        <div class="footer-btn">
-                        <a href="" title="Subscribe to Newsletter"><button >Subscribe</button></a>
-                        </div>
-                    </div>
+      <footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <div class="footer-title">
+                <h3>Contact Us</h3>
+            </div>
+            <div class="footer-col-content">
+                <ul>
+                    <li>Merz Street, Heidelberg Gauteng 1441</li>
+                    <li>+27 087 012 5682</li>
+                    <li>info@bwglgroup.co.za</li>
+                </ul>
+                <div class="footer-logo">
+                    <a href="/index.html" title="Go to Home">
+                        <img src="/assets/images/logo.png" alt="BWGL Group company logo" loading="lazy"
+                            aria-label="BWGL Group company logo">
+                    </a>
                 </div>
             </div>
-
-            <div class="wrapper">
-                <div class="main-footer">
-                    <div class="copyright">
-                        2025 &copy BWGL Group. All rights reserved.
-                    </div>
-
-                   
-                    
-                    <div class="credits">
-                        <span>Designed by <a href="">digitalconsistency.africa</a></span>
-                        <span>Developed by <a href="">NoWanDesigns</a></span>
-                    </div>
-                </div>
+        </div>
+        
+        <div class="footer-col">
+            <div class="footer-title">
+                <h3>Quick Links</h3>
             </div>
-        </footer>
+            <div class="footer-col-content">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/catalog/catalog.html">Products</a></li>
+                    <li><a href="/about/about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-col footer-delivery">
+    <div class="footer-title">
+        <h3>Delivery Info</h3>
+    </div>
+    <div class="footer-col-content">
+        <ul>
+            <li>✓ Nationwide via PAXI</li>
+            <li>✓ Available at PEP Stores</li>
+            <li>✓ Courier costs apply</li>
+            <li>✓ Fast & Reliable</li>
+        </ul>
+    </div>
+</div>
+
+        <div class="footer-col footer-hours">
+            <div class="footer-title">
+                <h3>Business Hours</h3>
+            </div>
+            <div class="footer-col-content">
+                <ul>
+                    <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
+                    <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
+                    <li><strong>Sunday:</strong> Closed</li>
+                    <li><strong>Public Holidays:</strong> Closed</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="footer-col footer-features">
+            <div class="footer-title">
+                <h3>Why Choose Us</h3>
+            </div>
+            <div class="footer-col-content">
+                <ul>
+                    <li>✓ Premium Quality Products</li>
+                    <li>✓ Competitive Pricing</li>
+                    <li>✓ Reliable Service</li>
+                    <li>✓ Nationwide Delivery</li>
+                    <li>✓ Expert Support</li>
+                    <li>✓ Environmentally Conscious</li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="wrapper">
+        <div class="main-footer">
+            <div class="copyright">
+                2025 &copy BWGL Group. All rights reserved.
+            </div>
+            <div class="credits">
+                <span>Designed by <a href="">digitalconsistency.africa</a></span>
+                <span>Developed by <a href="">NoWanDesigns</a></span>
+            </div>
+        </div>
+    </div>
+</footer>
     </section>
     <script src="main.js"></script>
 </body>
