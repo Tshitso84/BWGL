@@ -22,6 +22,65 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
     });
+
+      // Function to set active nav link
+    function setActiveNavLink() {
+        const currentPage = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        navLinks.forEach(link => {
+            // Remove active class from all links
+            link.classList.remove('active');
+            
+            // Get the link's href and convert to absolute path
+            const linkPath = new URL(link.href).pathname;
+            
+            // Check if this link matches the current page
+            if (linkPath === currentPage) {
+                link.classList.add('active');
+            }
+            
+            // Special case for index.html and root
+            if (currentPage === '/' || currentPage === '/index.html' || currentPage === '') {
+                if (linkPath === '/index.html' || linkPath === '/') {
+                    link.classList.add('active');
+                }
+            }
+        });
+        
+        // Handle dropdown product link for catalog pages
+        const productLink = document.querySelector('.product-link');
+        const catalogPages = ['/catalog/catalog.html', '/catalog/', '/products/'];
+        
+        if (productLink && catalogPages.some(page => currentPage.includes(page))) {
+            productLink.classList.add('active');
+        }
+    }
+    
+    // Set active nav link on page load
+    setActiveNavLink();
+    
+    // Update active state when navigating (for SPA-like behavior)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove active class from all links
+            document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Close mobile menu if open
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            if (hamburger && navLinks && hamburger.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    
+    // Update active state on browser back/forward
+    window.addEventListener('popstate', setActiveNavLink);
 });
 
 // CART
@@ -720,6 +779,7 @@ function nextStep(currentStep, nextStep) {
                 btn.classList.toggle('active');
             });
         });
+
 
 
         
