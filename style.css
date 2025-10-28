@@ -678,12 +678,6 @@ section {
 .about-banner {
     background: linear-gradient(135deg, #041527 0%, #0a2540 100%);
     color: white;
-    /* height: 350px; */
-    /* display: flex;
-    flex-direction: column; */
-    /* border-radius: 20px; */
-    /* justify-content: center; */
-    /* align-items: center; */
     position: relative;
     overflow: hidden;
 }
