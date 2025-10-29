@@ -645,7 +645,7 @@ section {
     left: 0;
     bottom: 0;
     right: 0;
-    background-image: url(colorful-composition-with-sponges-rags-gloves-detergent-general-cleaning-cleaning-service-concept.jpg);
+    background-image: url(/colorful-composition-with-sponges-rags-gloves-detergent-general-cleaning-cleaning-service-concept.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -1281,7 +1281,7 @@ section {
 .overview-container::before {
     content: '';
     position: absolute;
-    background-image: url(seamless-vector-pattern-with-outline-cleaning-icons-background-with-hand-drawn-house-work-elements_522613-442.avif);
+    background-image: url(/seamless-vector-pattern-with-outline-cleaning-icons-background-with-hand-drawn-house-work-elements_522613-442.avif);
     top: 0;
     left: 0;
     right: 0;
