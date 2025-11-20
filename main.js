@@ -780,6 +780,32 @@ function nextStep(currentStep, nextStep) {
             });
         });
 
+          // Loading animation script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loading screen after page loads
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    const loadingScreen = document.getElementById('loading-screen');
+                    loadingScreen.classList.add('hidden');
+                    
+                    // Remove from DOM after animation completes
+                    setTimeout(function() {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }, 1500); // Adjust timing as needed
+            });
+            
+            // Fallback in case load event doesn't fire
+            setTimeout(function() {
+                const loadingScreen = document.getElementById('loading-screen');
+                if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+                    loadingScreen.classList.add('hidden');
+                    setTimeout(function() {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }
+            }, 3000); // Maximum wait time
+        });
 
 
         
