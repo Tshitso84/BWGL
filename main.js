@@ -85,26 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // CART
 document.addEventListener('DOMContentLoaded', function() {
-    // Find the existing cart icon in the header
-    const cartIcon = document.querySelector('.nav-btns button:nth-child(1)');
+    // Find the new cart toggle button
+    const cartIcon = document.querySelector('.cart-toggle');
+    if (!cartIcon) return;
     
     // Add cart counter to the icon
     const cartCounter = document.createElement('span');
     cartCounter.className = 'cart-counter';
-    cartCounter.style.position = 'absolute';
-    cartCounter.style.top = '-8px';
-    cartCounter.style.right = '-8px';
-    cartCounter.style.backgroundColor = '#e94545';
-    cartCounter.style.color = 'white';
-    cartCounter.style.fontSize = '12px';
-    cartCounter.style.fontWeight = 'bold';
-    cartCounter.style.borderRadius = '50%';
-    cartCounter.style.width = '20px';
-    cartCounter.style.height = '20px';
-    cartCounter.style.display = 'flex';
-    cartCounter.style.alignItems = 'center';
-    cartCounter.style.justifyContent = 'center';
     cartCounter.textContent = '0';
+    cartIcon.appendChild(cartCounter);
     
     // Make sure cart icon has position relative for absolute positioning of counter
     if (window.getComputedStyle(cartIcon).position === 'static') {
