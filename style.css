@@ -53,6 +53,72 @@
     --checkout-button: #A4453C;
 }
 
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+title {
+    border-radius: 20px;
+}
+
+button.shop-btn {
+    background-color: #041527;
+    color: white;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+button.shop-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+button.shop-btn:hover {
+    background-color: #051a30;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.63);
+}
+
+button.shop-btn:hover::before {
+    left: 100%;
+}
+
+button.shop-btn:active {
+    transform: translateY(0);
+}
+
+
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
 /* ====================================================
 PREMIUM MINIMALIST HEADER (MOBILE-FIRST)
 ====================================================== */
@@ -241,6 +307,30 @@ PREMIUM MINIMALIST HEADER (MOBILE-FIRST)
     box-sizing: border-box;
     text-align: center;
     /* Center all text content */
+}
+
+/* Premium Floating Brand Badge (Replaces messy heroImage) */
+.hero-brand-badge {
+    width: clamp(5rem, 6vw, 6.5rem);
+    height: clamp(5rem, 6vw, 6.5rem);
+    border-radius: 50%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--hero-border-subtle);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: heroItemFade 1.2s var(--hero-ease) forwards;
+
+    img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    }
 }
 
 .hero-gallery-text-top {
@@ -795,444 +885,11 @@ PREMIUM MINIMALIST HEADER (MOBILE-FIRST)
     }
 }
 
-a {
-    text-decoration: none;
-    color: #fff;
-}
 
-li {
-    list-style: none;
-}
-
-title {
-    border-radius: 20px;
-}
-
-.shop-btn {
-    background-color: #041527;
-    color: white;
-    border: none;
-    padding: 13px 32px;
-    border-radius: 999px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    align-self: flex-start;
-    position: relative;
-    overflow: hidden;
-}
-
-.shop-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.shop-btn:hover {
-    background-color: #051a30;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.63);
-}
-
-.shop-btn:hover::before {
-    left: 100%;
-}
-
-.shop-btn:active {
-    transform: translateY(0);
-}
-
-button {
-    padding: 10px 15px;
-    border: none;
-    font-size: clamp(0.75rem, 1vw, 1rem);
-    color: #041527;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-family: overlock, julius sans one;
-    transition: all .3s ease;
-}
-
-button:active {
-    transform: translateY(-3PX);
-}
-
-body {
-    min-height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    line-height: 1.5;
-    letter-spacing: 1px;
-}
-
-.overlay-color {
-    background-image: linear-gradient(transparent, #051b33);
-}
-
-.overlay-color2 {
-    background-image: linear-gradient(#051b3360, #051b3354);
-}
-
-section {
-    width: 100%;
-    min-height: auto;
-    margin: 0 auto;
-    color: var(--text-dark);
-}
-
-
-/* Hero Section */
 
 /* ============================================
-   PREMIUM GLASSMORPHIC HERO SECTION REDESIGN
+   PREMIUM LANDING OVERVIEW SECTION
    ============================================ */
-
-.hero {
-    /* Inherits structural tokens from the updated header theme */
-    --hero-bg-dark: #0a0f18;
-    --hero-accent: #E2B6B0;
-    /* Premium Champagne / Rose Gold */
-    --hero-text-muted: #94A3B8;
-    --hero-border-subtle: rgba(255, 255, 255, 0.06);
-    --hero-ease: cubic-bezier(0.16, 1, 0.3, 1);
-
-    width: 100%;
-    min-height: 100dvh;
-    position: relative;
-    background-color: var(--hero-bg-dark);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 2;
-}
-
-/* Base Background layer & Cinematic Vignette */
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        radial-gradient(circle at 50% 30%, rgba(226, 182, 176, 0.08), transparent 45%),
-        radial-gradient(circle at 50% 50%, transparent, var(--hero-bg-dark)),
-        url('Hero background.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    opacity: 0.55;
-    mix-blend-mode: lighten;
-    z-index: -1;
-}
-
-.hero-content {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 8rem 2rem 4rem 2rem;
-    /* Strategic padding top to prevent header overlap */
-    position: relative;
-    z-index: 3;
-    gap: 2.5rem;
-    box-sizing: border-box;
-}
-
-/* Premium Floating Brand Badge (Replaces messy heroImage) */
-.hero-brand-badge {
-    width: clamp(5rem, 6vw, 6.5rem);
-    height: clamp(5rem, 6vw, 6.5rem);
-    border-radius: 50%;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--hero-border-subtle);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: heroItemFade 1.2s var(--hero-ease) forwards;
-
-    img {
-        width: 90%;
-        height: 90%;
-        object-fit: contain;
-        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-    }
-}
-
-/* Typography Container */
-.hero-cont-detail {
-    width: 100%;
-    max-width: 850px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-
-    /* Overlock / Julius alternative for elegant tracking */
-    h1 {
-        font-family: "Julius Sans One", "Inter", sans-serif;
-        font-weight: 400;
-        font-size: clamp(2.25rem, 6vw, 4.25rem);
-        letter-spacing: 0.04em;
-        color: #ffffff;
-        line-height: 1.15;
-        margin: 0;
-        animation: heroItemFade 1.4s var(--hero-ease) 0.1s both;
-
-        span {
-            color: var(--hero-accent);
-            font-weight: 600;
-        }
-    }
-
-    /* Subtitle Styling */
-    p {
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
-        font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-        line-height: 1.6;
-        letter-spacing: -0.01em;
-        color: var(--hero-text-muted);
-        max-width: 650px;
-        margin: 0 auto;
-        animation: heroItemFade 1.4s var(--hero-ease) 0.2s both;
-
-        span {
-            font-family: inherit;
-            font-style: italic;
-            color: var(--hero-accent);
-            font-weight: 500;
-        }
-    }
-
-    /* Kicker / Label above or below text */
-    small {
-        font-family: "Inter", sans-serif;
-        font-size: clamp(11px, 1.5vw, 13px);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        color: var(--hero-accent);
-        opacity: 0.85;
-        order: -1;
-        /* Placed cleanly above the H1 headline */
-        animation: heroItemFade 1.4s var(--hero-ease) 0s both;
-    }
-}
-
-
-
-/* Add these styling nodes directly into your CSS variables / block */
-
-.hero-actions {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    animation: heroItemFade 1.4s var(--hero-ease) 0.3s both;
-}
-
-.hero-cta-link {
-    text-decoration: none;
-}
-
-/* Customised High-End Hero Variant of your Shop Button */
-.hero .shop-btn {
-    background-color: var(--hero-accent);
-    color: var(--hero-bg-dark);
-    border: none;
-    padding: 1rem 2.25rem;
-    border-radius: 30px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(226, 182, 176, 0.2);
-    transition: var(--hero-ease) 0.4s;
-}
-
-.hero .shop-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(226, 182, 176, 0.35);
-    background-color: #ffffff;
-    /* Turns clean white on hover for premium minimalist feedback */
-}
-
-.hero .shop-btn:active {
-    transform: translateY(-1px);
-}
-
-/* Fixed nested image selector within showcase to prevent sizing collapse */
-.hero-showcase-wrap img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 14px 14px 0 0;
-    display: block;
-}
-
-/* ========== PERFORMANCE ANIMATIONS ========== */
-@keyframes heroItemFade {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========== MOBILE ADAPTATIONS Refactored ========== */
-@media (max-width: 768px) {
-    .hero {
-        background-attachment: scroll;
-        /* Fixes performance lag on mobile webkit */
-    }
-
-    .hero::before {
-        /* Replaces the duplicate background-image logic cleanly */
-        background-image:
-            radial-gradient(circle at 50% 30%, rgba(226, 182, 176, 0.12), transparent 60%),
-            linear-gradient(180deg, rgba(10, 15, 24, 0.85) 0%, var(--hero-bg-dark) 100%),
-            url('colorful-composition-with-sponges-rags-gloves-detergent-general-cleaning-cleaning-service-concept.jpg');
-        opacity: 0.75;
-    }
-
-    .hero-content {
-        padding: 7rem 1.5rem 2rem 1.5rem;
-        gap: 2rem;
-    }
-
-    .hero-showcase-wrap {
-        padding: 0.75rem 0.75rem 0 0.75rem;
-
-        img {
-            max-height: 250px;
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content {
-        padding-top: 6.5rem;
-    }
-
-    .hero-cont-detail h1 {
-        letter-spacing: 0.02em;
-    }
-}
-
-/*
-.about-banner {
-    background: linear-gradient(135deg, #041527 0%, #0a2540 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.about-banner::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(236, 187, 183, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: moveBackground 3s linear infinite;
-    border: 4px solid red;
-}
-    */
-
-.friendly-products {
-    width: 100%;
-    min-height: 100vh;
-    color: #ECBBB7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 160px;
-    padding-bottom: 40px;
-    justify-content: center;
-    -webkit-box-shadow: -1px -17px 83px -12px rgba(4, 21, 39, 0.78);
-    -moz-box-shadow: -1px -17px 83px -12px rgba(4, 21, 39, 0.78);
-    box-shadow: -1px -17px 83px -12px rgba(4, 21, 39, 0.78);
-    position: relative;
-    z-index: 1;
-    background-color: #041527;
-    gap: clamp(1rem, 2vw, 2rem);
-}
-
-.friendly-products-title-content {
-    text-align: center;
-    margin-bottom: 60px;
-    animation: fadeIn 1s ease-out 0.3s both;
-}
-
-.friendlyIcon {
-    margin-bottom: 20px;
-    animation: rotate360 3s ease-in-out infinite;
-}
-
-.friendlyIcon img {
-    width: 60px;
-    height: 60px;
-    filter: drop-shadow(0 0 10px rgba(236, 187, 183, 0.5));
-}
-
-.title h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: white;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.title h2 span {
-    color: #ECBBB7;
-    position: relative;
-    font-family: overlock, julius sans one;
-}
-
-.title h2 span::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #ECBBB7, transparent);
-    animation: shimmer 2s infinite;
-}
-
-.sub-title p {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: #777;
-}
-
-.sub-title span {
-    font-style: italic;
-    font-family: overlock, julius sans one;
-    font-weight: 600;
-    color: #ECBBB7;
-    animation: shimmer 2s infinite;
-}
-
-
 .overview-container {
     max-width: 100%;
     padding-block: clamp(3rem, 5vw, 7rem);
@@ -1313,6 +970,75 @@ section {
 .overview-subtitle p {
     border-radius: 20px;
 }
+
+
+/* ===========================================
+Main footer section (copyright area)
+=========================================== */
+.main-footer {
+    max-width: 1280px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem clamp(1rem, 2vw, 2rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.credits {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.credits a {
+    color: #ECBBB7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.credits a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .credits {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+.main-footer {
+    max-inline-size: 1280px;
+    font-size: .8rem;
+    color: #777;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: clamp(1rem, 2vw, 2rem);
+    padding-inline: clamp(1rem, 2vw, 2rem);
+}
+
+.main-footer span a {
+    color: #777;
+    font-style: italic;
+    animation: shimmer 2s infinite;
+}
+
 
 footer {
     background-color: #041527;
@@ -1436,399 +1162,8 @@ footer {
     }
 }
 
-/* Main footer section (copyright area) */
-.main-footer {
-    max-width: 1280px;
-    margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem clamp(1rem, 2vw, 2rem);
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.copyright {
-    color: #777;
-    font-size: 0.9rem;
-}
-
-.credits {
-    display: flex;
-    gap: 1.5rem;
-    font-size: 0.9rem;
-    color: #777;
-}
-
-.credits a {
-    color: #ECBBB7;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.credits a:hover {
-    color: #fff;
-}
-
-@media (max-width: 768px) {
-    .main-footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-
-    .credits {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-}
-
-.main-footer {
-    max-inline-size: 1280px;
-    font-size: .8rem;
-    color: #777;
-    margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: clamp(1rem, 2vw, 2rem);
-    padding-inline: clamp(1rem, 2vw, 2rem);
-}
-
-.main-footer span a {
-    color: #777;
-    font-style: italic;
-    animation: shimmer 2s infinite;
-}
 
 
-
-.container {
-    width: 100%;
-    max-width: 112.5rem;
-    margin-inline: auto;
-    padding: 0 1rem;
-    box-sizing: border-box;
-}
-
-.nav-btns {
-    display: flex;
-    gap: 0.9375rem;
-}
-
-.nav-btns button {
-    background: none;
-    border: none;
-    color: var(--primary-700);
-    font-size: clamp(1.2rem, 2.5vw, 1.9rem);
-    cursor: pointer;
-    position: relative;
-}
-
-
-.product-catalog {
-    padding: 40px 20px;
-    background-color: #041527;
-    color: white;
-}
-
-.catalog-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    margin-top: 8rem;
-}
-
-.catalog-title {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.catalog-title h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    color: white;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.catalog-title h2 span {
-    color: #ECBBB7;
-    position: relative;
-    font-family: overlock, julius sans one;
-}
-
-.catalog-title h2 span::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #ECBBB7, transparent);
-    animation: shimmer 2s infinite;
-}
-
-.catalog-subtitle {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    color: #777;
-}
-
-.catalog-subtitle span {
-    font-style: italic;
-    font-family: overlock, julius sans one;
-    font-weight: 600;
-    color: #ECBBB7;
-    animation: shimmer 2s infinite;
-}
-
-.catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
-}
-
-.catalog-section {
-    margin-bottom: 60px;
-}
-
-.section-title {
-    font-size: 1.8rem;
-    color: #ECBBB7;
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: 'Overlock', julius sans one;
-    border-bottom: 2px solid #ECBBB7;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-
-.product-item {
-    background: rgba(47, 75, 96, 0.13);
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
-    border-radius: 20px;
-    padding: 25px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.product-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
-}
-
-.product-name {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    color: #ECBBB7;
-    margin-bottom: 15px;
-    font-family: 'Overlock', julius sans one;
-}
-
-.product-price {
-    font-size: clamp(1.4rem, 3vw, 1.8rem);
-    font-weight: 700;
-    color: var(--primary-700);
-    margin-bottom: 20px;
-}
-
-.item-image {
-    width: 100%;
-    height: 250px;
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.size {
-    font-size: 1.2rem;
-    color: #bbb;
-}
-
-.item-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.item-image:hover img {
-    transform: scale(1.15);
-}
-
-.catalog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    width: 100%;
-}
-
-.product-description {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-    .product-item {
-        padding: 20px;
-    }
-
-    .catalog-grid {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
-    }
-
-    .item-image {
-        height: 220px;
-    }
-}
-
-@media (max-width: 480px) {
-    .product-item {
-        padding: 15px;
-    }
-
-    .catalog-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .item-image {
-        height: 200px;
-    }
-
-    .section-title {
-        font-size: clamp(1.3rem, 4vw, 1.8rem);
-    }
-}
-
-.product-description {
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.catalog-info {
-    background: rgba(47, 75, 96, 0.13);
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
-    border-radius: 20px;
-    border-top-left-radius: clamp(3rem, 5vw, 6.25rem);
-    border-bottom-right-radius: clamp(3rem, 5vw, 6.25rem);
-    padding: 30px;
-    margin-top: 40px;
-    text-align: center;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(236, 187, 183, 0.2);
-}
-
-.catalog-info h3 {
-    color: #ECBBB7;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    font-family: 'Overlock', julius sans one;
-}
-
-.catalog-info p {
-    color: #bbb;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.contact-info {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.contact-info p {
-    margin-bottom: 10px;
-}
-
-.contact-info a {
-    color: var(--primary-700);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: #ECBBB7;
-}
-
-.distributor-package {
-    background: linear-gradient(135deg, rgba(236, 187, 183, 0.1), rgba(26, 65, 112, 0.2));
-    border-radius: 20px;
-    border-top-left-radius: clamp(3rem, 5vw, 6.25rem);
-    border-bottom-right-radius: clamp(3rem, 5vw, 6.25rem);
-    padding: 30px;
-    margin-top: 40px;
-    text-align: center;
-    border: 1px solid rgba(236, 187, 183, 0.2);
-    margin-bottom: 4rem;
-}
-
-.delivery-tag {
-    color: #ECBBB7;
-}
-
-.distributor-package h3 {
-    color: #ECBBB7;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    font-family: 'Overlock', julius sans one;
-    animation: shimmer 2s infinite;
-}
-
-.package-price {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-700);
-    margin-bottom: 20px;
-    animation: shimmer 2s infinite;
-}
-
-.package-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-bottom: 25px;
-    margin-top: 2rem;
-}
-
-.package-item {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 10px;
-    color: #bbb;
-}
-
-@media (max-width: 768px) {
-    .catalog-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .package-items {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width: 767px) {
-
-    input,
-    select,
-    textarea {
-        font-size: 16px !important;
-    }
-}
 
 /* ====================================================
    CATALOG PAGE - PREMIUM CLEAN REDESIGN
@@ -1850,12 +1185,6 @@ footer {
     color: var(--catalog-text);
 }
 
-.catalog-page .header {
-    background: rgba(7, 17, 29, 0.76);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
-}
 
 .catalog-main {
     padding-top: clamp(7rem, 10vw, 9rem);
@@ -1867,6 +1196,7 @@ footer {
     padding: clamp(2rem, 5vw, 4rem) clamp(1.2rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
     display: grid;
     gap: 1.25rem;
+    border-radius: 26px;
 }
 
 .catalog-kicker {
@@ -1881,7 +1211,7 @@ footer {
     font-size: clamp(2rem, 5vw, 4rem);
     line-height: 1.02;
     max-width: 14ch;
-    color: #0d2236;
+    color: #fff;
     letter-spacing: -0.03em;
 }
 
