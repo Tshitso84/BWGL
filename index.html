@@ -26,306 +26,298 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
- 
-
-.product-category {
-    padding: 4rem 1rem;
-    background: #041527;
-    width: 100%;
-}
-
-.container {
-    max-width: 1300px;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Page Title */
-.page-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    color: #2c3e50;
-    font-weight: 600;
-    animation: fadeIn 0.8s ease-out;
-}
-
-/* Cards Grid - Mobile First */
-.cards-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
-/* Category Card */
-.category-card {
-    background: #142b41;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    animation: slideUp 0.6s ease-out;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(236, 187, 183, 0.2);
-}
-
-.category-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Card Image */
-.card-image {
-    height: 200px;
-    padding: 20px;
-    /* overflow: hidden; */
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    transition: transform 0.5s ease;
-   
-}
-
-.category-card:hover .card-image img {
-    transform: scale(1.05);
-}
-
-/* Card Content */
-.card-content {
-    padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    background: #0c253b;
-}
-
-.card-title {
-    font-size: 1.4rem;
-    margin-bottom: 0.75rem;
-    color: #DEA9A1;
-    font-family: overlock, julius sans one;
-    font-weight: 600;
-}
-
-.card-description {
-    color: #666;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
-    line-height: 1.5;
-}
-
-/* Shop Button
-.shop-btn {
-    background-color: #041527;;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    align-self: flex-start;
-    position: relative;
-    overflow: hidden;
-}
-
-.shop-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.shop-btn:hover {
-    background-color:#051a30;;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.63);
-}
-
-.shop-btn:hover::before {
-    left: 100%;
-}
-
-.shop-btn:active {
-    transform: translateY(0);
-} */
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+    :root {
+        --bg-main: #030d1a;
+        /* Deep, premium midnight blue */
+        --bg-card: #091625;
+        /* Slightly lighter sleek slate */
+        --bg-image-vault: #ffffff;
+        /* Vaulting the white background images gracefully */
+        --accent-rose: #DEA9A1;
+        /* Your signature rose gold */
+        --accent-rose-bright: #f0c5bf;
+        --text-primary: #ffffff;
+        --text-muted: #94a3b8;
+        /* Crisp, high-contrast readable gray */
+        --transition-premium: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    to {
-        opacity: 1;
-    }
-}
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+    /* Section Wrapper */
+    .product-category {
+        padding: 6rem 2rem;
+        background-color: var(--bg-main);
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Tablet Styles */
-@media (min-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        /* Expands the track width */
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Header Elements */
+    .page-header-group {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
     .page-title {
-        font-size: 2.2rem;
-        margin-bottom: 2.5rem;
+        font-size: 2.75rem;
+        color: var(--text-primary);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
     }
-    
+
+    /* Highlight dynamic styling */
+    .page-title span {
+        color: var(--accent-rose);
+        background: linear-gradient(135deg, #ffffff 30%, var(--accent-rose) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+        color: var(--accent-rose);
+        opacity: 0.8;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-weight: 500;
+    }
+
+    /* Cards Grid Layout */
     .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        width: 100%;
     }
-    
+
+    /* Premium Category Card */
+    .category-card {
+        background: var(--bg-card);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: var(--transition-premium);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(222, 169, 161, 0.08);
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Premium Hover State */
+    .category-card:hover {
+        transform: translateY(-10px);
+        border-color: rgba(222, 169, 161, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--accent-rose);
+    }
+
+    /* Card Image Wrapper: Turns the amateurish white background crop 
+   into an intentional aesthetic studio window contrast blocks 
+*/
     .card-image {
-        height: 220px;
-    }
-    
-    .card-content {
+        position: relative;
+        height: 260px;
+        background: var(--bg-image-vault);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 2rem;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(222, 169, 161, 0.1);
     }
-    
+
+    /* Soft inner shadow inside the image vault to integrate it */
+    .card-image::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 -30px 40px rgba(4, 21, 39, 0.05);
+        pointer-events: none;
+    }
+
+    .card-image img {
+        max-width: 85%;
+        max-height: 85%;
+        object-fit: contain;
+        transition: var(--transition-premium);
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+    }
+
+    .category-card:hover .card-image img {
+        transform: scale(1.08) translateY(-5px);
+        filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25));
+    }
+
+    /* Card Content Area */
+    .card-content {
+        padding: 2.25rem 2rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
     .card-title {
         font-size: 1.5rem;
+        margin-bottom: 0.85rem;
+        color: var(--text-primary);
+        font-weight: 600;
+        letter-spacing: -0.01em;
     }
-}
 
-/* Desktop Styles */
-@media (min-width: 1024px) {
-    .cards-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2.5rem;
+    .card-description {
+        color: var(--text-muted);
+        margin-bottom: 2.5rem;
+        flex-grow: 1;
+        line-height: 1.65;
+        font-size: 0.95rem;
     }
-    
-    .card-image {
-        height: 240px;
-    }
-    
-    .card-content {
-        padding: 2rem;
-    }
-    
-    .card-title {
-        font-size: 1.6rem;
-    }
-    
+
+    /* Premium Minimal Call To Action */
     .shop-btn {
-        padding: 0.875rem 1.75rem;
+        background: transparent;
+        color: var(--accent-rose);
+        border: 1.5px solid var(--accent-rose);
+        padding: 0.85rem 1.75rem;
+        border-radius: 30px;
+        /* Rounded pill shape adds luxury feel */
+        font-weight: 600;
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        transition: var(--transition-premium);
+        align-self: flex-start;
+        text-transform: uppercase;
     }
-}
+
+    .shop-btn:hover {
+        background-color: var(--accent-rose);
+        color: var(--bg-main);
+        box-shadow: 0 8px 20px rgba(222, 169, 161, 0.25);
+        transform: translateY(-2px);
+    }
+
+    .shop-btn:active {
+        transform: translateY(0);
+    }
+
+    /* Multi-Column Layout Adjustments */
+    @media (min-width: 768px) {
+        .cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .cards-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+    }
 </style>
 
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <div class="loading-logo">
-            <img src="logo.png" alt="BWGL Group Logo">
-        </div>
-        <!--<div class="loading-spinner"></div> --> 
-        <div class="loading-text">
-            <h3>Loading Boni's Clean Products</h3>
-            <br>
 
-            <div class="loading-dots">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-        </div>
-    </div>
     <section>
 
-         <header class="header">
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html" title="Go to Home">
-                        <img src="logo.png" alt="BWGL Group company Logo" loading="lazy">
-                    </a>
+    <header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="BWGL Logo">
+        </a>
+    </div>
+    
+    <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="catalog.html">Products</a>
+        <a href="about.html">Contact Us</a>
+    </nav>
+    
+    <div class="nav-actions">
+        <a href="about.html" class="book-meeting-btn">Book a meeting</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</header>
+
+
+
+
+        <section class="hero-gallery-section">
+            <!-- 1. Text content at the top of the gallery -->
+            <div class="hero-gallery-text-top">
+                <div class="hero-brand-badge">
+                    <img src="coe-badge-2021.png" alt="BWGL Excellence Badge" loading="lazy">
                 </div>
+                <span class="hero-badge-tag">Switch to Eco-Friendly Premium Cleaners</span>
+                <h1 class="hero-gallery-title overview-title"><span>Clean</span> Smarter.<br>Plant-Based <span>Power</span>.</h1>
+                <p>Switch to Boni's premium, plant-based eco-friendly solutions designed for modern luxury spaces.</p>
+            </div>
 
-                <div class="nav-btns">
-                    <div class="nav-links">
-                        <a href="" title="Go to Home">Home</a>
-
-                        <div class="dropdown11">
-                            <a href="catalog.html" title="View catalog" class="product-link">
-                                Products
-                                <!-- <span class="arrow-down"></span> -->
-                            </a>
-                            <!-- <ul class="dropdown11-links">
-                                <li>
-                                    <a href="detergents.html">Detergents</a>
-                                </li>
-                                <li>
-                                    <a href="degreasers.html">Degreasers</a>
-                                </li>
-                                <li>
-                                    <a href="disinfectants.html">Disinfectants</a>
-                                </li>
-                            </ul> -->
-                        </div>
-
-                        <a href="about.html">About Us</a>
-                        <!-- <a href="services.html">Services</a> -->
-                        <!-- <a href="checkout.html">Checkout</a>-->
+            <!-- 2. Curved Panoramic Image Gallery -->
+            <div id="hero-image-gallery" class="hero-image-gallery">
+                <div class="gallery-images">
+                    <div class="gallery-image">
+                        <img src="eco_dishwash.png" alt="Eco Dishwashing Liquid">
                     </div>
-
-                    <!-- <div class="ux-btns">
-                        <button type="button" title="View your cart" aria-label="View Cart">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </button>
-                        <button><a href=""><i class="fa-solid fa-circle-user"></i></a></button>
-                        <button><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></button>
-                    </div> -->
-                </div>
-                <button class="hamburger" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </nav>
-        </header>
-
-
-
-       
-        <div class="hero overlay-color2">
-            <div class="hero-content">
-                <div class="hero-cont-detail">
-                    <h1>Clean Smarter</h1>
-                    <P>switch to <span>Boni's</span> eco friendly</P>
-                    <small>with Boni’s <span>Eco Detergents</span> no space is left dirty</small>
-                </div>
-
-                <div class="heroImage">
-                    <img src="coe-badge-2021.png" alt="">
-                </div>
-
-                <div >
-                    <a href="catalog.html" title="See Product Categories"><button class="shop-btn">Become a distributor</button></a>
+                    <div class="gallery-image">
+                        <img src="eco_glass_cleaner.png" alt="Eco Glass Cleaner">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="eco_surface_cleaner.png" alt="Eco Surface Cleaner">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="eco_disinfectant.png" alt="Eco Disinfectant">
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <!-- 3. Description and Action Links below the gallery -->
+            <div class="hero-gallery-bottom">
+                <p class="hero-bottom-desc">
+                    We formulate plant-based detergents, degreasers, and disinfectants from scratch. Pure ingredients,
+                    zero harsh chemicals, no compromises.
+                </p>
+
+                <div class="hero-bottom-links">
+                    <a href="catalog.html" class="hero-bottom-link-underline">Become a distributor</a>
+                    <a href="#about-section" class="hero-bottom-link-underline">Our Story</a>
+                </div>
+
+                <!--
+                <div class="gallery-controls-container">
+                    <div class="active-slide-info">
+                        <span class="slide-number">01</span>
+                        <span class="slide-divider">/</span>
+                        <span class="slide-title">Eco Dishwashing Liquid</span>
+                    </div>
+                    <div class="gallery-dots">
+                        <span class="gallery-dot active" data-index="0"></span>
+                        <span class="gallery-dot" data-index="1"></span>
+                        <span class="gallery-dot" data-index="2"></span>
+                        <span class="gallery-dot" data-index="3"></span>
+                    </div>
+                </div>
+                -->
+
+            </div>
+        </section>
 
         <!-- <section class="friendly-products about-banner">
 
@@ -421,60 +413,78 @@
 
         </section> -->
 
-        <div class="product-category about-banner">
-    
-    <div class="container">
-        <!-- <h1 class="page-title">Our Cleaning Products</h1> -->
-         <div id="products" class="friendly-products-title-content">
-                <div class="friendlyIcon">
-                    <img src="SVG.png" alt="flower icon" loading="lazy">
+        <section id="about-section" class="landing-about-section">
+            <div class="about-container">
+                <div class="about-header">
+                    <span class="about-kicker">About BWGL Group</span>
+                    <h2 class="about-title overview-title">Pioneering Premium <span>Eco-Cleaning</span> Solutions</h2>
                 </div>
-                <div class="title">
-                    <h2>Eco <span>Friendly</span> Products</h2>
-                </div>
-                <div class="sub-title">
-                    <p>Our Various Products </p>
-                </div>
-            </div>
-        <div class="cards-grid">
-            <!-- Detergents Card -->
-            <div class="category-card">
-                <div class="card-image">
-                    <img src="Surfaca cleaner.png" alt="Detergents">
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">Detergents</h2>
-                    <p class="card-description">Powerful cleaning formulas that remove tough stains and dirt from various surfaces while being gentle on materials.</p>
-                    <a href="catalog.html"><button class="shop-btn" title="Shop for Detergents">View Products</button></a>
-                </div>
-            </div>
 
-            <!-- De-greasers Card -->
-            <div class="category-card">
-                <div class="card-image">
-                    <img src="Glass Cleaner.png" alt="De-greasers">
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">De-greasers</h2>
-                    <p class="card-description">Specialized solutions that break down and remove stubborn grease, oil, and grime from kitchen and industrial surfaces.</p>
-                    <a href="catalog.html"><button class="shop-btn" title="Shop for De-greasers">View Products</button></a>
-                </div>
-            </div>
+                <div class="about-grid">
+                    <!-- Left Side: Copy and Details -->
+                    <div class="about-copy-col">
+                        <p class="about-lead">
+                            BWGL Group places the client at the center of our services. We deliver an excellent
+                            two-pronged solution: premium cleaning/hygiene service systems and custom eco-friendly
+                            product distribution.
+                        </p>
+                        <p class="about-body">
+                            Based in the picturesque mountainous area of Heidelberg in Gauteng, we partner with
+                            corporate, business, public sector, and retail clients to deliver top-tier hygienic
+                            solutions. Through our foundation, we run community outreach programmes to empower our local
+                            communities and the country at large.
+                        </p>
 
-            <!-- Disinfectants Card -->
-            <div class="category-card">
-                <div class="card-image">
-                    <img src="Rectangle 9.png " alt="Disinfectants">
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">Disinfectants</h2>
-                    <p class="card-description">Effective sanitizing agents that eliminate germs, bacteria, and viruses to maintain a hygienic and safe environment.</p>
-                    <a href="catalog.html"><button class="shop-btn" title="Shop for Disinfectants">View Products</button></a>
+                        <div class="about-pillars">
+                            <div class="pillar-card">
+                                <div class="pillar-icon">
+                                    <i class="fa-solid fa-leaf"></i>
+                                </div>
+                                <div class="pillar-text">
+                                    <h3>Our Mission</h3>
+                                    <p>To deliver superior, plant-based cleaning solutions that exceed performance
+                                        standards while protecting our planet.</p>
+                                </div>
+                            </div>
+
+                            <div class="pillar-card">
+                                <div class="pillar-icon">
+                                    <i class="fa-solid fa-gem"></i>
+                                </div>
+                                <div class="pillar-text">
+                                    <h3>Our Values</h3>
+                                    <p>Prioritizing quality, continuous innovation, sustainability, and absolute
+                                        customer satisfaction in everything we do.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Founder Profile / Visual Showcase -->
+                    <div class="about-visual-col">
+                        <div class="founder-card">
+                            <div class="founder-image-wrapper">
+                                <img src="founder.jpg" alt="Sibongile V. Mthimunye - Founder & CEO" loading="lazy">
+                                <div class="founder-overlay">
+                                    <span class="founder-name">Sibongile V. Mthimunye</span>
+                                    <span class="founder-title">Founder & CEO</span>
+                                </div>
+                            </div>
+                            <div class="founder-bio-card">
+                                <p class="founder-experience">
+                                    <strong>CEO Profile:</strong> A former Corporate Executive with over 23 years of
+                                    professional leadership experience in the corporate and NPO sectors.
+                                </p>
+                                <p class="founder-qualifications">
+                                    <strong>Qualifications:</strong> BA Social Sciences (Wits), HRM (RAU), and MBA
+                                    (Regent Business School).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    </div>
+        </section>
 
         <div class="overview-container overlay-color2">
             <div class="overview about-banner">
@@ -491,69 +501,69 @@
             </div>
         </div>
 
-      <footer>
-    <div class="footer-grid">
-        <div class="footer-col">
-            <div class="footer-title">
-                <h3>Contact Us</h3>
-            </div>
-            <div class="footer-col-content">
-                <ul>
-                    <li>Merz Street, Heidelberg Gauteng 1441</li>
-                    <li>+27 087 012 5682</li>
-                    <li>info@bwglgroup.co.za</li>
-                </ul>
-                <div class="footer-logo">
-                    <a href="index.html" title="Go to Home">
-                        <img src="logo.png" alt="BWGL Group company logo" loading="lazy"
-                            aria-label="BWGL Group company logo">
-                    </a>
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-title">
+                        <h3>Contact Us</h3>
+                    </div>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li>Merz Street, Heidelberg Gauteng 1441</li>
+                            <li>+27 087 012 5682</li>
+                            <li>info@bwglgroup.co.za</li>
+                        </ul>
+                        <div class="footer-logo">
+                            <a href="index.html" title="Go to Home">
+                                <img src="logo.png" alt="BWGL Group company logo" loading="lazy"
+                                    aria-label="BWGL Group company logo">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="footer-col">
-            <div class="footer-title">
-                <h3>Quick Links</h3>
-            </div>
-            <div class="footer-col-content">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="catalog.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                </ul>
-            </div>
-        </div>
 
-        <div class="footer-col footer-delivery">
-    <div class="footer-title">
-        <h3>Delivery Info</h3>
-    </div>
-    <div class="footer-col-content">
-        <ul>
-            <li>✓ Nationwide via PAXI</li>
-            <li>✓ Available at PEP Stores</li>
-            <li>✓ Courier costs apply</li>
-            <li>✓ Fast & Reliable</li>
-        </ul>
-    </div>
-</div>
+                <div class="footer-col">
+                    <div class="footer-title">
+                        <h3>Quick Links</h3>
+                    </div>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="catalog.html">Products</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-        <div class="footer-col footer-hours">
-            <div class="footer-title">
-                <h3>Business Hours</h3>
-            </div>
-            <div class="footer-col-content">
-                <ul>
-                    <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
-                    <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
-                    <li><strong>Sunday:</strong> Closed</li>
-                    <li><strong>Public Holidays:</strong> Closed</li>
-                </ul>
-            </div>
-        </div>
+                <div class="footer-col footer-delivery">
+                    <div class="footer-title">
+                        <h3>Delivery Info</h3>
+                    </div>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li>✓ Nationwide via PAXI</li>
+                            <li>✓ Available at PEP Stores</li>
+                            <li>✓ Courier costs apply</li>
+                            <li>✓ Fast & Reliable</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- <div class="footer-col footer-features">
+                <div class="footer-col footer-hours">
+                    <div class="footer-title">
+                        <h3>Business Hours</h3>
+                    </div>
+                    <div class="footer-col-content">
+                        <ul>
+                            <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
+                            <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
+                            <li><strong>Sunday:</strong> Closed</li>
+                            <li><strong>Public Holidays:</strong> Closed</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- <div class="footer-col footer-features">
             <div class="footer-title">
                 <h3>Why Choose Us</h3>
             </div>
@@ -568,21 +578,24 @@
                 </ul>
             </div>
         </div> -->
-    </div>
+            </div>
 
-    <div class="wrapper">
-        <div class="main-footer">
-            <div class="copyright">
-                2025 &copy BWGL Group. All rights reserved.
+            <div class="wrapper">
+                <div class="main-footer">
+                    <div class="copyright">
+                        2025 &copy BWGL Group. All rights reserved.
+                    </div>
+                    <div class="credits">
+                        <span>Designed by <a href="">digitalconsistency.africa</a></span>
+                        <span>Developed by <a href="">NoWanDesigns</a></span>
+                    </div>
+                </div>
             </div>
-            <div class="credits">
-                <span>Designed by <a href="">digitalconsistency.africa</a></span>
-                <span>Developed by <a href="">NoWanDesigns</a></span>
-            </div>
-        </div>
-    </div>
-</footer>
+        </footer>
     </section>
+    <!-- GSAP and Three.js CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="main.js"></script>
 </body>
 
