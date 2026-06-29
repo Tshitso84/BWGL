@@ -29,7 +29,6 @@
     padding: clamp(2rem, 5vw, 4rem) clamp(1.2rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
     display: grid;
     gap: 1.25rem;
-    border-radius: 26px;
 }
 
 .catalog-kicker {
@@ -45,7 +44,14 @@
     line-height: 1.02;
     max-width: 14ch;
     color: #fff;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
+}
+
+.catalog-hero h1 span {
+    font-family: overlock, julius sans one;
+    font-style: italic;
+    color: #ECBBB7;
+    animation: shimmer 2s infinite;
 }
 
 .catalog-lead {
@@ -84,7 +90,7 @@
     padding: 0.8rem 1.1rem;
     border: 1px solid var(--catalog-border);
     border-radius: 999px;
-    color: #18344f;
+    color: #fff;
     font-weight: 600;
     transition: all 0.3s ease;
 }
@@ -99,17 +105,23 @@
     max-width: 1180px;
     margin: 0 auto;
     padding: 0 clamp(1.2rem, 4vw, 3rem) clamp(2.8rem, 6vw, 4.5rem);
+    
 }
 
 .category-header {
     display: grid;
     gap: 0.45rem;
     margin-bottom: 1.6rem;
+
+}
+
+.section-badge {
+    color: #d49b74;
 }
 
 .category-header h2 {
     font-size: clamp(1.5rem, 3vw, 2.25rem);
-    color: #10263e;
+    color: #fff;
     letter-spacing: -0.02em;
 }
 
@@ -247,7 +259,7 @@
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: rgba(255, 255, 255, 0.8);
+    color: #d49b74;
 }
 
 .distributor-content h2 {
@@ -256,7 +268,7 @@
     max-width: 15ch;
 }
 
-.distributor-content p {
+.distributor-eyebrow p {
     color: rgba(242, 247, 252, 0.86);
     max-width: 52ch;
 }
