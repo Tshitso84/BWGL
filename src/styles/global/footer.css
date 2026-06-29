@@ -1,0 +1,182 @@
+.main-footer {
+    max-width: 1280px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem clamp(1rem, 2vw, 2rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.copyright {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.credits {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.credits a {
+    color: #ECBBB7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.credits a:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .credits {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+.main-footer {
+    max-inline-size: 1280px;
+    font-size: .8rem;
+    color: #777;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: clamp(1rem, 2vw, 2rem);
+    padding-inline: clamp(1rem, 2vw, 2rem);
+}
+
+.main-footer span a {
+    color: #777;
+    font-style: italic;
+    animation: shimmer 2s infinite;
+}
+
+footer {
+    background-color: #041527;
+    color: #fff;
+    padding-top: clamp(3rem, 5vw, 7rem);
+}
+
+.wrapper {
+    max-inline-size: 100%;
+    background-color: #061b31b6;
+}
+
+.footer-grid {
+    max-width: 1280px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-bottom: clamp(1rem, 2vw, 2rem);
+    padding-inline: clamp(1rem, 2vw, 2rem);
+}
+
+.footer-col {
+    padding-block: clamp(1rem, 2vw, 2rem);
+}
+
+.footer-col-content {
+    color: #777;
+}
+
+.footer-col-content ul li,
+.footer-col-content ul li a {
+    color: #777;
+    transition: 0.3s;
+    margin-bottom: 8px;
+}
+
+.footer-col ul li:hover,
+.footer-col ul li a:hover {
+    color: #ECBBB7;
+}
+
+.footer-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.footer-title h3 {
+    font-family: overlock, julius sans one;
+    color: #ECBBB7;
+}
+
+.footer-logo {
+    margin-block: 1rem;
+    border: 1px solid #fff;
+    width: clamp(40px, 5vw, 80px);
+    height: clamp(40px, 5vw, 80px);
+    display: flex;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+.footer-logo img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.footer-hours ul li,
+.footer-features ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.footer-hours strong {
+    color: #ECBBB7;
+    font-weight: 600;
+}
+
+.footer-features ul li {
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .footer-col {
+        text-align: center;
+        padding-block: 1rem;
+    }
+
+    .footer-logo {
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        padding-inline: 1rem;
+    }
+
+    .footer-title h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer-col-content ul li {
+        font-size: 0.9rem;
+    }
+}

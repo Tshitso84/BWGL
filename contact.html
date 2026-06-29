@@ -23,7 +23,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/styles/global/global.css">
+    <link rel="stylesheet" href="src/styles/pages/contact-page.css">
 </head>
 
 <body>
@@ -494,7 +495,7 @@
                     <img src="logo.png" alt="BWGL Logo" height="40">
                 </a>
             </div>
-           <nav class="nav-links">
+            <nav class="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="catalog.html">Products</a>
                 <a href="contact.html">Contact Us</a>
@@ -512,152 +513,171 @@
 
 
 
-        <main>
-            <section class="about-section about-banner">
-                <!-- Contact Us Section Replacement -->
-                <div id="contact" class="contact-us-hero">
-                    <div class="contact-content">
-                        <h1>Get in touch</h1>
-                        <p>Partner with us for premium plant-based solutions. Let's design a cleaner future together.</p>
-                        <a href="mailto:info@bwgl.co.za" class="hero-bottom-link-underline">info@bwgl.co.za</a>
-                        <div class="contact-links">
-                            <a href="#projects" class="hero-bottom-link-underline">View Projects</a>
-                            <a href="catalog.html" class="hero-bottom-link-underline">Download Catalog</a>
-                        </div>
-                    </div>
+       <main class="contact-page-wrapper">
+    <!-- Hero Header Section -->
+    <section class="contact-us-hero">
+        <div class="contact-hero-content">
+            <h1 class="overview-title">Get in <span>touch</span></h1>
+            <p>Partner with us for premium cleaning formulations. Let's design a cleaner future together.</p>
+            <a href="mailto:info@bwglgroup.co.za" class="hero-email-link">info@bwglgroup.co.za</a>
+            
+            <div class="contact-hero-actions">
+                <a href="#projects" class="action-link-underline">View Projects</a>
+                <a href="catalog.html" class="action-link-underline">Download Catalog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Corporate Information Split Section -->
+    <section class="corporate-details-section">
+        <div class="details-container-card">
+            <div class="card-brand-header">
+                <div class="brand-badge-icon">
+                    <img src="SVG.png" alt="BWGL Brand Icon" loading="lazy">
                 </div>
-            </section>
-        </main>
-                                    we
-                                    do,
-                                    and we strive to exceed their expectations.</li>
-                            </ul>
-                        </div>
-                    </div>
+                <h3>Corporate Headquarters</h3>
+                <p>We're here to assist with all your cleaning product and distribution needs.</p>
+            </div>
 
-                    <!-- <div class="friendlyIcon">
-                        <img src="SVG.png" alt="flower icon" loading="lazy">
-                    </div> -->
-
-
-                    <!-- <div class="content-split">
-                        <div class="contact-tag">
-                            <h2>Contact Us</h2>
-                            <p>If you have any questions or inquiries about our products or services, please feel free
-                                to
-                                reach
-                                out to us. We value your feedback and look forward to assisting you with your cleaning
-                                needs.
-                            </p>
-                        </div>
-                    </div> -->
-
-                    <div class="catalog-info">
-                        <div class="friendlyIcon">
-                            <img src="SVG.png" alt="flower icon" loading="lazy">
-                        </div>
-                        <h3>Contact Us</h3>
-                        <p>We're here to help with all your cleaning product needs</p>
-
-                        <div class="contact-info">
-                            <p><strong>Phone:</strong> 0823076510 / 0764088968</p>
-                            <p><strong>Email:</strong> admin@bwglgroup.co.za / info@bwglgroup.co.za</p>
-                            <p><strong>Address:</strong> 70 Merz Str, Heidelberg, GP</p>
-                            <p><strong>Delivery:</strong> Courier costs apply - we deliver via PAXI available at all PEP
-                                Stores nationwide</p>
-                        </div>
-
-                        <button class="shop-btn mt-20">Call Us Now</button>
-                        <!-- Modal for phone numbers -->
-                       
-
-                    </div>
-                     <div class="modal" id="phoneModal">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h2>Choose a Number to Call</h2>
-                                </div>
-                                <div class="phone-options">
-                                    <div class="phone-option">
-                                        <span class="phone-number">0823076510</span>
-                                        <a href="tel:0823076510" class="call-btn">Call</a>
-                                    </div>
-                                    <div class="phone-option">
-                                        <span class="phone-number">0764088968</span>
-                                        <a href="tel:0764088968" class="call-btn">Call</a>
-                                    </div>
-                                </div>
-                                <button class="close-btn" id="closeModal">Close</button>
-                            </div>
-                        </div>
-
-            </section>
-        </main>
-
-
-        <footer>
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-title">
-                        <h3>Contact Us</h3>
-                    </div>
-                    <div class="footer-col-content">
-                        <ul>
-                            <li>Merz Street, Heidelberg Gauteng 1441</li>
-                            <li>+27 087 012 5682</li>
-                            <li>info@bwglgroup.co.za</li>
-                        </ul>
-                        <div class="footer-logo">
-                            <a href="index.html" title="Go to Home">
-                                <img src="logo.png" alt="BWGL Group company logo" loading="lazy"
-                                    aria-label="BWGL Group company logo">
-                            </a>
-                        </div>
+            <!-- Grid Layout for Contact Channels -->
+            <div class="info-channels-grid">
+                <div class="channel-item">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <div class="channel-meta">
+                        <h4>Phone Terminals</h4>
+                        <p>082 307 6510 / 076 408 8968</p>
                     </div>
                 </div>
 
-                <div class="footer-col">
-                    <div class="footer-title">
-                        <h3>Quick Links</h3>
-                    </div>
-                    <div class="footer-col-content">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="catalog.html">Products</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                        </ul>
+                <div class="channel-item">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <div class="channel-meta">
+                        <h4>Administrative Email</h4>
+                        <p>admin@bwglgroup.co.za<br>info@bwglgroup.co.za</p>
                     </div>
                 </div>
 
-                <div class="footer-col footer-delivery">
-                    <div class="footer-title">
-                        <h3>Delivery Info</h3>
-                    </div>
-                    <div class="footer-col-content">
-                        <ul>
-                            <li>✓ Nationwide via PAXI</li>
-                            <li>✓ Available at PEP Stores</li>
-                            <li>✓ Courier costs apply</li>
-                            <li>✓ Fast & Reliable</li>
-                        </ul>
+                <div class="channel-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div class="channel-meta">
+                        <h4>Physical Location</h4>
+                        <p>70 Merz Str, Heidelberg, Gauteng</p>
                     </div>
                 </div>
 
-                <div class="footer-col footer-hours">
-                    <div class="footer-title">
-                        <h3>Business Hours</h3>
-                    </div>
-                    <div class="footer-col-content">
-                        <ul>
-                            <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
-                            <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
-                            <li><strong>Sunday:</strong> Closed</li>
-                            <li><strong>Public Holidays:</strong> Closed</li>
-                        </ul>
+                <div class="channel-item">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <div class="channel-meta">
+                        <h4>National Logistics Delivery</h4>
+                        <p>Courier costs apply — we deliver reliably via PAXI to all PEP Stores nationwide.</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- <div class="footer-col footer-features">
+            <div class="action-footer">
+                <button class="shop-btn unique-call-trigger">Call Us Now <i class="fa-solid fa-phone"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Communications Modal (Fully Styled) -->
+    <div class="modal" id="phoneModal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close-icon-btn" id="closeModal" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h2>Direct Channels</h2>
+                <p>Select an available network operator terminal below</p>
+            </div>
+            <div class="phone-options">
+                <div class="phone-option">
+                    <div class="terminal-meta">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <span class="operator-title">Line Terminal 01</span>
+                            <span class="phone-number">082 307 6510</span>
+                        </div>
+                    </div>
+                    <a href="tel:0823076510" class="call-btn"><i class="fa-solid fa-phone"></i> Dial</a>
+                </div>
+                <div class="phone-option">
+                    <div class="terminal-meta">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <span class="operator-title">Line Terminal 02</span>
+                            <span class="phone-number">076 408 8968</span>
+                        </div>
+                    </div>
+                    <a href="tel:0764088968" class="call-btn"><i class="fa-solid fa-phone"></i> Dial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-title">
+                    <h3>Contact Us</h3>
+                </div>
+                <div class="footer-col-content">
+                    <ul>
+                        <li>Merz Street, Heidelberg Gauteng 1441</li>
+                        <li>+27 087 012 5682</li>
+                        <li>info@bwglgroup.co.za</li>
+                    </ul>
+                    <div class="footer-logo">
+                        <a href="index.html" title="Go to Home">
+                            <img src="logo.png" alt="BWGL Group company logo" loading="lazy"
+                                aria-label="BWGL Group company logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <div class="footer-title">
+                    <h3>Quick Links</h3>
+                </div>
+                <div class="footer-col-content">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-col footer-delivery">
+                <div class="footer-title">
+                    <h3>Delivery Info</h3>
+                </div>
+                <div class="footer-col-content">
+                    <ul>
+                        <li>✓ Nationwide via PAXI</li>
+                        <li>✓ Available at PEP Stores</li>
+                        <li>✓ Courier costs apply</li>
+                        <li>✓ Fast & Reliable</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-col footer-hours">
+                <div class="footer-title">
+                    <h3>Business Hours</h3>
+                </div>
+                <div class="footer-col-content">
+                    <ul>
+                        <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
+                        <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
+                        <li><strong>Sunday:</strong> Closed</li>
+                        <li><strong>Public Holidays:</strong> Closed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="footer-col footer-features">
             <div class="footer-title">
                 <h3>Why Choose Us</h3>
             </div>
@@ -672,20 +692,20 @@
                 </ul>
             </div>
         </div> -->
-            </div>
+        </div>
 
-            <div class="wrapper">
-                <div class="main-footer">
-                    <div class="copyright">
-                        2025 &copy BWGL Group. All rights reserved.
-                    </div>
-                    <div class="credits">
-                        <span>Designed by <a href="">digitalconsistency.africa</a></span>
-                        <span>Developed by <a href="">NoWanDesigns</a></span>
-                    </div>
+        <div class="wrapper">
+            <div class="main-footer">
+                <div class="copyright">
+                    2025 &copy BWGL Group. All rights reserved.
+                </div>
+                <div class="credits">
+                    <span>Designed by <a href="">digitalconsistency.africa</a></span>
+                    <span>Developed by <a href="">NoWanDesigns</a></span>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
     </section>
     <script>
         document.addEventListener('DOMContentLoaded', function () {

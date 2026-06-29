@@ -546,40 +546,6 @@ PREMIUM MINIMALIST HEADER (MOBILE-FIRST)
     justify-content: center;
 }
 
-.contact-us-hero {
-    text-align: center;
-    max-width: 800px;
-}
-
-.contact-content h1 {
-    font-size: clamp(3rem, 10vw, 5rem);
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    line-height: 1.1;
-    /* Standardized with hero */
-    letter-spacing: -0.04em;
-    color: #000000;
-}
-
-.contact-content p {
-    font-size: clamp(1rem, 2.5vw, 1.25rem);
-    color: #444444;
-    margin-bottom: 2.5rem;
-    line-height: 1.5;
-}
-
-.contact-links {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.contact-content .hero-bottom-link-underline {
-    display: block;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
 
 .about-grid {
     display: grid;
@@ -645,6 +611,7 @@ PREMIUM MINIMALIST HEADER (MOBILE-FIRST)
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
+   
 }
 
 .pillar-text p {
@@ -660,6 +627,7 @@ PREMIUM MINIMALIST HEADER (MOBILE-FIRST)
     position: sticky;
     top: 100px;
 }
+
 
 .founder-card {
     background: rgba(9, 22, 37, 0.5);
@@ -758,6 +726,339 @@ PREMIUM MINIMALIST HEADER (MOBILE-FIRST)
         padding: 100px 5% 40px 5%;
     }
 }
+
+/* ==========================================================================
+   PREMIUM LANDING CONTACT SECTION (Strictly Scoped Layout)
+   ========================================================================== */
+
+/* Component Variables Base styling constraints */
+.contact-page-wrapper {
+  --contact-bg-deep: #030b14;
+  --contact-bg-card: #081424;
+  --contact-bg-surface: #0c1c32;
+  --contact-accent-gold: #e2b3ae;
+  --contact-accent-gold-hover: #d29c96;
+  --contact-text-primary: #ffffff;
+  --contact-text-secondary: #94a3b8;
+  --contact-text-muted: #64748b;
+  
+  background-color: var(--contact-bg-deep);
+  color: var(--contact-text-primary);
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 6rem;
+}
+
+/* Hero Title Styling */
+.contact-page-wrapper .contact-us-hero {
+  padding: 10rem 2rem 4rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-page-wrapper .contact-hero-content {
+  max-width: 750px;
+  width: 100%;
+}
+
+.contact-page-wrapper .contact-hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.contact-page-wrapper .gradient-text {
+  background: linear-gradient(135deg, #ffffff 30%, var(--contact-accent-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-page-wrapper .contact-hero-content p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--contact-text-secondary);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contact-page-wrapper .hero-email-link {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  color: var(--contact-accent-gold);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.contact-page-wrapper .hero-email-link:hover {
+  opacity: 0.8;
+}
+
+.contact-page-wrapper .contact-hero-actions {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.contact-page-wrapper .action-link-underline {
+  color: var(--contact-text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.contact-page-wrapper .action-link-underline:hover {
+  color: var(--contact-text-primary);
+}
+
+.contact-page-wrapper .action-link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 1px;
+  background-color: var(--contact-accent-gold);
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-page-wrapper .action-link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* Corporate Details Card Layout */
+.contact-page-wrapper .corporate-details-section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-page-wrapper .details-container-card {
+  background: var(--contact-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 4rem 3.5rem;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+}
+
+.contact-page-wrapper .card-brand-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.contact-page-wrapper .brand-badge-icon {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1.25rem;
+}
+
+.contact-page-wrapper .brand-badge-icon img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.contact-page-wrapper .card-brand-header h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.contact-page-wrapper .card-brand-header p {
+  color: var(--contact-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+/* Grid System for Info Rows */
+.contact-page-wrapper .info-channels-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 3.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.contact-page-wrapper .channel-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.contact-page-wrapper .channel-item i {
+  color: var(--contact-accent-gold);
+  font-size: 1.35rem;
+  margin-top: 0.25rem;
+  width: 25px;
+  text-align: center;
+}
+
+.contact-page-wrapper .channel-meta h4 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--contact-text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.contact-page-wrapper .channel-meta p {
+  color: var(--contact-text-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Trigger Button Custom Styling */
+.contact-page-wrapper .action-footer {
+  text-align: center;
+}
+
+.contact-page-wrapper .shop-btn {
+  background: var(--contact-accent-gold);
+  color: var(--contact-bg-deep);
+  border: none;
+  border-radius: 4px;
+  padding: 1.1rem 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-page-wrapper .shop-btn:hover {
+  background: var(--contact-accent-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(226, 179, 174, 0.2);
+}
+
+/* Global Dynamic Modal Overlays */
+
+
+
+
+.contact-page-wrapper .close-icon-btn {
+  position: absolute;
+  top: 1rem; right: 1.25rem;
+  background: transparent;
+  border: none;
+  color: var(--contact-text-secondary);
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.contact-page-wrapper .close-icon-btn:hover {
+  color: var(--contact-text-primary);
+}
+
+.contact-page-wrapper .modal-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contact-page-wrapper .modal-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.contact-page-wrapper .modal-header p {
+  font-size: 0.85rem;
+  color: var(--contact-text-secondary);
+}
+
+.contact-page-wrapper .phone-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-page-wrapper .phone-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 6px;
+}
+
+.contact-page-wrapper .terminal-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-page-wrapper .terminal-meta i {
+  color: var(--contact-accent-gold);
+  font-size: 1.1rem;
+}
+
+.contact-page-wrapper .operator-title {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--contact-text-muted);
+}
+
+.contact-page-wrapper .phone-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.contact-page-wrapper .call-btn {
+  background: var(--contact-accent-gold);
+  color: var(--contact-bg-deep);
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ==========================================================================
+   MOBILE MEDIA BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 768px) {
+  .contact-page-wrapper .details-container-card {
+    padding: 2.5rem 1.5rem;
+  }
+  .contact-page-wrapper .info-channels-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .contact-page-wrapper .contact-hero-actions {
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+  }
+}
+
 
 
 @keyframes fadeInDown {
@@ -1493,85 +1794,7 @@ footer {
     color: var(--catalog-muted);
     max-width: 60ch;
 }
-
-.catalog-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(5, 15, 26, 0.62);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    z-index: 1200;
-    align-items: center;
-    justify-content: center;
-    padding: 1.2rem;
-}
-
-.catalog-modal.is-visible {
-    display: flex;
-}
-
-.catalog-modal .modal-content {
-    width: min(430px, 100%);
-    background: #ffffff;
-    border-radius: 18px;
-    border: 1px solid rgba(16, 34, 53, 0.11);
-    padding: 1.45rem;
-    box-shadow: 0 30px 65px rgba(8, 21, 35, 0.28);
-}
-
-.catalog-modal .modal-header h2 {
-    color: #10263e;
-    font-size: 1.35rem;
-}
-
-.catalog-modal .modal-header p {
-    color: var(--catalog-muted);
-    margin-top: 0.3rem;
-    font-size: 0.95rem;
-}
-
-.catalog-modal .phone-options {
-    margin-top: 1rem;
-    display: grid;
-    gap: 0.65rem;
-}
-
-.catalog-modal .phone-option a {
-    border: 1px solid rgba(16, 34, 53, 0.12);
-    border-radius: 12px;
-    padding: 0.78rem 0.88rem;
-    color: #11304c;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: all 0.25s ease;
-}
-
-.catalog-modal .phone-option a:hover {
-    border-color: rgba(185, 127, 88, 0.7);
-    background: #fcf7f2;
-}
-
-.catalog-modal .phone-action {
-    color: #0f7a47;
-    font-weight: 700;
-}
-
-.catalog-modal .close-btn {
-    margin-top: 0.95rem;
-    width: 100%;
-    border-radius: 12px;
-    background: #edf2f7;
-    color: #10263e;
-    padding: 0.72rem;
-    text-transform: none;
-}
-
-.catalog-modal .close-btn:hover {
-    background: #e2ebf4;
-}
-
+        
 @keyframes catalogRise {
     from {
         opacity: 0;

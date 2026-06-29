@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BWGL - Home</title>
+    <title>BWGL - Product Catalog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -22,24 +23,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/styles/global/global.css">
+    <link rel="stylesheet" href="src/styles/pages/catalog-page.css">
 </head>
 
 <body class="catalog-page">
     <header class="header">
         <div class="logo">
             <a href="index.html">
-                <img src="logo.png" alt="BWGL Logo" height="40">
+                <img src="logo.png" alt="BWGL Logo">
             </a>
         </div>
-      <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="catalog.html">Products</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="catalog.html" class="active">Products</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
         <div class="nav-actions">
             <button class="shop-btn catalog-call-btn" type="button">Call Us Now</button>
-            <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+            <div class="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -47,88 +51,111 @@
         </div>
     </header>
 
-    <main class="catalog-main landing-about-section">
+    <main class="catalog-main">
+        <!-- Hero Section -->
         <section class="catalog-hero">
-            <p class="catalog-kicker">Complete Collection · 2026</p>
-            <h1 class="overview-title">Boni <span>Clean Product</span> Catalog</h1>
-            <p class="catalog-lead">Premium-grade detergents, disinfectants, and all-surface cleaners for retail homes and industrial operations.</p>
-            <div class="hero-cta-row">
-                <button class="shop-btn catalog-call-btn" type="button">Request a quote</button>
-                <a href="#retail-products" class="catalog-ghost-link">Browse retail range</a>
+            <div class="hero-content">
+                <p class="catalog-kicker">Complete Collection &middot; 2026</p>
+                <h1 class="overview-title">Boni Clean <br><span class="gradient-text">Product Catalog</span></h1>
+                <p class="catalog-lead">Premium-grade detergents, disinfectants, and all-surface cleaners architected for pristine homes and heavy-duty industrial operations.</p>
+                <div class="hero-cta-row">
+                    <button class="shop-btn catalog-call-btn primary-cta" type="button">Request a Quote</button>
+                    <a href="#retail-products" class="catalog-ghost-link">
+                        Browse Retail Range <i class="fa-solid fa-arrow-right-long"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
+        <!-- Industrial Collection -->
         <section class="catalog-grid-section" id="industrial-products">
             <div class="category-header">
-                <h2>Industrial Collection</h2>
-                <p>High-volume performance formulas, packaged in 5 litre formats.</p>
+                <div class="header-title-wrap">
+                    <span class="section-badge">Heavy Duty</span>
+                    <h2>Industrial Collection</h2>
+                </div>
+                <p>High-volume performance formulas engineering structural hygiene, safely packaged in 5 Litre formats.</p>
             </div>
 
             <div class="premium-catalog-grid">
                 <article class="premium-product-card">
                     <div class="product-info-top">
-                        <span class="product-tag">Detergent</span>
-                        <span class="product-size">5 Litres</span>
+                        <span class="product-tag tag-detergent">Detergent</span>
+                        <span class="product-size"><i class="fa-solid fa-box-open"></i> 5 Litres</span>
                     </div>
-                    <h3>Dishwashing Liquid</h3>
-                    <p class="price">R175.00</p>
-                    <p>High-performance grease cutting formula for industrial and high-volume kitchens.</p>
+                    <div class="product-body">
+                        <h3>Dishwashing Liquid</h3>
+                        <p class="price">R175.00</p>
+                        <p class="description">High-performance grease cutting formula optimized for industrial settings and high-volume commercial kitchens.</p>
+                    </div>
                 </article>
 
                 <article class="premium-product-card">
                     <div class="product-info-top">
-                        <span class="product-tag">Surface</span>
-                        <span class="product-size">5 Litres</span>
+                        <span class="product-tag tag-surface">Surface</span>
+                        <span class="product-size"><i class="fa-solid fa-box-open"></i> 5 Litres</span>
                     </div>
-                    <h3>Pine Gel</h3>
-                    <p class="price">R225.00</p>
-                    <p>Traditional pine-infused concentrated gel for deep cleaning and natural aroma.</p>
+                    <div class="product-body">
+                        <h3>Pine Gel</h3>
+                        <p class="price">R225.00</p>
+                        <p class="description">Traditional pine-infused concentrated therapeutic gel for ultra-deep active cleaning and persistent natural aroma.</p>
+                    </div>
                 </article>
 
                 <article class="premium-product-card">
                     <div class="product-info-top">
-                        <span class="product-tag">All Surface</span>
-                        <span class="product-size">5 Litres</span>
+                        <span class="product-tag tag-all">All Surface</span>
+                        <span class="product-size"><i class="fa-solid fa-box-open"></i> 5 Litres</span>
                     </div>
-                    <h3>Multi-Purpose Cleaner</h3>
-                    <p class="price">R175.00</p>
-                    <p>Universal cleaning agent formulated for versatility across all hard surfaces.</p>
+                    <div class="product-body">
+                        <h3>Multi-Purpose Cleaner</h3>
+                        <p class="price">R175.00</p>
+                        <p class="description">Universal cleaning agent scientifically formulated for absolute versatility across all architectural hard surfaces.</p>
+                    </div>
                 </article>
 
                 <article class="premium-product-card">
                     <div class="product-info-top">
-                        <span class="product-tag">Disinfectant</span>
-                        <span class="product-size">5 Litres</span>
+                        <span class="product-tag tag-disinfectant">Disinfectant</span>
+                        <span class="product-size"><i class="fa-solid fa-box-open"></i> 5 Litres</span>
                     </div>
-                    <h3>Thick Bleach</h3>
-                    <p class="price">R200.00</p>
-                    <p>Viscous disinfecting bleach designed for maximum contact time and hygiene.</p>
+                    <div class="product-body">
+                        <h3>Thick Bleach</h3>
+                        <p class="price">R200.00</p>
+                        <p class="description">Viscous high-adhesion disinfecting bleach designed for maximum surface contact time and medical-grade hygiene.</p>
+                    </div>
                 </article>
             </div>
         </section>
 
+        <!-- Distributor Hero Feature -->
         <section class="premium-distributor-hero">
             <div class="distributor-content">
                 <p class="distributor-eyebrow">Wholesale Opportunity</p>
                 <h2>Partner With Boni Clean</h2>
-                <p>Join our nationwide network of distributors and represent the Boni Clean standard in your region.</p>
-                <button class="shop-btn catalog-call-btn" id="distributorBtn" type="button">Become a distributor</button>
+                <p>Join our elite nationwide network of independent distributors and anchor the Boni Clean premium standard within your commercial region.</p>
+                <button class="shop-btn catalog-call-btn secondary-cta" id="distributorBtn" type="button">Become a Distributor</button>
             </div>
             <aside class="distributor-info" aria-label="Starter pack details">
-                <div class="distributor-price">R750 <span>Starter Pack</span></div>
+                <div class="distributor-price">R750 <span class="pack-label">Starter Pack</span></div>
+                <div class="pack-divider"></div>
                 <ul class="package-list">
-                    <li><i class="fa-solid fa-check"></i> 5 units · Pine Gel (1L)</li>
-                    <li><i class="fa-solid fa-check"></i> 5 units · Thick Bleach (750ml)</li>
-                    <li><i class="fa-solid fa-check"></i> 5 units · Multi-Purpose (750ml)</li>
-                    <li><i class="fa-solid fa-check"></i> 5 units · Dishwashing Liquid (750ml)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> <span><strong>5 units</strong> &middot; Pine Gel (1L)</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <span><strong>5 units</strong> &middot; Thick Bleach (750ml)</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <span><strong>5 units</strong> &middot; Multi-Purpose (750ml)</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <span><strong>5 units</strong> &middot; Dishwashing Liquid (750ml)</span></li>
                 </ul>
             </aside>
         </section>
 
+        <!-- Retail Essentials Section -->
         <section class="catalog-grid-section" id="retail-products">
             <div class="category-header">
-                <h2>Retail Essentials</h2>
-                <p>Everyday cleaning products in convenient shelf-ready sizes.</p>
+                <div class="header-title-wrap">
+                    <span class="section-badge">Daily Luxury</span>
+                    <h2>Retail Essentials</h2>
+                </div>
+                <p>Everyday high-tier cleaning products curated in convenient, elegant shelf-ready sizes.</p>
             </div>
 
             <div class="premium-catalog-grid">
@@ -137,12 +164,14 @@
                         <img src="IMG_3682.jpg" alt="Dishwashing Liquid 750ml">
                     </div>
                     <div class="product-info-top">
-                        <span class="product-tag">Retail</span>
+                        <span class="product-tag tag-retail">Retail</span>
                         <span class="product-size">750ml</span>
                     </div>
-                    <h3>Dishwashing Liquid</h3>
-                    <p class="price">R35.00</p>
-                    <p>The everyday kitchen essential, now in a sleek retail format.</p>
+                    <div class="product-body">
+                        <h3>Dishwashing Liquid</h3>
+                        <p class="price">R35.00</p>
+                        <p class="description">The vital everyday kitchen culinary essential, re-imagined in a sleek retail presentation format.</p>
+                    </div>
                 </article>
 
                 <article class="premium-product-card premium-product-visual">
@@ -150,12 +179,14 @@
                         <img src="IMG_3685.jpg" alt="Pine Gel 1L">
                     </div>
                     <div class="product-info-top">
-                        <span class="product-tag">Retail</span>
+                        <span class="product-tag tag-retail">Retail</span>
                         <span class="product-size">1 Litre</span>
                     </div>
-                    <h3>Pine Gel</h3>
-                    <p class="price">R60.00</p>
-                    <p>Our premium pine concentrated gel for home maintenance.</p>
+                    <div class="product-body">
+                        <h3>Pine Gel</h3>
+                        <p class="price">R60.00</p>
+                        <p class="description">Our high-concentration pine gel optimized for meticulous residential maintenance ecosystems.</p>
+                    </div>
                 </article>
 
                 <article class="premium-product-card premium-product-visual">
@@ -163,12 +194,14 @@
                         <img src="IMG_3678.jpg" alt="Multi-Purpose Cleaner 750ml">
                     </div>
                     <div class="product-info-top">
-                        <span class="product-tag">Retail</span>
+                        <span class="product-tag tag-retail">Retail</span>
                         <span class="product-size">750ml</span>
                     </div>
-                    <h3>Multi-Purpose Cleaner</h3>
-                    <p class="price">R40.00</p>
-                    <p>Elegant efficiency for all your standard cleaning needs.</p>
+                    <div class="product-body">
+                        <h3>Multi-Purpose Cleaner</h3>
+                        <p class="price">R40.00</p>
+                        <p class="description">Elegant chemical efficiency engineered smoothly for all your standard routine cleaning tasks.</p>
+                    </div>
                 </article>
 
                 <article class="premium-product-card premium-product-visual">
@@ -176,45 +209,59 @@
                         <img src="IMG_3678.jpg" alt="Thick Bleach 750ml">
                     </div>
                     <div class="product-info-top">
-                        <span class="product-tag">Retail</span>
+                        <span class="product-tag tag-retail">Retail</span>
                         <span class="product-size">750ml</span>
                     </div>
-                    <h3>Thick Bleach</h3>
-                    <p class="price">R40.00</p>
-                    <p>Focused disinfection with a clean, surgical precision.</p>
+                    <div class="product-body">
+                        <h3>Thick Bleach</h3>
+                        <p class="price">R40.00</p>
+                        <p class="description">Focused diagnostic sanitation and disinfection structured with surgical clean precision.</p>
+                    </div>
                 </article>
             </div>
         </section>
 
+        <!-- Final Call to Action -->
         <section class="catalog-final-cta">
-            <p class="catalog-kicker">Direct Enquiries</p>
-            <h2>Need a custom package?</h2>
-            <p>Talk to our team for retail, hospitality, and distribution pricing.</p>
-            <button class="shop-btn catalog-call-btn" type="button">Call us now</button>
+            <div class="cta-inner">
+                <p class="catalog-kicker">Direct Enquiries</p>
+                <h2>Need a Custom Package?</h2>
+                <p>Connect immediately with our structural distribution team to discuss curated bespoke commercial frameworks, hospitality options, and tailored regional tier pricing maps.</p>
+                <button class="shop-btn catalog-call-btn primary-cta long-btn" type="button">
+                    <i class="fa-solid fa-comment-dots"></i> Speak with a Representative
+                </button>
+            </div>
         </section>
     </main>
 
+    <!-- Interactive Direct Line Modal Component -->
     <div class="catalog-modal" id="phoneModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 id="modalTitle">Direct Line</h2>
-                <p>Select a representative to call</p>
+                <h2 id="modalTitle">Direct Line Architecture</h2>
+                <p>Select an authorized executive representative to place your call directly</p>
             </div>
             <div class="phone-options">
                 <div class="phone-option">
                     <a href="tel:0823076510">
-                        <span class="phone-number">082 307 6510</span>
-                        <span class="phone-action">Call</span>
+                        <div class="rep-meta">
+                            <span class="rep-title">Corporate Liaison Desk</span>
+                            <span class="phone-number">082 307 6510</span>
+                        </div>
+                        <span class="phone-action"><i class="fa-solid fa-phone"></i> Connect</span>
                     </a>
                 </div>
                 <div class="phone-option">
                     <a href="tel:0764088968">
-                        <span class="phone-number">076 408 8968</span>
-                        <span class="phone-action">Call</span>
+                        <div class="rep-meta">
+                            <span class="rep-title">Logistics & Support Desk</span>
+                            <span class="phone-number">076 408 8968</span>
+                        </div>
+                        <span class="phone-action"><i class="fa-solid fa-phone"></i> Connect</span>
                     </a>
                 </div>
             </div>
-            <button class="close-btn" id="closeModal" type="button">Dismiss</button>
+            <button class="close-btn" id="closeModal" type="button">Dismiss Dashboard</button>
         </div>
     </div>
 
@@ -230,6 +277,12 @@
                         <li>+27 087 012 5682</li>
                         <li>info@bwglgroup.co.za</li>
                     </ul>
+                    <div class="footer-logo">
+                        <a href="index.html" title="Go to Home">
+                            <img src="logo.png" alt="BWGL Group company logo" loading="lazy"
+                                aria-label="BWGL Group company logo">
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -239,9 +292,9 @@
                 </div>
                 <div class="footer-col-content">
                     <ul>
-                        <li><a href="index.html">Work</a></li>
-                        <li><a href="catalog.html">Catalog</a></li>
-                        <li><a href="about.html">Connect</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="catalog.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -252,21 +305,24 @@
                 </div>
                 <div class="footer-col-content">
                     <ul>
-                        <li>Nationwide via PAXI</li>
-                        <li>All PEP Stores</li>
-                        <li>Standard Courier</li>
+                        <li>✓ Nationwide via PAXI</li>
+                        <li>✓ Available at PEP Stores</li>
+                        <li>✓ Courier costs apply</li>
+                        <li>✓ Fast & Reliable</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-col footer-hours">
                 <div class="footer-title">
-                    <h3>Hours</h3>
+                    <h3>Business Hours</h3>
                 </div>
                 <div class="footer-col-content">
                     <ul>
-                        <li><strong>Mon - Fri:</strong> 8:00 AM - 5:00 PM</li>
+                        <li><strong>Monday - Friday:</strong> 8:00 AM - 5:00 PM</li>
                         <li><strong>Saturday:</strong> 9:00 AM - 1:00 PM</li>
+                        <li><strong>Sunday:</strong> Closed</li>
+                        <li><strong>Public Holidays:</strong> Closed</li>
                     </ul>
                 </div>
             </div>
@@ -275,10 +331,11 @@
         <div class="wrapper">
             <div class="main-footer">
                 <div class="copyright">
-                    2026 &copy; BWGL Group.
+                    2025 &copy BWGL Group. All rights reserved.
                 </div>
                 <div class="credits">
-                    <span>Architecture of Design</span>
+                    <span>Designed by <a href="">digitalconsistency.africa</a></span>
+                    <span>Developed by <a href="">NoWanDesigns</a></span>
                 </div>
             </div>
         </div>
@@ -290,24 +347,24 @@
             const modal = document.getElementById('phoneModal');
             const closeButton = document.getElementById('closeModal');
 
-            if (!modal || !closeButton) {
-                return;
-            }
+            if (!modal || !closeButton) return;
 
             callButtons.forEach(function (button) {
-                button.addEventListener('click', function () {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
                     modal.classList.add('is-visible');
+                    document.body.style.overflow = 'hidden';
                 });
             });
 
-            closeButton.addEventListener('click', function () {
+            const exitModal = function () {
                 modal.classList.remove('is-visible');
-            });
+                document.body.style.overflow = '';
+            };
 
+            closeButton.addEventListener('click', exitModal);
             window.addEventListener('click', function (event) {
-                if (event.target === modal) {
-                    modal.classList.remove('is-visible');
-                }
+                if (event.target === modal) exitModal();
             });
         });
     </script>
